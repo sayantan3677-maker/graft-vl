@@ -26,3 +26,4 @@ logs/
 *.lock
 reports/benchmarks/**/*samples_*.jsonl
 reports/benchmarks/**/submissions/
+demo/vllm.log

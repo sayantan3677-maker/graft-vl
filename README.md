@@ -76,6 +76,14 @@ Multi-turn QA rows hold one image with several independent questions; the loader
 The exported hybrid is a stock Qwen3-VL checkpoint, so `vllm serve exports/<name>` works without the plugin.
 Image preprocessing runs on the GPU in the trainer (`HybridProcessor.finalize`); prompt/target rendering runs in loader workers.
 
+## Demo (Gradio)
+```bash
+python -m venv ~/.venvs/vlm-demo && ~/.venvs/vlm-demo/bin/pip install "gradio>=5,<6" "openai>=1.40" pillow
+demo/launch.sh exports/hyb-4b-s3-s4000-l05            # vLLM on :8011 + Gradio on :7860
+```
+The app is a thin OpenAI-API client of `vllm serve` (streaming, TTFT and tok/s per request, thinking toggle, task presets:
+QA, OCR, description, chart → table, key-field JSON). Example images are rendered by `demo/make_examples.py` (no third-party images).
+
 ## Serving (vLLM)
 ```bash
 $PY scripts/export_vlm.py --run experiments/<run> --out exports/<name>          # self-contained serving checkpoint
