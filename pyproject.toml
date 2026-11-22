@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qwen3-vlm"
+version = "0.1.0"
+description = "Text-only Qwen3 → vision-language model: training, evaluation and vLLM serving plugin"
+requires-python = ">=3.12"
+
+[project.entry-points."vllm.general_plugins"]
+qwen_siglip_vlm = "vlm.serving.vllm_plugin:register"
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,28 @@
+# Python / tooling
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+wandb/
+
+# Weights and checkpoints (published separately on Hugging Face)
+exports/
+experiments/*/checkpoints/
+*.safetensors
+*.pt
+*.bin
+
+# Training data: shards and per-sample records hold third-party dataset content (see LICENSES.md,
+# reports/licenses/dataset-audit.md). Only manifest.json (provenance + counts) is versioned; rebuild with scripts/build_shards.py.
+manifests/**/shards/
+*.tar
+manifests/**/records.jsonl
+manifests/**/raw_generations.jsonl
+
+# Runtime state, logs and bulky per-sample eval dumps
+locks/
+logs/
+*.log
+*.lock
+reports/benchmarks/**/*samples_*.jsonl
+reports/benchmarks/**/submissions/
