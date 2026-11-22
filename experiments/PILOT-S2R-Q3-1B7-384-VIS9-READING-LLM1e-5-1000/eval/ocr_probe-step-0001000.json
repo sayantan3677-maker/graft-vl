@@ -1,0 +1,65 @@
+{
+  "80": {
+    "acc": 46.7,
+    "examples": [
+      [
+        "BANANA",
+        "APPLE"
+      ],
+      [
+        "GARDEN",
+        "GARDEN"
+      ],
+      [
+        "ROCKET",
+        "SPACEHOPPER"
+      ],
+      [
+        "PLANET",
+        "PLANET"
+      ]
+    ]
+  },
+  "40": {
+    "acc": 43.3,
+    "examples": [
+      [
+        "BANANA",
+        "APPLE"
+      ],
+      [
+        "GARDEN",
+        "GARDEN"
+      ],
+      [
+        "ROCKET",
+        "FLIGHT"
+      ],
+      [
+        "PLANET",
+        "PLANET"
+      ]
+    ]
+  },
+  "20": {
+    "acc": 43.3,
+    "examples": [
+      [
+        "BANANA",
+        "APPLE"
+      ],
+      [
+        "GARDEN",
+        "GARDEN"
+      ],
+      [
+        "ROCKET",
+        "FLY"
+      ],
+      [
+        "PLANET",
+        "PLANET"
+      ]
+    ]
+  }
+}

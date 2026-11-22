@@ -1,0 +1,47 @@
+{
+  "train": {
+    "run_id": "EXP-S1-Q3-1B7-S2P16-384-MLPLN-5K-LR1e-3",
+    "stage": "S1",
+    "data": "manifests/s1-5k",
+    "model": {
+      "llm_name": "Qwen/Qwen3-1.7B",
+      "vision_name": "google/siglip2-so400m-patch16-384",
+      "feature_layer": -2,
+      "loss_impl": "liger",
+      "projector_layernorm": true
+    },
+    "processor": {
+      "max_tiles": 6
+    },
+    "train_llm": false,
+    "train_vision": false,
+    "special_rows": [
+      "vision"
+    ],
+    "llm_dtype": "bfloat16",
+    "lr_projector": 0.001,
+    "lr_llm": 5e-06,
+    "lr_vision": 1e-06,
+    "lr_special_rows": 0.001,
+    "weight_decay": 0.0,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "warmup_ratio": 0.04,
+    "max_steps": 170,
+    "grad_accum": 4,
+    "max_grad_norm": 1.0,
+    "pack_tokens": 8192,
+    "pack_tiles": 48,
+    "num_workers": 12,
+    "attn_implementation": "flex_attention",
+    "gradient_checkpointing": false,
+    "seed": 0,
+    "log_every": 10,
+    "save_every": 170,
+    "wandb": false
+  },
+  "git_sha": "HEAD",
+  "cuda_visible_devices": "1"
+}

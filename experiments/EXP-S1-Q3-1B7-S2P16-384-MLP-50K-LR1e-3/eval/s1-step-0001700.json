@@ -1,0 +1,132 @@
+{
+  "checkpoint": "step-0001700",
+  "eval_data": "manifests/s1-eval300",
+  "reliance": {
+    "all": {
+      "real": 2.1702767095877706,
+      "blind": 3.156563260368977,
+      "swapped": 2.239029424401843,
+      "zeroed": 3.377357708622445,
+      "n_samples": 110,
+      "gap_blind": 0.9862865507812062,
+      "gap_swapped": 0.0687527148140723,
+      "gap_zeroed": 1.2070809990346745
+    },
+    "page": {
+      "real": 2.3660238501750595,
+      "blind": 3.1666032396948722,
+      "swapped": 2.4092703567537916,
+      "zeroed": 3.4853462400736657,
+      "n_samples": 51,
+      "gap_blind": 0.8005793895198128,
+      "gap_swapped": 0.04324650657873219,
+      "gap_zeroed": 1.1193223898986062
+    },
+    "photo": {
+      "real": 2.4010384943491903,
+      "blind": 6.237703722898011,
+      "swapped": 2.84397652560954,
+      "zeroed": 5.10313842356371,
+      "n_samples": 53,
+      "gap_blind": 3.8366652285488203,
+      "gap_swapped": 0.4429380312603497,
+      "gap_zeroed": 2.7020999292145196
+    },
+    "screenshot": {
+      "real": 0.3961694970252997,
+      "blind": 0.9284846525584385,
+      "swapped": 0.4146191768400238,
+      "zeroed": 1.2856491406912762,
+      "n_samples": 6,
+      "gap_blind": 0.5323151555331388,
+      "gap_swapped": 0.018449679814724118,
+      "gap_zeroed": 0.8894796436659765
+    }
+  },
+  "generations": [
+    {
+      "key": "pixmo_cap-00000068",
+      "image_type": "photo",
+      "prompt": "Describe this image in detail.",
+      "reference": "The image captures a bustling mall interior from 2004, with an upper and lower level visible. The centerpiece is a massive clock designed to resemble a giant pocket watch, complete with a winding knob, Roman numerals, and a distinctive logo. This clock is attached to a second-floor balcony, appearing gold and intricately detailed. The scene includes numerous shops on both levels, some with Asian language signage, suggesting a diverse retail environment. A security camera is positioned behind the clock to the left. The lower-level stores seem to offer a variety of items from jewelry to technica",
+      "generated": "In this image, we can see a large clock tower with a digital display. The tower is located in the center of the image, and it is surrounded by a white wall. On the wall, there are several clocks, including one that reads 12:00, another that reads 12:00, and a third that reads 12:00. The tower is also surrounded by a white wall, and there are several other clocks on the wall. In the background, we can see a white wall with a white door. The door has a white handle and a white door frame. In the foreground, there is a white wall with a white door, and on the door, there is a white handle. The im"
+    },
+    {
+      "key": "localized_narratives-00000000",
+      "image_type": "photo",
+      "prompt": "Describe this image in one or two sentences.",
+      "reference": "In this picture we can see noodles, fork, few leaves and other food in the plate.",
+      "generated": "In this image we can see a plate with food on it. In the middle of the plate there is a food. In the background there is a white wall."
+    },
+    {
+      "key": "localized_narratives-00000001",
+      "image_type": "photo",
+      "prompt": "Describe this image in one or two sentences.",
+      "reference": "This image is taken in a petrol bunk. On the left side of the image a car is parked on the road and a fuel tank is opened. On the right side of the image a man is standing on the floor and filling diesel, holding a diesel pipe in his hand.",
+      "generated": "In this image I can see a car. In the background I can see a wall."
+    },
+    {
+      "key": "localized_narratives-00000002",
+      "image_type": "photo",
+      "prompt": "Could you give a brief overview of what you see in this image?",
+      "reference": "In this image I can see bottles,glasses and the menu on the table. In the back there is a person standing in front of the wall and there are many wine bottles on the table.",
+      "generated": "In this image we can see a glass of wine, a bottle of wine, a glass of beer, a bottle of beer, a glass of water, a bottle of water, a glass of soda, a bottle of soda, a glass of juice, a bottle of juice, a glass of apple juice, a bottle of apple juice, a glass of orange juice, a bottle of orange juice, a glass of lemonade, a bottle of lemonade, a glass of milk, a bottle of milk, a glass of water, a bottle of water, a glass of soda, a bottle of soda, a glass of juice, a bottle of juice, a glass of apple juice, a bottle of apple juice, a glass of orange juice, a bottle of orange juice, a glass o"
+    },
+    {
+      "key": "websight-00000000",
+      "image_type": "screenshot",
+      "prompt": "Generate the HTML code corresponding to this website screenshot.",
+      "reference": "<html>\n<link href=\"https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css\" rel=\"stylesheet\">\n<body class=\"bg-gray-200\">\n  <div class=\"flex flex-col items-center justify-center min-h-screen\">\n    <header class=\"w-full bg-gray-800 text-white p-4\">\n      <h1 class=\"text-2xl font-bold\">Welcome to Our Tech Company</h1>\n    </header>\n    <main class=\"flex flex-col items-center justify-center w-full flex-1 px-20 text-center\">\n      <p class=\"text-lg mb-6\">\n        At Our Tech Company, we are dedicated to providing innovative and reliable technology solutions to meet your business needs",
+      "generated": "<html>\n<link href=\"https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css\" rel=\"stylesheet\">\n<body class=\"bg-gray-100\">\n    <header class=\"bg-white\">\n        <div class=\"container mx-auto px-4 py-8\">\n            <div class=\"flex justify-between items-center\">\n                <div class=\"text-3xl font-bold\">Welcome to Our Company</div>\n                <nav class=\"flex space-x-4\">\n                    <a href=\"#\" class=\"text-gray-700 hover:text-gray-900\">Home</a>\n                    <a href=\"#\" class=\"text-gray-700 hover:text-gray-900\">About</a>\n                    <a href=\"#\" clas"
+    },
+    {
+      "key": "websight-00000006",
+      "image_type": "screenshot",
+      "prompt": "Transform this website screenshot into HTML code.",
+      "reference": "<html>\n<link href=\"https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css\" rel=\"stylesheet\">\n<body class=\"bg-gray-100\">\n  <div class=\"relative\">\n    <img src=\"https://source.unsplash.com/random/1200x600/?fashion\" alt=\"Fashion Item\" class=\"w-full\">\n    <div class=\"absolute inset-0 flex items-center justify-center\">\n      <div class=\"bg-white bg-opacity-75 p-8 rounded-lg\">\n        <h1 class=\"text-4xl font-bold mb-4\">Fashion Brand</h1>\n        <p class=\"text-lg\">\n          At Fashion Brand, we believe in the power of fashion to express individuality and style. Our collection is des",
+      "generated": "<html>\n<link href=\"https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css\" rel=\"stylesheet\">\n<body class=\"bg-gray-100\">\n    <div class=\"container mx-auto p-4\">\n        <h1 class=\"text-3xl font-bold mb-4\">Welcome to Our Fashion Store</h1>\n        <p class=\"mb-4\">\n            At our fashion store, we offer a wide range of trendy and stylish clothing for men and women. Our collection includes the latest fashion trends, from the most popular brands to the most unique designs. We have a variety of styles, from casual to formal, and we have a wide range of colors and sizes to choose f"
+    },
+    {
+      "key": "websight-00000008",
+      "image_type": "screenshot",
+      "prompt": "Reconstruct the HTML code from this website image.",
+      "reference": "<html>\n<link href=\"https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css\" rel=\"stylesheet\">\n<body class=\"font-sans antialiased text-gray-900 leading-normal tracking-wider bg-cover bg-center\" style=\"background-image: url('https://source.unsplash.com/random/1600x900/?architecture');\">\n  <div class=\"container w-full md:max-w-3xl mx-auto pt-20\">\n    <div class=\"w-full px-4 md:px-6 text-xl text-center text-gray-800 leading-normal\">\n      <div class=\"font-sans break-normal white-space-pre-line\">\n        <p>Welcome to our Architecture Firm Site, your one-stop destination for all your ",
+      "generated": "<html>\n<link href=\"https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css\" rel=\"stylesheet\">\n<body class=\"bg-gray-100\">\n    <div class=\"container mx-auto p-4\">\n        <h1 class=\"text-3xl font-bold mb-4\">Welcome to Our Website</h1>\n        <p class=\"mb-4\">We are a leading company in the field of technology and innovation. Our mission is to provide the best solutions to our clients. We are committed to excellence and quality. Our team of experts is dedicated to delivering the highest level of service. We are always looking for new ideas and ways to improve our services. Our websi"
+    },
+    {
+      "key": "websight-00000010",
+      "image_type": "screenshot",
+      "prompt": "Render the HTML code that corresponds to this web design.",
+      "reference": "<html>\n<link href=\"https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css\" rel=\"stylesheet\">\n<body class=\"bg-gray-100\">\n    <div class=\"container mx-auto px-4 py-8\">\n        <h1 class=\"text-4xl font-bold text-center text-gray-800\">Nonprofit Organization</h1>\n        <p class=\"text-lg text-gray-700 mt-4\">\n            At Nonprofit Organization, we believe in the power of community. We are committed to making a positive impact in our community by organizing and participating in various initiatives and volunteer opportunities. Our goal is to create a better world for everyone.\n     ",
+      "generated": "<html>\n<link href=\"https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css\" rel=\"stylesheet\">\n<body class=\"bg-gray-100\">\n    <div class=\"container mx-auto p-4\">\n        <header class=\"flex justify-between items-center\">\n            <h1 class=\"text-2xl font-bold\">Nonprofit Organization</h1>\n            <nav class=\"flex space-x-4\">\n                <a href=\"#\" class=\"text-gray-700 hover:text-gray-900\">Home</a>\n                <a href=\"#\" class=\"text-gray-700 hover:text-gray-900\">About</a>\n                <a href=\"#\" class=\"text-gray-700 hover:text-gray-900\">Services</a>\n            "
+    },
+    {
+      "key": "olmocr_docs-00000000",
+      "image_type": "page",
+      "prompt": "Please transcribe the text from this document image.",
+      "reference": "Law by which clitics move into second position, though for mysterious reasons. As things stand, such an account explains nothing (as Steele herself realizes) and can only function as a spur to further analysis.\n\nAn additional complexity is that even though second position is greatly favored as a location for clitics, the definition of 'second position' differs from language to language. Walbiri, Serbo-Croatian, Tagalog, and Pashto differ in detail on this point (Zwicky 1977:18-20), and the historical linguist is entitled to wonder if there are any reasons for these differences.\n\n11. Clisis and",
+      "generated": "The following is a summary of the text from the image:\n\n**Title:**\nThe following is a summary of the text from the image:\n\n**Title:**\nThe following is a summary of the text from the image:\n\n**Title:**\nThe following is a summary of the text from the image:\n\n**Title:**\nThe following is a summary of the text from the image:\n\n**Title:**\nThe following is a summary of the text from the image:\n\n**Title:**\nThe following is a summary of the text from the image:\n\n**Title:**\nThe following is a summary of the text from the image:\n\n**Title:**\nThe following is a summary of the text from the image:\n\n**Title:"
+    },
+    {
+      "key": "olmocr_docs-00000001",
+      "image_type": "page",
+      "prompt": "Type out everything written on this page.",
+      "reference": "List of Tables\n\n\u25a1 Table (2.1) Important of Techniques of Crystal Growth (Classification of Crystal Growth Techniques) ................................................................. 34\n\n\u25a1 Table (3.1) Terms in polarization series and their meanings .......................... 67\n\n\u25a1 Table (3.2) Materials for Nonlinear Optics .................................................... 97\n\n\u25a1 Table (4.1) Comparison of SHG efficiencies of promising semiorganic and organic NLO Crystal relative to KDP as reference Sample ......................... 123\n\n\u25a1 Table (4.2) Two theta values ,FWHM,d-spacing and their",
+      "generated": "**1.** The following is a summary of the results of the experiments on the effect of the addition of the following compounds to the solution of the following compounds:\n\n| Compound | Concentration (g/L) | Effect on the solution |\n|----------|---------------------|------------------------|\n| 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1"
+    },
+    {
+      "key": "olmocr_docs-00000002",
+      "image_type": "page",
+      "prompt": "Read the text in the picture and write it out exactly.",
+      "reference": "stained with 1% solution of Alizarin red S (Sigma\u2013Aldrich) as described previously (Hino et al. 1999).\n\n**Proliferation and 5-bromo-2\u2032-deoxyuridine incorporation assays**\n\nCells were seeded at 3000 cells/well in 96-well plates and grown for 24 h. The cells were starved for 24 h before treatment with different concentrations of NMB (Peptide Institute, Osaka, Japan) and E2 in starvation medium for 24 h. The NMBR antagonist BIM23127 (Bachem, Torrance, CA, USA) and MEK inhibitor U0126 (Calbiochem, San Diego, CA, USA) were added 1 h before NMB treatment. Cell proliferation was evaluated in 2-(2-met",
+      "generated": "**Abstract**\n\nThe purpose of this study was to evaluate the effect of a 12-week treatment with the anti-platelet drug clopidogrel on the expression of the platelet-derived growth factor receptor (PDGF-R) in the human umbilical vein endothelial cells (HUVECs). The HUVECs were isolated from human umbilical cords and cultured in vitro. The cells were then treated with clopidogrel (100 nM) for 24 h. The expression of PDGF-R was analyzed by immunofluorescence and Western blotting. The results showed that the expression of PDGF-R was significantly decreased in the clopidogrel-treated HUVECs compared"
+    },
+    {
+      "key": "olmocr_docs-00000003",
+      "image_type": "page",
+      "prompt": "Transcribe everything printed or written in the image.",
+      "reference": "Abstract\nThis paper presents a 3D reconstruction technique for real world environments based on a traditional 2D laser range finder modified to implement a 3D laser scanner. The paper describes the mechanical and control issues addressed to achieve physically the 3D sensor as well as the adaptation of some previously developed techniques used to merge range and intensity data and illustrates the potential of such a unit. The result is a promising system for 3D modelling of real world scenes at a commercial price 10 or 20 times lower than current commercial 3D laser scanners.\n\nKeywords\n3D Recon",
+      "generated": "The paper is structured as follows: in the first part, we present the problem of the control of a class of nonlinear systems with time-varying delays. In the second part, we propose a new approach to the problem of the control of such systems. In the third part, we present the results of the simulation of the control method on a class of nonlinear systems with time-varying delays. In the fourth part, we draw the conclusions of the paper.\n\nThe paper is organized as follows: in the first part, we present the problem of the control of a class of nonlinear systems with time-varying delays. In the "
+    }
+  ]
+}

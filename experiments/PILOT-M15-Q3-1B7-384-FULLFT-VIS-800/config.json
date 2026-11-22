@@ -1,0 +1,93 @@
+{
+  "train": {
+    "run_id": "PILOT-M15-Q3-1B7-384-FULLFT-VIS-800",
+    "stage": "S2",
+    "data": [
+      {
+        "path": "manifests/s2/docvqa",
+        "weight": 0.14
+      },
+      {
+        "path": "manifests/s2/infographic_vqa",
+        "weight": 0.08
+      },
+      {
+        "path": "manifests/s2/ureader_qa",
+        "weight": 0.08
+      },
+      {
+        "path": "manifests/s2/ocrvqa",
+        "weight": 0.05
+      },
+      {
+        "path": "manifests/s2/olmocr_docs",
+        "weight": 0.05
+      },
+      {
+        "path": "manifests/s2/chartqa",
+        "weight": 0.1
+      },
+      {
+        "path": "manifests/s2/screenqa",
+        "weight": 0.12
+      },
+      {
+        "path": "manifests/s2/visualwebinstruct",
+        "weight": 0.08
+      },
+      {
+        "path": "manifests/s2/textvqa",
+        "weight": 0.05
+      },
+      {
+        "path": "manifests/s2/vqav2",
+        "weight": 0.05
+      },
+      {
+        "path": "manifests/replay-q3-1b7-20k",
+        "weight": 0.2
+      }
+    ],
+    "model": {
+      "llm_name": "Qwen/Qwen3-1.7B",
+      "vision_name": "google/siglip2-so400m-patch16-384",
+      "feature_layer": -2,
+      "loss_impl": "liger"
+    },
+    "processor": {
+      "max_tiles": 6
+    },
+    "train_llm": true,
+    "train_vision": true,
+    "vision_top_layers": 9,
+    "special_rows": [
+      "vision"
+    ],
+    "init_from": "experiments/EXP-S1-Q3-1B7-S2P16-384-MLP-50K-LR1e-3/checkpoints/step-0001700",
+    "llm_dtype": "float32",
+    "lr_projector": 5e-05,
+    "lr_llm": 5e-06,
+    "lr_vision": 2e-06,
+    "lr_special_rows": 5e-05,
+    "weight_decay": 0.0,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "warmup_ratio": 0.03,
+    "max_steps": 800,
+    "grad_accum": 4,
+    "max_grad_norm": 1.0,
+    "pack_tokens": 8192,
+    "pack_tiles": 48,
+    "num_workers": 12,
+    "attn_implementation": "flex_attention",
+    "gradient_checkpointing": true,
+    "seed": 0,
+    "log_every": 25,
+    "save_every": 800,
+    "wandb": false
+  },
+  "git_sha": "HEAD",
+  "cuda_visible_devices": "1"
+}

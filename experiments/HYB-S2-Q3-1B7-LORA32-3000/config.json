@@ -1,0 +1,183 @@
+{
+  "run_id": "HYB-S2-Q3-1B7-LORA32-3000",
+  "init": "exports/hybrid-q3-1b7-aligned",
+  "data": [
+    {
+      "path": "manifests/s2/pixmo_cap",
+      "weight": 0.03605
+    },
+    {
+      "path": "manifests/s2/localized_narratives",
+      "weight": 0.01802
+    },
+    {
+      "path": "manifests/s2/densefusion",
+      "weight": 0.03605
+    },
+    {
+      "path": "manifests/s2/vqav2",
+      "weight": 0.04206
+    },
+    {
+      "path": "manifests/s2/aokvqa",
+      "weight": 0.01802
+    },
+    {
+      "path": "manifests/s2/visual7w",
+      "weight": 0.01202
+    },
+    {
+      "path": "manifests/s2/tallyqa",
+      "weight": 0.01802
+    },
+    {
+      "path": "manifests/s2/vsr",
+      "weight": 0.01202
+    },
+    {
+      "path": "manifests/s2/lnqa",
+      "weight": 0.01802
+    },
+    {
+      "path": "manifests/s2/textvqa",
+      "weight": 0.02344
+    },
+    {
+      "path": "manifests/s2/st_vqa",
+      "weight": 0.01562
+    },
+    {
+      "path": "manifests/s2/screen2words",
+      "weight": 0.02344
+    },
+    {
+      "path": "manifests/s2/screenqa",
+      "weight": 0.0703
+    },
+    {
+      "path": "manifests/s2/visualwebinstruct",
+      "weight": 0.04686
+    },
+    {
+      "path": "manifests/s2/websight",
+      "weight": 0.01562
+    },
+    {
+      "path": "manifests/s2/docvqa",
+      "weight": 0.03905
+    },
+    {
+      "path": "manifests/s2/infographic_vqa",
+      "weight": 0.02344
+    },
+    {
+      "path": "manifests/s2/ureader_qa",
+      "weight": 0.02344
+    },
+    {
+      "path": "manifests/s2/ureader_ie",
+      "weight": 0.01562
+    },
+    {
+      "path": "manifests/s2/ocrvqa",
+      "weight": 0.01562
+    },
+    {
+      "path": "manifests/s2/olmocr_docs",
+      "weight": 0.02344
+    },
+    {
+      "path": "manifests/s2/doclingmatix",
+      "weight": 0.01562
+    },
+    {
+      "path": "manifests/s2/slidevqa",
+      "weight": 0.00781
+    },
+    {
+      "path": "manifests/s2/sroie",
+      "weight": 0.00781
+    },
+    {
+      "path": "manifests/s2/chartqa",
+      "weight": 0.03125
+    },
+    {
+      "path": "manifests/s2/plotqa",
+      "weight": 0.00781
+    },
+    {
+      "path": "manifests/s2/chart2text",
+      "weight": 0.00781
+    },
+    {
+      "path": "manifests/s2/tat_qa",
+      "weight": 0.00781
+    },
+    {
+      "path": "manifests/s2/hitab",
+      "weight": 0.00781
+    },
+    {
+      "path": "manifests/s2/ai2d",
+      "weight": 0.02403
+    },
+    {
+      "path": "manifests/s2/scienceqa",
+      "weight": 0.01202
+    },
+    {
+      "path": "manifests/s2/tqa",
+      "weight": 0.01202
+    },
+    {
+      "path": "manifests/s2/iconqa",
+      "weight": 0.00601
+    },
+    {
+      "path": "manifests/s2/geo170k_qa",
+      "weight": 0.003
+    },
+    {
+      "path": "manifests/s2/arxivqa",
+      "weight": 0.003
+    },
+    {
+      "path": "manifests/synth-reading-200k",
+      "weight": 0.05
+    },
+    {
+      "path": "manifests/traces-q3-1b7-v3",
+      "weight": 0.02
+    },
+    {
+      "path": "manifests/traces-q3-1b7-s2-v3",
+      "weight": 0.03
+    },
+    {
+      "path": "manifests/replay-q3-1b7-20k",
+      "weight": 0.15
+    },
+    {
+      "path": "manifests/replay-q3-1b7-ifsafety-5k",
+      "weight": 0.05
+    }
+  ],
+  "lr_merger": 5e-05,
+  "vit_top_blocks": 0,
+  "lora": {
+    "r": 32,
+    "alpha": 64,
+    "dropout": 0.0
+  },
+  "lr_lora": 0.0001,
+  "max_steps": 3000,
+  "grad_accum": 32,
+  "warmup_ratio": 0.03,
+  "save_every": 1000,
+  "log_every": 25,
+  "max_pixels": 1600000,
+  "max_length": 6144,
+  "num_workers": 16,
+  "gradient_checkpointing": false
+}

@@ -1,0 +1,132 @@
+{
+  "checkpoint": "step-0000170",
+  "eval_data": "manifests/s1-eval300",
+  "reliance": {
+    "all": {
+      "real": 2.1781387979890865,
+      "blind": 3.159654937303253,
+      "swapped": 2.1802799221598574,
+      "zeroed": 3.222275221388744,
+      "n_samples": 201,
+      "gap_blind": 0.9815161393141665,
+      "gap_swapped": 0.002141124170770947,
+      "gap_zeroed": 1.0441364233996575
+    },
+    "page": {
+      "real": 2.455796401445496,
+      "blind": 3.248495950752511,
+      "swapped": 2.458474031409978,
+      "zeroed": 3.400722575904848,
+      "n_samples": 75,
+      "gap_blind": 0.7926995493070152,
+      "gap_swapped": 0.0026776299644821755,
+      "gap_zeroed": 0.944926174459352
+    },
+    "photo": {
+      "real": 2.6608915901124326,
+      "blind": 4.533045612209396,
+      "swapped": 2.664309583972706,
+      "zeroed": 4.242408561364315,
+      "n_samples": 94,
+      "gap_blind": 1.872154022096963,
+      "gap_swapped": 0.003417993860273416,
+      "gap_zeroed": 1.5815169712518826
+    },
+    "screenshot": {
+      "real": 0.6861383866278731,
+      "blind": 1.183703262223249,
+      "swapped": 0.6849735824375593,
+      "zeroed": 1.3906566521450252,
+      "n_samples": 32,
+      "gap_blind": 0.497564875595376,
+      "gap_swapped": -0.0011648041903137285,
+      "gap_zeroed": 0.7045182655171521
+    }
+  },
+  "generations": [
+    {
+      "key": "pixmo_cap-00000000",
+      "image_type": "photo",
+      "prompt": "Describe this image in detail.",
+      "reference": "The blurry photograph appears to be taken in a garage or a kitchen setting, featuring a gray concrete floor and wooden cupboards in the background. Central to the image are two folding tables with black stands and light brown tabletops, seemingly set up for a party. The table to the left is cluttered with various items, including an open can of Coke, a small white foam bowl, and several brightly colored objects potentially linked to party supplies like balloons or candy. Blue flip-flops are noticeable on the floor near a white object. Folded chairs are arranged around the tables, and cabinets ",
+      "generated": "This image shows a large, rectangular window located on the left side of the image. The window is approximately 1000 pixels wide and 500 pixels tall. The window is positioned at the top of the image, with its top edge aligned with the top of the image. The window is filled with a dark blue color, which is the primary color of the image. The window is bordered by a thin, light blue border that is approximately 10 pixels wide. The window is centered horizontally within the image, with its center aligned with the center of the image. The window is not filled with any other color, and its edges ar"
+    },
+    {
+      "key": "pixmo_cap-00000006",
+      "image_type": "photo",
+      "prompt": "Give a detailed description of the picture.",
+      "reference": "In this image, we see a cartoon depiction of an airplane set against an all-white background. The airplane is predominantly red, with gray wheels visible. Although the propeller is not entirely shown, motion lines near the front of the plane suggest a spinning propeller. In the cockpit area, we can see the face of Reddit\u2019s mascot, known as Snoo. The mascot features a round face, red eyes, a smile, and a distinctive antenna on top of its head. The antenna consists of a straight line with a smaller line branching out at a 90-degree angle, ending in a round circle. The image contains no text, foc",
+      "generated": "This image shows a person wearing a black and white striped shirt, a black and white striped pants, and a black and white striped jacket. The person is standing in front of a white wall with a black and white striped pattern. The person is wearing a black and white striped hat and a black and white striped scarf. The person is smiling and looking at the camera. The background is a white wall with a black and white striped pattern."
+    },
+    {
+      "key": "pixmo_cap-00000012",
+      "image_type": "photo",
+      "prompt": "Write a detailed caption for this image.",
+      "reference": "The image showcases a lavishly detailed, first-person, top-down view of an ornate and expensive dessert presented on a sophisticated table setting. The table surface is highly polished and appears to be made of marble or granite, featuring a white base interspersed with faded black veins in a non-repeating pattern. The dessert rests on a uniquely shaped white plate, characterized by undulating sides that create a wavy effect.\n\nIn the bottom right corner of the plate lies a shiny glazed strawberry, subtly showcasing its tiny black seeds, though some are missing. The bottom left corner features ",
+      "generated": "This image shows a beautiful scene of a garden with a large tree in the center. The tree is surrounded by a variety of flowers, including red roses, yellow daisies, and blue lilies. The flowers are arranged in a way that creates a vibrant and colorful display. The garden is filled with life and beauty, with the tree standing tall and proud. The image captures the essence of a peaceful and picturesque garden, where nature and beauty come together."
+    },
+    {
+      "key": "pixmo_cap-00000016",
+      "image_type": "photo",
+      "prompt": "Describe this image in detail.",
+      "reference": "In the image, a diverse group of people is gathered on a field bordered by leafy trees and a chain-link fence. The group includes individuals both in casual clothing and construction attire, with some wearing safety vests and white hard hats. At the center of the image, people are facing each other, seemingly focused on the ground, though it is unclear what exactly holds their attention. Scattered across the grass are several round balls, predominantly black, interspersed with orange ones. On the right side of the picture, a woman in a khaki hat, short-sleeved green shirt, and white capri pant",
+      "generated": "In this image, there are two people. One is wearing a black shirt, black pants, and black shoes. The other is wearing a black shirt, black pants, and black shoes. They are sitting on a chair. The chair is in front of a table. The table has a black table cloth. There are two cups on the table. One cup is black and the other is white. There are two glasses on the table. One is black and the other is white. There are two plates on the table. One is black and the other is white. There are two spoons on the table. One is black and the other is white. There are two forks on the table. One is black a"
+    },
+    {
+      "key": "screen2words-00000001",
+      "image_type": "screenshot",
+      "prompt": "Give me a narrative description of this picture.",
+      "reference": "Settings page displayed of a ebook reading app.",
+      "generated": "A man is sitting on a bench in a park. He is wearing a black shirt and a black pants. He is looking at a book."
+    },
+    {
+      "key": "screen2words-00000003",
+      "image_type": "screenshot",
+      "prompt": "Provide a textual representation of this image.",
+      "reference": "Pop-up displaying the wifi auto connection.",
+      "generated": "The image shows a person wearing a black and white striped shirt, a black and white striped pants, and a black and white striped cap. The person is standing in front of a white wall with a black and white striped wall."
+    },
+    {
+      "key": "screen2words-00000006",
+      "image_type": "screenshot",
+      "prompt": "What is the overall content of this screenshot?",
+      "reference": "Sign up page of a business app.",
+      "generated": "The image shows a website with a large header that includes a logo and a navigation menu. The header is divided into two sections: the left side contains the logo and the navigation menu, while the right side has a search bar. The main content area is centered, and the page is divided into two columns. The left column contains a section with a heading and a paragraph, followed by a list of items. The right column has a section with a heading and a paragraph, followed by a list of items."
+    },
+    {
+      "key": "screen2words-00000007",
+      "image_type": "screenshot",
+      "prompt": "Explain the elements present in this screenshot.",
+      "reference": "Page shows to create your alerts.",
+      "generated": "The image shows a website with a header, a main content area, and a footer. The header contains a logo and a navigation menu. The main content area has a title, a section with a heading, and a paragraph. The footer includes a copyright notice and a link to the website's privacy policy."
+    },
+    {
+      "key": "olmocr_docs-00000000",
+      "image_type": "page",
+      "prompt": "Please transcribe the text from this document image.",
+      "reference": "Law by which clitics move into second position, though for mysterious reasons. As things stand, such an account explains nothing (as Steele herself realizes) and can only function as a spur to further analysis.\n\nAn additional complexity is that even though second position is greatly favored as a location for clitics, the definition of 'second position' differs from language to language. Walbiri, Serbo-Croatian, Tagalog, and Pashto differ in detail on this point (Zwicky 1977:18-20), and the historical linguist is entitled to wonder if there are any reasons for these differences.\n\n11. Clisis and",
+      "generated": "The following is a summary of the key findings from the study on the effects of the 2016-2017 summer monsoon on the Indian subcontinent, particularly focusing on the impact on the monsoon season and the subsequent effects on the region.\n\n### Key Findings\n\n1. **Monsoon Season and Rainfall Patterns**:\n   - The 2016-2017 summer monsoon season was characterized by a significant deviation from the average rainfall. The monsoon season was notably delayed, with the first monsoon rains arriving later than usual.\n   - The rainfall distribution was uneven, with the western and central parts of the subco"
+    },
+    {
+      "key": "olmocr_docs-00000001",
+      "image_type": "page",
+      "prompt": "Type out everything written on this page.",
+      "reference": "List of Tables\n\n\u25a1 Table (2.1) Important of Techniques of Crystal Growth (Classification of Crystal Growth Techniques) ................................................................. 34\n\n\u25a1 Table (3.1) Terms in polarization series and their meanings .......................... 67\n\n\u25a1 Table (3.2) Materials for Nonlinear Optics .................................................... 97\n\n\u25a1 Table (4.1) Comparison of SHG efficiencies of promising semiorganic and organic NLO Crystal relative to KDP as reference Sample ......................... 123\n\n\u25a1 Table (4.2) Two theta values ,FWHM,d-spacing and their",
+      "generated": "**1.** The following is a list of the **10 most common mistakes** that people make when they are trying to **learn a new language**. These mistakes are **very common** and **very easy to make**. If you are trying to learn a new language, you should be aware of these mistakes and try to avoid them. If you are not aware of them, you are likely to make them. If you are aware of them, you can avoid them. If you are not aware of them, you are likely to make them. If you are aware of them, you can avoid them. If you are not aware of them, you are likely to make them. If you are aware of them, you ca"
+    },
+    {
+      "key": "olmocr_docs-00000002",
+      "image_type": "page",
+      "prompt": "Read the text in the picture and write it out exactly.",
+      "reference": "stained with 1% solution of Alizarin red S (Sigma\u2013Aldrich) as described previously (Hino et al. 1999).\n\n**Proliferation and 5-bromo-2\u2032-deoxyuridine incorporation assays**\n\nCells were seeded at 3000 cells/well in 96-well plates and grown for 24 h. The cells were starved for 24 h before treatment with different concentrations of NMB (Peptide Institute, Osaka, Japan) and E2 in starvation medium for 24 h. The NMBR antagonist BIM23127 (Bachem, Torrance, CA, USA) and MEK inhibitor U0126 (Calbiochem, San Diego, CA, USA) were added 1 h before NMB treatment. Cell proliferation was evaluated in 2-(2-met",
+      "generated": "The following is the text of the letter from the United States Department of State to the United Nations, dated 1968, and signed by the Secretary of State, Henry Kissinger, and the Undersecretary of State, John Foster Dulles. The letter is in the public domain and is available for free use.\n\n**United States Department of State**  \n**Office of the Secretary of State**  \n**Washington, D.C.**  \n**April 1968**\n\n**To the United Nations**  \n**From: Henry Kissinger, Secretary of State**  \n**To: United Nations**  \n**Subject: United States and United Nations**  \n**Date: April 1968**\n\n**Dear United Nati"
+    },
+    {
+      "key": "olmocr_docs-00000003",
+      "image_type": "page",
+      "prompt": "Transcribe everything printed or written in the image.",
+      "reference": "Abstract\nThis paper presents a 3D reconstruction technique for real world environments based on a traditional 2D laser range finder modified to implement a 3D laser scanner. The paper describes the mechanical and control issues addressed to achieve physically the 3D sensor as well as the adaptation of some previously developed techniques used to merge range and intensity data and illustrates the potential of such a unit. The result is a promising system for 3D modelling of real world scenes at a commercial price 10 or 20 times lower than current commercial 3D laser scanners.\n\nKeywords\n3D Recon",
+      "generated": "The following is a summary of the results of the study on the effects of the use of the Internet on the behavior of the students in the school of education, in the context of the study of the effects of the use of the Internet on the behavior of the students in the school of education, in the context of the study of the effects of the use of the Internet on the behavior of the students in the school of education, in the context of the study of the effects of the use of the Internet on the behavior of the students in the school of education, in the context of the study of the effects of the use"
+    }
+  ]
+}

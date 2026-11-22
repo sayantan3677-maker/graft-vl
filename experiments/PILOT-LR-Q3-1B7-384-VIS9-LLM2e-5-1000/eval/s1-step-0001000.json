@@ -1,0 +1,35 @@
+{
+  "checkpoint": "step-0001000",
+  "eval_data": "manifests/diag-train-docvqa",
+  "reliance": {
+    "all": {
+      "real": 3.4514100648523347,
+      "blind": 3.405053074645802,
+      "swapped": 3.6365040675169085,
+      "zeroed": 4.44736058125651,
+      "n_samples": 60,
+      "gap_blind": -0.04635699020653261,
+      "gap_swapped": 0.18509400266457376,
+      "gap_zeroed": 0.9959505164041755
+    },
+    "page": {
+      "real": 3.4514100648523347,
+      "blind": 3.405053074645802,
+      "swapped": 3.6365040675169085,
+      "zeroed": 4.44736058125651,
+      "n_samples": 60,
+      "gap_blind": -0.04635699020653261,
+      "gap_swapped": 0.18509400266457376,
+      "gap_zeroed": 0.9959505164041755
+    }
+  },
+  "generations": [
+    {
+      "key": "docvqa-00000000",
+      "image_type": "page",
+      "prompt": "What is the Total?\nYour answer should be very brief.",
+      "reference": "1,718.88.",
+      "generated": "43,735.20."
+    }
+  ]
+}

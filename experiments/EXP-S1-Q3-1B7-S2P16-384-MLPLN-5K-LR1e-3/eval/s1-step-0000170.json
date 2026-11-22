@@ -1,0 +1,132 @@
+{
+  "checkpoint": "step-0000170",
+  "eval_data": "manifests/s1-eval300",
+  "reliance": {
+    "all": {
+      "real": 2.1653168245680714,
+      "blind": 3.1596549455513396,
+      "swapped": 2.1683190750013575,
+      "zeroed": 3.2346207627914576,
+      "n_samples": 201,
+      "gap_blind": 0.9943381209832682,
+      "gap_swapped": 0.003002250433286058,
+      "gap_zeroed": 1.0693039382233862
+    },
+    "page": {
+      "real": 2.4502536001723456,
+      "blind": 3.2484959589250932,
+      "swapped": 2.452329764297013,
+      "zeroed": 3.388644319621806,
+      "n_samples": 75,
+      "gap_blind": 0.7982423587527476,
+      "gap_swapped": 0.002076164124667379,
+      "gap_zeroed": 0.9383907194494605
+    },
+    "photo": {
+      "real": 2.618975937733158,
+      "blind": 4.5330456273651905,
+      "swapped": 2.625949247086013,
+      "zeroed": 4.312244641588011,
+      "n_samples": 94,
+      "gap_blind": 1.9140696896320324,
+      "gap_swapped": 0.006973309352854784,
+      "gap_zeroed": 1.6932687038548528
+    },
+    "screenshot": {
+      "real": 0.6855291641059043,
+      "blind": 1.183703262223249,
+      "swapped": 0.6866461580916613,
+      "zeroed": 1.4113579212450513,
+      "n_samples": 32,
+      "gap_blind": 0.4981740981173448,
+      "gap_swapped": 0.0011169939857570421,
+      "gap_zeroed": 0.7258287571391471
+    }
+  },
+  "generations": [
+    {
+      "key": "pixmo_cap-00000000",
+      "image_type": "photo",
+      "prompt": "Describe this image in detail.",
+      "reference": "The blurry photograph appears to be taken in a garage or a kitchen setting, featuring a gray concrete floor and wooden cupboards in the background. Central to the image are two folding tables with black stands and light brown tabletops, seemingly set up for a party. The table to the left is cluttered with various items, including an open can of Coke, a small white foam bowl, and several brightly colored objects potentially linked to party supplies like balloons or candy. Blue flip-flops are noticeable on the floor near a white object. Folded chairs are arranged around the tables, and cabinets ",
+      "generated": "In this image, we can see a black and white photo of a man standing in the middle of a room. The man is wearing a white shirt and a black tie. He is holding a black and white camera. In the background, there is a white wall with a black and white pattern. On the left side of the image, there is a white wall with a black and white pattern. On the right side of the image, there is a white wall with a black and white pattern. In the center of the image, there is a white wall with a black and white pattern. On the top of the image, there is a white wall with a black and white pattern. On the botto"
+    },
+    {
+      "key": "pixmo_cap-00000006",
+      "image_type": "photo",
+      "prompt": "Give a detailed description of the picture.",
+      "reference": "In this image, we see a cartoon depiction of an airplane set against an all-white background. The airplane is predominantly red, with gray wheels visible. Although the propeller is not entirely shown, motion lines near the front of the plane suggest a spinning propeller. In the cockpit area, we can see the face of Reddit\u2019s mascot, known as Snoo. The mascot features a round face, red eyes, a smile, and a distinctive antenna on top of its head. The antenna consists of a straight line with a smaller line branching out at a 90-degree angle, ending in a round circle. The image contains no text, foc",
+      "generated": "The image features a black and white photograph of a man standing in a room with a white wall. The man is wearing a black shirt and a white tie. He is holding a white paper and a black pen. The room has a white wall, and there is a white ceiling. The man is sitting on a white chair. There is a white table in the background. The man is wearing a black shirt and a white tie. The room has a white wall, and there is a white ceiling. The man is sitting on a white chair. There is a white table in the background. The man is wearing a black shirt and a white tie. The room has a white wall, and there i"
+    },
+    {
+      "key": "pixmo_cap-00000012",
+      "image_type": "photo",
+      "prompt": "Write a detailed caption for this image.",
+      "reference": "The image showcases a lavishly detailed, first-person, top-down view of an ornate and expensive dessert presented on a sophisticated table setting. The table surface is highly polished and appears to be made of marble or granite, featuring a white base interspersed with faded black veins in a non-repeating pattern. The dessert rests on a uniquely shaped white plate, characterized by undulating sides that create a wavy effect.\n\nIn the bottom right corner of the plate lies a shiny glazed strawberry, subtly showcasing its tiny black seeds, though some are missing. The bottom left corner features ",
+      "generated": "In this image, we can see a large white box with a red label on it. The label reads \"1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "key": "pixmo_cap-00000016",
+      "image_type": "photo",
+      "prompt": "Describe this image in detail.",
+      "reference": "In the image, a diverse group of people is gathered on a field bordered by leafy trees and a chain-link fence. The group includes individuals both in casual clothing and construction attire, with some wearing safety vests and white hard hats. At the center of the image, people are facing each other, seemingly focused on the ground, though it is unclear what exactly holds their attention. Scattered across the grass are several round balls, predominantly black, interspersed with orange ones. On the right side of the picture, a woman in a khaki hat, short-sleeved green shirt, and white capri pant",
+      "generated": "In this image, there are many people. There are people in the background. There are people in the foreground. There are people in the middle. There are people in the background. There are people in the middle. There are people in the background. There are people in the middle. There are people in the background. There are people in the middle. There are people in the background. There are people in the middle. There are people in the background. There are people in the middle. There are people in the background. There are people in the middle. There are people in the background. There are peop"
+    },
+    {
+      "key": "screen2words-00000001",
+      "image_type": "screenshot",
+      "prompt": "Give me a narrative description of this picture.",
+      "reference": "Settings page displayed of a ebook reading app.",
+      "generated": "A black and white photograph of a man standing in front of a white wall. The man is wearing a black shirt, a black tie, and a black leather jacket. His face is partially obscured by a black mask."
+    },
+    {
+      "key": "screen2words-00000003",
+      "image_type": "screenshot",
+      "prompt": "Provide a textual representation of this image.",
+      "reference": "Pop-up displaying the wifi auto connection.",
+      "generated": "A black and white image of a man in a white shirt, black pants, and black shoes standing in front of a white wall."
+    },
+    {
+      "key": "screen2words-00000006",
+      "image_type": "screenshot",
+      "prompt": "What is the overall content of this screenshot?",
+      "reference": "Sign up page of a business app.",
+      "generated": "This is a screenshot of a website that allows users to search for and view information about the latest news, articles, and videos."
+    },
+    {
+      "key": "screen2words-00000007",
+      "image_type": "screenshot",
+      "prompt": "Explain the elements present in this screenshot.",
+      "reference": "Page shows to create your alerts.",
+      "generated": "This is a screenshot of a website that displays a list of items. The website is likely a marketplace or a list of products. The items are displayed in a grid format, with each item having a title, a price, and a description. The website may be designed to allow users to add items to their cart or make purchases."
+    },
+    {
+      "key": "olmocr_docs-00000000",
+      "image_type": "page",
+      "prompt": "Please transcribe the text from this document image.",
+      "reference": "Law by which clitics move into second position, though for mysterious reasons. As things stand, such an account explains nothing (as Steele herself realizes) and can only function as a spur to further analysis.\n\nAn additional complexity is that even though second position is greatly favored as a location for clitics, the definition of 'second position' differs from language to language. Walbiri, Serbo-Croatian, Tagalog, and Pashto differ in detail on this point (Zwicky 1977:18-20), and the historical linguist is entitled to wonder if there are any reasons for these differences.\n\n11. Clisis and",
+      "generated": "The following is a summary of the key points from the provided text, which discusses the impact of the 1980s on the United States and the world, focusing on the economic and political changes, the rise of the United States as a global power, and the influence of the Cold War.\n\n1. **Economic and Political Changes in the 1980s**:\n   - The 1980s marked a significant period of economic and political transformation in the United States.\n   - The U.S. economy experienced a period of stagflation, characterized by high inflation and high unemployment.\n   - The Federal Reserve, under Paul Volcker, impl"
+    },
+    {
+      "key": "olmocr_docs-00000001",
+      "image_type": "page",
+      "prompt": "Type out everything written on this page.",
+      "reference": "List of Tables\n\n\u25a1 Table (2.1) Important of Techniques of Crystal Growth (Classification of Crystal Growth Techniques) ................................................................. 34\n\n\u25a1 Table (3.1) Terms in polarization series and their meanings .......................... 67\n\n\u25a1 Table (3.2) Materials for Nonlinear Optics .................................................... 97\n\n\u25a1 Table (4.1) Comparison of SHG efficiencies of promising semiorganic and organic NLO Crystal relative to KDP as reference Sample ......................... 123\n\n\u25a1 Table (4.2) Two theta values ,FWHM,d-spacing and their",
+      "generated": "The following is a summary of the key points from the provided text, organized in a clear and concise manner.\n\n1. **Introduction to the Text**:\n   - The text is a summary of a research paper published in the journal *Nature* on April 13, 2018, titled \"The role of the brain in the control of the body's immune system\" by researchers from the University of Geneva and the University of California, San Francisco.\n\n2. **Key Findings**:\n   - The study found that the brain can control the body's immune system, which is a significant discovery as it challenges the long-held belief that the brain is not"
+    },
+    {
+      "key": "olmocr_docs-00000002",
+      "image_type": "page",
+      "prompt": "Read the text in the picture and write it out exactly.",
+      "reference": "stained with 1% solution of Alizarin red S (Sigma\u2013Aldrich) as described previously (Hino et al. 1999).\n\n**Proliferation and 5-bromo-2\u2032-deoxyuridine incorporation assays**\n\nCells were seeded at 3000 cells/well in 96-well plates and grown for 24 h. The cells were starved for 24 h before treatment with different concentrations of NMB (Peptide Institute, Osaka, Japan) and E2 in starvation medium for 24 h. The NMBR antagonist BIM23127 (Bachem, Torrance, CA, USA) and MEK inhibitor U0126 (Calbiochem, San Diego, CA, USA) were added 1 h before NMB treatment. Cell proliferation was evaluated in 2-(2-met",
+      "generated": "**1.** The following is a list of the most important and relevant information in the text.  \n**2.** The following is a summary of the text.  \n**3.** The following is a summary of the text in your own words.  \n**4.** The following is a summary of the text in your own words.  \n**5.** The following is a summary of the text in your own words.  \n**6.** The following is a summary of the text in your own words.  \n**7.** The following is a summary of the text in your own words.  \n**8.** The following is a summary of the text in your own words.  \n**9.** The following is a summary of the text in your ow"
+    },
+    {
+      "key": "olmocr_docs-00000003",
+      "image_type": "page",
+      "prompt": "Transcribe everything printed or written in the image.",
+      "reference": "Abstract\nThis paper presents a 3D reconstruction technique for real world environments based on a traditional 2D laser range finder modified to implement a 3D laser scanner. The paper describes the mechanical and control issues addressed to achieve physically the 3D sensor as well as the adaptation of some previously developed techniques used to merge range and intensity data and illustrates the potential of such a unit. The result is a promising system for 3D modelling of real world scenes at a commercial price 10 or 20 times lower than current commercial 3D laser scanners.\n\nKeywords\n3D Recon",
+      "generated": "The following is a summary of the key points from the provided text.\n\n1. **Introduction to the Text**:\n   - The text is a summary of a research paper titled \"The Role of the Internet in the Development of the Internet of Things (IoT) in the Smart City\" published in the journal *IEEE Internet of Things*.\n   - The paper was published in the 2018 issue of the journal, and the summary is based on the original paper.\n\n2. **Key Points**:\n   - The paper discusses the role of the Internet of Things (IoT) in the development of smart cities.\n   - It explores the integration of IoT into smart cities, foc"
+    }
+  ]
+}

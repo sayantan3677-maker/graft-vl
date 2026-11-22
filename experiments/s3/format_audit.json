@@ -1,0 +1,632 @@
+{
+ "ai2d": {
+  "turns": 300,
+  "short_answers": 149,
+  "short_with_period": 0,
+  "answer_prefix": 149,
+  "mcq": 149,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "the related domain knowledge and theories that underly this diagram. Note that you do not need to provide much detail. Simply cover the most important concepts.",
+    "This figure is a diagram explaining the concept of ocean currents and how they a"
+   ],
+   [
+    "Question: What force is shown to act in the diagram?\nChoices:\nA. centrifugal\nB. magnetic\nC. none of the above\nD. centripetal\nAnswer with the letter.",
+    "Answer: A"
+   ]
+  ]
+ },
+ "aokvqa": {
+  "turns": 300,
+  "short_answers": 163,
+  "short_with_period": 163,
+  "answer_prefix": 137,
+  "mcq": 300,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "es this player practice?\nMake your selection and explain in format: 'Answer: answer\nRationale: rationale.'\nOptions: Ball carrying, serving, pitching, returning.",
+    "Answer: serving.\nRationale: The player is reaching up to hit the ball."
+   ],
+   [
+    "e batter?\nFrom the following four choices, select the correct answer to address the question.\nOptions: Joe mauer, chipper jones, tanyon sturtze, jerry cantrell.",
+    "Joe mauer."
+   ]
+  ]
+ },
+ "arxivqa": {
+  "turns": 300,
+  "short_answers": 0,
+  "short_with_period": 0,
+  "answer_prefix": 0,
+  "mcq": 0,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "rch compared to Brett. C. Both Brett and Ian found jobs quickly after graduation due to internships. D. The internship was more beneficial to Ian than to Brett.",
+    "The diagram suggests that because Brett found an internship and Ian did not, Ian"
+   ],
+   [
+    "ser source. B. It has been observed by SINFONI, Spitzer, and Herschel. C. It is only visible in the optical spectrum. D. It is the largest source in the region.",
+    "N113-YSO1 is marked with multiple symbols, including a square (Spitzer source), "
+   ]
+  ]
+ },
+ "chart2text": {
+  "turns": 300,
+  "short_answers": 0,
+  "short_with_period": 0,
+  "answer_prefix": 0,
+  "mcq": 0,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "What conclusions can be drawn from the information depicted in this graph?",
+    "This survey shows the shift in attitude towards homosexual marriages in Great Br"
+   ],
+   [
+    "Could you shed some light on the insights conveyed by this graph?",
+    "As COVID-19 cases have surged in the United States, young adults face a weakenin"
+   ]
+  ]
+ },
+ "chartqa": {
+  "turns": 300,
+  "short_answers": 300,
+  "short_with_period": 300,
+  "answer_prefix": 0,
+  "mcq": 0,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "What is Peloton's market cap?\nGive a very brief answer.",
+    "28649."
+   ],
+   [
+    "What was HPE's R&D expenditure in 2020?\nShort answer required.",
+    "1874."
+   ]
+  ]
+ },
+ "densefusion": {
+  "turns": 300,
+  "short_answers": 0,
+  "short_with_period": 0,
+  "answer_prefix": 0,
+  "mcq": 0,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "Please describe what you see in this image in detail.",
+    "The image displays a man and a gorilla in an indoor setting. The man is seated o"
+   ],
+   [
+    "Can you tell me what's happening in this picture?",
+    "The image displays a camouflage-patterned pouch with a metal clip, designed to h"
+   ]
+  ]
+ },
+ "doclingmatix": {
+  "turns": 300,
+  "short_answers": 1,
+  "short_with_period": 1,
+  "answer_prefix": 0,
+  "mcq": 0,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "What is the main topic of the first paragraph?",
+    "The main topic of the first paragraph is the importance and benefits of starting"
+   ],
+   [
+    "What document does the technical data sheet belong to?",
+    "The technical data sheet belongs to the product with the item number 0255600305A"
+   ]
+  ]
+ },
+ "docvqa": {
+  "turns": 300,
+  "short_answers": 273,
+  "short_with_period": 273,
+  "answer_prefix": 0,
+  "mcq": 0,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "What is the name of the university mentioned in the given form ?\nKeep it short and to the point.",
+    "WASHINGTON UNIVERSITY."
+   ],
+   [
+    "What is the Contract No:?\nYour answer should be compact.",
+    "DA-49-007-MD-1024."
+   ]
+  ]
+ },
+ "geo170k_qa": {
+  "turns": 300,
+  "short_answers": 1,
+  "short_with_period": 0,
+  "answer_prefix": 3,
+  "mcq": 300,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    " of AE to EF is 3:4 and BC measures 10.0, what is the distance from the chord BC to the center OD? \nChoices:\nA: \\frac{9}{4}\nB: \\frac{15}{4}\nC: 4\nD: \\frac{12}{5}",
+    "Solution: Let's connect BO, OC. \nSince OD is perpendicular to BC, we have angle "
+   ],
+   [
+    "cle O at point C. Point D is on circle O. Connect AD, CD, OA. If angle B = 20\u00b0, then the degree measure of angle ADC is ().\nChoices:\nA: 40\u00b0\nB: 35\u00b0\nC: 30\u00b0\nD: 20\u00b0",
+    "since AB is tangent to circle O, therefore, OA is perpendicular to AB. therefore"
+   ]
+  ]
+ },
+ "hitab": {
+  "turns": 300,
+  "short_answers": 274,
+  "short_with_period": 274,
+  "answer_prefix": 0,
+  "mcq": 0,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "How many percent of caregivers of seniors living in a care facility reported feeling depressed as a result of their caregiving responsibilities?",
+    "22.0."
+   ],
+   [
+    "Parse the table in full.",
+    "{'header': ['year', 'international', '', 'domestic', '', 'unscheduled', '', 'tot"
+   ]
+  ]
+ },
+ "iconqa": {
+  "turns": 300,
+  "short_answers": 300,
+  "short_with_period": 0,
+  "answer_prefix": 189,
+  "mcq": 189,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "Question: If you select a marble without looking, which color are you less likely to pick?\nChoices:\nA. light blue\nB. black\nAnswer with the letter.",
+    "Answer: B"
+   ],
+   [
+    "Question: The first picture is a moon. Which picture is seventh?\nChoices:\nA. star\nB. rocket\nC. moon\nAnswer with the letter.",
+    "Answer: B"
+   ]
+  ]
+ },
+ "infographic_vqa": {
+  "turns": 300,
+  "short_answers": 285,
+  "short_with_period": 0,
+  "answer_prefix": 0,
+  "mcq": 0,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "Which corporation has received the highest subsidy?\nAnswer the question with a short phrase.",
+    "$13.3 BILLION"
+   ],
+   [
+    "How many different types of turkeys are mentioned in the key?\nAnswer the question with a short phrase.",
+    "5"
+   ]
+  ]
+ },
+ "lnqa": {
+  "turns": 300,
+  "short_answers": 2,
+  "short_with_period": 2,
+  "answer_prefix": 0,
+  "mcq": 0,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "What type of structure is visible in the image?",
+    "There is a building in the image."
+   ],
+   [
+    "What type of flowers can be seen on the plant in the image?",
+    "There are pink color flowers on a plant in the image."
+   ]
+  ]
+ },
+ "localized_narratives": {
+  "turns": 300,
+  "short_answers": 0,
+  "short_with_period": 0,
+  "answer_prefix": 0,
+  "mcq": 0,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "In one or two sentences, can you explain what this image depicts?",
+    "As we can see in the image there is a wall, table, chair and a girl standing ove"
+   ],
+   [
+    "Could you give a brief overview of what you see in this image?",
+    "In the picture we can see a man standing near the desk and talking into the micr"
+   ]
+  ]
+ },
+ "ocrvqa": {
+  "turns": 300,
+  "short_answers": 276,
+  "short_with_period": 276,
+  "answer_prefix": 0,
+  "mcq": 0,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "Who is the author of this book?\nKeep it short and to the point.",
+    "Shawn O. Farrell."
+   ],
+   [
+    "Who is the author of this book?\nYour answer should be compact.",
+    "Christine Rimmer."
+   ]
+  ]
+ },
+ "olmocr_docs": {
+  "turns": 300,
+  "short_answers": 2,
+  "short_with_period": 0,
+  "answer_prefix": 0,
+  "mcq": 0,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "Transcribe the document.",
+    "Link between migraines and reduced breast cancer risk confirmed in follow-up stu"
+   ],
+   [
+    "Transcribe everything printed or written in the image.",
+    "MINOR IN LAW\n\nAt the undergraduate level, the Civil Law Section of the Faculty o"
+   ]
+  ]
+ },
+ "pixmo_cap": {
+  "turns": 300,
+  "short_answers": 0,
+  "short_with_period": 0,
+  "answer_prefix": 0,
+  "mcq": 0,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "What do you see in this image? Describe it thoroughly.",
+    "This image appears to be designed as a screenshot from a tablet, depicting a use"
+   ],
+   [
+    "What do you see in this image? Describe it thoroughly.",
+    "This composite photograph presents three distinct interior settings, each showca"
+   ]
+  ]
+ },
+ "plotqa": {
+  "turns": 300,
+  "short_answers": 284,
+  "short_with_period": 284,
+  "answer_prefix": 0,
+  "mcq": 0,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "Is the number of lines equal to the number of legend labels?\nProvide a succinct answer.",
+    "Yes."
+   ],
+   [
+    "How many groups of bars are there?\nMake the answer very short.",
+    "5."
+   ]
+  ]
+ },
+ "scienceqa": {
+  "turns": 300,
+  "short_answers": 300,
+  "short_with_period": 0,
+  "answer_prefix": 300,
+  "mcq": 300,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "n Pair 1.\nB. The magnitude of the magnetic force is greater in Pair 2.\nC. The magnitude of the magnetic force is the same in both pairs.\nAnswer with the letter.",
+    "Answer: A"
+   ],
+   [
+    "in both pairs.\nB. The magnitude of the magnetic force is greater in Pair 1.\nC. The magnitude of the magnetic force is greater in Pair 2.\nAnswer with the letter.",
+    "Answer: A"
+   ]
+  ]
+ },
+ "screen2words": {
+  "turns": 300,
+  "short_answers": 27,
+  "short_with_period": 27,
+  "answer_prefix": 0,
+  "mcq": 0,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "Describe this image in words.",
+    "User agreement screen in food app."
+   ],
+   [
+    "Explain the elements present in this screenshot.",
+    "Screen showing application settings page."
+   ]
+  ]
+ },
+ "screenqa": {
+  "turns": 300,
+  "short_answers": 89,
+  "short_with_period": 28,
+  "answer_prefix": 0,
+  "mcq": 0,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "How many likes does \"What do you think about a nose piercing?\" have?\nWhen the provided information is insufficient, respond with <no answer>.",
+    "<no answer>"
+   ],
+   [
+    "Which country is selected?",
+    "The selected country is the USA."
+   ]
+  ]
+ },
+ "slidevqa": {
+  "turns": 94,
+  "short_answers": 39,
+  "short_with_period": 2,
+  "answer_prefix": 0,
+  "mcq": 0,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "Looking at this presentation slide from 'bayesiandataanalysis-141112100931-conversion-gate02_95', How many prior probabilities are there in hyperparameter?",
+    "Based on the information in the slide(s), the answer is: 5"
+   ],
+   [
+    "Looking at this presentation slide from 'forextradingstrategies-150813102923-lva1-app6892_95', What are these trading strategies based on?",
+    "forex analysis"
+   ]
+  ]
+ },
+ "sroie": {
+  "turns": 300,
+  "short_answers": 278,
+  "short_with_period": 5,
+  "answer_prefix": 0,
+  "mcq": 0,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "What is written in the image? Answer this question using the text in the image directly.",
+    "CASH"
+   ],
+   [
+    "What is written in the image? Answer this question using the text in the image directly.",
+    "SQ003L STEAMED SQUIDS"
+   ]
+  ]
+ },
+ "st_vqa": {
+  "turns": 300,
+  "short_answers": 294,
+  "short_with_period": 294,
+  "answer_prefix": 0,
+  "mcq": 0,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "What word is printed in red?\nAnswer briefly.",
+    "Devil."
+   ],
+   [
+    "/What type of store is shown in this photo\nConcise answer only.",
+    "CANDLE."
+   ]
+  ]
+ },
+ "tallyqa": {
+  "turns": 300,
+  "short_answers": 300,
+  "short_with_period": 300,
+  "answer_prefix": 0,
+  "mcq": 0,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "How many street signs can be seen?\nGive a very brief answer.",
+    "2."
+   ],
+   [
+    "How many ducks?\nGive a very brief answer.",
+    "3."
+   ]
+  ]
+ },
+ "tat_qa": {
+  "turns": 300,
+  "short_answers": 179,
+  "short_with_period": 179,
+  "answer_prefix": 0,
+  "mcq": 1,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "ears ended March 31, 2018 and 2017 adjusted due to the adoption of ASC 606.\nWhich years does the table provide information for net sales by geographic location?",
+    "2019, 2018, 2017."
+   ],
+   [
+    "ion of actuarial losses are recorded in the other (loss) income, net line item in the statements of income.\nWhat were plan benefits provided in accordance with?",
+    "Local statutory requirements."
+   ]
+  ]
+ },
+ "textvqa": {
+  "turns": 300,
+  "short_answers": 294,
+  "short_with_period": 294,
+  "answer_prefix": 0,
+  "mcq": 0,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "What country is being celebrated in this banner?\nYour response must be concise.",
+    "America."
+   ],
+   [
+    "What is the time of this watch?\nEnsure brevity in your answer.",
+    "9:34."
+   ]
+  ]
+ },
+ "tqa": {
+  "turns": 300,
+  "short_answers": 0,
+  "short_with_period": 0,
+  "answer_prefix": 0,
+  "mcq": 0,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "Which planet is known for the rings of debris surrounding it?\na. Saturn\nb. Jupiter\nc. Neptune\nd. Uranus",
+    "The correct answer is A. Saturn."
+   ],
+   [
+    "Which label shows Evaporation?\na. R\nb. J\nc. D\nd. H",
+    "The correct answer is A. R."
+   ]
+  ]
+ },
+ "ureader_ie": {
+  "turns": 300,
+  "short_answers": 267,
+  "short_with_period": 4,
+  "answer_prefix": 0,
+  "mcq": 0,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "What is the value for the report_date?\nAnswer the question using a single word or phrase.",
+    "2013-11-30"
+   ],
+   [
+    "What is the value for the charity_name?\nAnswer the question using a single word or phrase.",
+    "Portsmouth Mediation Service"
+   ]
+  ]
+ },
+ "ureader_qa": {
+  "turns": 300,
+  "short_answers": 264,
+  "short_with_period": 6,
+  "answer_prefix": 0,
+  "mcq": 0,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "What is a way of Keeping Big Science Anonymous?\nAnswer the question using a single word or phrase.",
+    "It can be kept anonymous by stripping it of identifying information."
+   ],
+   [
+    "he highest rank of rider colin martin be 4.0, Yes or No?\nAnswer the question using a single word or phrase.",
+    "No"
+   ]
+  ]
+ },
+ "visual7w": {
+  "turns": 300,
+  "short_answers": 300,
+  "short_with_period": 0,
+  "answer_prefix": 300,
+  "mcq": 300,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "Question: what color is the building?\nChoices:\nA. Blue.\nB. Red.\nC. Green.\nD. Black.\nAnswer with the letter.",
+    "Answer: B"
+   ],
+   [
+    "Question: where was this taken?\nChoices:\nA. Farm.\nB. Street.\nC. At a corral.\nD. Mountains.\nAnswer with the letter.",
+    "Answer: C"
+   ]
+  ]
+ },
+ "visualwebinstruct": {
+  "turns": 300,
+  "short_answers": 1,
+  "short_with_period": 0,
+  "answer_prefix": 1,
+  "mcq": 2,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "<image>\nWhat does the notation \"Tv = -v\" signify in Figure 2?",
+    "The notation \"Tv = -v\" in Figure 2 signifies that the transformation T applied t"
+   ],
+   [
+    " most likely represent the immediate economic impact?\n\na) Shift from AD1 to AD2  \nb) Shift from AD2 to AD1  \nc) Shift from AD2 to AD3  \nd) Shift from AD3 to AD2",
+    "c) Shift from AD2 to AD3  \n\nReason: A reduction in taxes puts more disposable in"
+   ]
+  ]
+ },
+ "vqav2": {
+  "turns": 300,
+  "short_answers": 300,
+  "short_with_period": 300,
+  "answer_prefix": 0,
+  "mcq": 0,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "Do the birds have toys?\nBe succinct.",
+    "Yes."
+   ],
+   [
+    "Is it cold?\nAnswer briefly.",
+    "Yes."
+   ]
+  ]
+ },
+ "vsr": {
+  "turns": 300,
+  "short_answers": 300,
+  "short_with_period": 300,
+  "answer_prefix": 0,
+  "mcq": 0,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "Is the statement \"The person is far away from the potted plant.\" accurate regarding the image?\nAnswer yes or no.",
+    "No."
+   ],
+   [
+    "Is the given caption \"The oven is below the pizza.\" fitting for the image?\nAnswer yes or no.",
+    "No."
+   ]
+  ]
+ },
+ "websight": {
+  "turns": 300,
+  "short_answers": 0,
+  "short_with_period": 0,
+  "answer_prefix": 0,
+  "mcq": 0,
+  "mcq_bare_letter": 0,
+  "ex": [
+   [
+    "Convert this screenshot into its equivalent HTML structure.",
+    "<html>\n<link href=\"https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind"
+   ],
+   [
+    "Compose the HTML code to achieve the same design as this screenshot.",
+    "<html>\n<link href=\"https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind"
+   ]
+  ]
+ }
+}

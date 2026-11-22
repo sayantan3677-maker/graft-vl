@@ -1,0 +1,65 @@
+{
+  "80": {
+    "acc": 0.0,
+    "examples": [
+      [
+        "BANANA",
+        "CEREAL"
+      ],
+      [
+        "GARDEN",
+        "Budophila"
+      ],
+      [
+        "ROCKET",
+        "Eclipse"
+      ],
+      [
+        "PLANET",
+        "UNIVERSAL"
+      ]
+    ]
+  },
+  "40": {
+    "acc": 3.3,
+    "examples": [
+      [
+        "BANANA",
+        "SWANK"
+      ],
+      [
+        "GARDEN",
+        "Flower"
+      ],
+      [
+        "ROCKET",
+        "HEART"
+      ],
+      [
+        "PLANET",
+        "Heavily"
+      ]
+    ]
+  },
+  "20": {
+    "acc": 0.0,
+    "examples": [
+      [
+        "BANANA",
+        "ICE"
+      ],
+      [
+        "GARDEN",
+        "Flower"
+      ],
+      [
+        "ROCKET",
+        "HEAVENLY"
+      ],
+      [
+        "PLANET",
+        "UNISON"
+      ]
+    ]
+  }
+}

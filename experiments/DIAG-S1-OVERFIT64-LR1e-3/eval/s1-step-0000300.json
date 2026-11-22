@@ -1,0 +1,90 @@
+{
+  "checkpoint": "step-0000300",
+  "eval_data": "manifests/s1-overfit64",
+  "reliance": {
+    "all": {
+      "real": 1.8201690858475428,
+      "blind": 4.078014884300086,
+      "swapped": 2.797701293096443,
+      "zeroed": 3.660940250195461,
+      "n_samples": 64,
+      "gap_blind": 2.2578457984525433,
+      "gap_swapped": 0.9775322072489003,
+      "gap_zeroed": 1.840771164347918
+    },
+    "page": {
+      "real": 2.131070415415461,
+      "blind": 4.218752306983585,
+      "swapped": 2.8029973863609254,
+      "zeroed": 4.030815586211189,
+      "n_samples": 16,
+      "gap_blind": 2.0876818915681237,
+      "gap_swapped": 0.6719269709454645,
+      "gap_zeroed": 1.8997451707957285
+    },
+    "photo": {
+      "real": 1.7213576422725878,
+      "blind": 3.8478552667679513,
+      "swapped": 2.8043741043800567,
+      "zeroed": 3.3885171307253725,
+      "n_samples": 32,
+      "gap_blind": 2.1264976244953635,
+      "gap_swapped": 1.083016462107469,
+      "gap_zeroed": 1.6671594884527847
+    },
+    "screenshot": {
+      "real": 0.7669462583683155,
+      "blind": 12.515626829641837,
+      "swapped": 2.3780516615620364,
+      "zeroed": 9.853089869463885,
+      "n_samples": 16,
+      "gap_blind": 11.748680571273521,
+      "gap_swapped": 1.6111054031937209,
+      "gap_zeroed": 9.086143611095569
+    }
+  },
+  "generations": [
+    {
+      "key": "pixmo_cap-00000000",
+      "image_type": "photo",
+      "prompt": "Write a detailed caption for this image.",
+      "reference": "This image is a highly detailed, rectangular graphics artwork of a realistic 3D-rendered man, centered against a completely black background. The man, likely in his late 30s and of Middle Eastern or Latino descent, appears to be a soldier or knight. He is portrayed as handsome and is gazing straight forward. He wears a distinct uniform with a combination of dark gray, white, blue, red, and black colors. His outfit includes a gray hood that extends down to his shoulders, adorned with some sort of emblem or artwork on the front. The man's facial features, including dark eyebrows, eyes, and a sli",
+      "generated": "This image is a highly detailed, 1024x1024 pixel UI design that appears to be a digital representation of a 3D model of a person's face. The UI is designed to resemble a 3D face, with the face being a composite of multiple facial features: eyes, nose, mouth, and lips. The image is likely generated using a 3D modeling tool and is intended for use as a visual representation in a mobile application. The UI is designed to be a simplified, stylized version of a 3D face, which could be used as a placeholder or a visual element in a mobile app interface. It is not a standalone UI but rather a part of"
+    },
+    {
+      "key": "pixmo_cap-00000001",
+      "image_type": "photo",
+      "prompt": "Describe everything visible in this image.",
+      "reference": "This vibrant and artistic image showcases a figure adorned in richly colored, African-inspired attire, complete with intricate design patterns in red, green, black, and yellow hues. The character, with a black face accented by white detailing for eyes, nose, and mouth, is playing a lengthy, elaborately decorated didgeridoo. The didgeridoo, primarily golden yellow, features complex designs in red, yellow, black, and gold, including black diamonds with golden tips and other colorful wraps. The person is holding the instrument with one hand while the other hand is raised. A striking feature of th",
+      "generated": "This vibrant, 360-degree panoramic image showcases a diverse group of individuals engaged in various activities, all set against a warm, golden-yellow background with soft lighting. The scene is rendered in a digital format, utilizing high-resolution imaging and advanced color rendering techniques to achieve a rich, detailed visual experience.\n\nThe image features a multitude of people of different ethnicities and genders, with a significant emphasis on women and men of color. The composition is not only visually rich but also highly detailed, capturing intricate details of clothing, hair, and "
+    },
+    {
+      "key": "screen2words-00000000",
+      "image_type": "screenshot",
+      "prompt": "Provide a description of this screenshot.",
+      "reference": "Pop-up displaying list of apps to select.",
+      "generated": "Pop-up displaying list of apps to select."
+    },
+    {
+      "key": "screen2words-00000001",
+      "image_type": "screenshot",
+      "prompt": "Explain the elements present in this screenshot.",
+      "reference": "Screen showing the field to enter the system id.",
+      "generated": "Screen showing the list of settings for the phone."
+    },
+    {
+      "key": "olmocr_docs-00000000",
+      "image_type": "page",
+      "prompt": "Please transcribe the text from this document image.",
+      "reference": "endorsed by the Executive Committee. Following a membership-wide consultation, a revised version of the Procedure for Joint Statements is being put forward for adoption at the Closed Session.\n\n**Engaging externally: GPA observers**\n\nThe GPA continued to be represented by its observers at international organisations: NPC Philippines at APEC; CNIL France at OECD; EDPS, EU at the Council of Europe and OPC Canada at the UN Counter-Terrorism Committee.\n\nWhile the number of events might have been reduced this year in the current unprecedented global circumstances, our observers continued to engage w",
+      "generated": "```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n```\n\n"
+    },
+    {
+      "key": "olmocr_docs-00000008",
+      "image_type": "page",
+      "prompt": "Extract all text from the image provided.",
+      "reference": "It was 100 years ago - on August 16, 1916 \u2013 that the seeds were planted for what would grow into the Georgia Department of Transportation. Georgia DOT celebrates its 100th birthday with a year-long Centennial celebration that explores GDOT\u2019s role in getting Georgia out of the mud \u2013 from the dirt roads of 1916 to the paved roads crisscrossing Georgia in 1939 to today\u2019s modern transportation system.\n\nFor everything you want to know about the centennial, visit www.dot.ga.gov/centennial. In addition to the award winning student art entries, you\u2019ll also find an event calendar, decade-by-decade time",
+      "generated": "### 2018 - 2019\n\n#### 2018\n\n- 2018: 1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "checkpoint": "step-0015600",
+  "eval_data": "manifests/diag-train-vqav2",
+  "reliance": {
+    "all": {
+      "real": 1.196545986674618,
+      "blind": 2.7608527922971207,
+      "swapped": 1.5082381570279815,
+      "zeroed": 9.501111348470053,
+      "n_samples": 40,
+      "gap_blind": 1.5643068056225027,
+      "gap_swapped": 0.3116921703533635,
+      "gap_zeroed": 8.304565361795435
+    },
+    "photo": {
+      "real": 1.196545986674618,
+      "blind": 2.7608527922971207,
+      "swapped": 1.5082381570279815,
+      "zeroed": 9.501111348470053,
+      "n_samples": 40,
+      "gap_blind": 1.5643068056225027,
+      "gap_swapped": 0.3116921703533635,
+      "gap_zeroed": 8.304565361795435
+    }
+  },
+  "generations": [
+    {
+      "key": "vqav2-00000000",
+      "image_type": "photo",
+      "prompt": "What type of animal are these?\nKeep it brief.",
+      "reference": "Swans.",
+      "generated": "Ducks."
+    }
+  ]
+}

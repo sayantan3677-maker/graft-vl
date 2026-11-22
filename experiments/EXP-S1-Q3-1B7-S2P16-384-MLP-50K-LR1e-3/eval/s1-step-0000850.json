@@ -1,0 +1,132 @@
+{
+  "checkpoint": "step-0000850",
+  "eval_data": "manifests/s1-eval300",
+  "reliance": {
+    "all": {
+      "real": 2.174392963585637,
+      "blind": 3.1565632493422804,
+      "swapped": 2.224650339208687,
+      "zeroed": 3.6750224876130235,
+      "n_samples": 110,
+      "gap_blind": 0.9821702857566432,
+      "gap_swapped": 0.05025737562304977,
+      "gap_zeroed": 1.5006295240273864
+    },
+    "page": {
+      "real": 2.3630575604413875,
+      "blind": 3.166603223863133,
+      "swapped": 2.393524101904866,
+      "zeroed": 3.764755616923423,
+      "n_samples": 51,
+      "gap_blind": 0.8035456634217457,
+      "gap_swapped": 0.030466541463478602,
+      "gap_zeroed": 1.4016980564820356
+    },
+    "photo": {
+      "real": 2.442428476232672,
+      "blind": 6.237703722898011,
+      "swapped": 2.7914878340484703,
+      "zeroed": 6.031384403791932,
+      "n_samples": 53,
+      "gap_blind": 3.7952752466653386,
+      "gap_swapped": 0.34905935781579833,
+      "gap_zeroed": 3.5889559275592604
+    },
+    "screenshot": {
+      "real": 0.43271035544395076,
+      "blind": 0.9284846734593689,
+      "swapped": 0.43804371129227204,
+      "zeroed": 1.2947242315006033,
+      "n_samples": 6,
+      "gap_blind": 0.49577431801541816,
+      "gap_swapped": 0.005333355848321286,
+      "gap_zeroed": 0.8620138760566526
+    }
+  },
+  "generations": [
+    {
+      "key": "pixmo_cap-00000068",
+      "image_type": "photo",
+      "prompt": "Describe this image in detail.",
+      "reference": "The image captures a bustling mall interior from 2004, with an upper and lower level visible. The centerpiece is a massive clock designed to resemble a giant pocket watch, complete with a winding knob, Roman numerals, and a distinctive logo. This clock is attached to a second-floor balcony, appearing gold and intricately detailed. The scene includes numerous shops on both levels, some with Asian language signage, suggesting a diverse retail environment. A security camera is positioned behind the clock to the left. The lower-level stores seem to offer a variety of items from jewelry to technica",
+      "generated": "In this image, we can see a clock tower with a digital clock on it. The clock tower is surrounded by a white wall. On the wall, there are several clocks, some of which are digital. In the center of the image, there is a large clock tower with a digital clock on it. The tower is surrounded by a white wall, and there are several clocks on the wall. The image is taken from the top, showing the entire clock tower and its surrounding elements."
+    },
+    {
+      "key": "localized_narratives-00000000",
+      "image_type": "photo",
+      "prompt": "Describe this image in one or two sentences.",
+      "reference": "In this picture we can see noodles, fork, few leaves and other food in the plate.",
+      "generated": "In this image we can see a plate with food on it. We can see a plate with food on it. We can see a plate with food on it."
+    },
+    {
+      "key": "localized_narratives-00000001",
+      "image_type": "photo",
+      "prompt": "Describe this image in one or two sentences.",
+      "reference": "This image is taken in a petrol bunk. On the left side of the image a car is parked on the road and a fuel tank is opened. On the right side of the image a man is standing on the floor and filling diesel, holding a diesel pipe in his hand.",
+      "generated": "In this image we can see a car."
+    },
+    {
+      "key": "localized_narratives-00000002",
+      "image_type": "photo",
+      "prompt": "Could you give a brief overview of what you see in this image?",
+      "reference": "In this image I can see bottles,glasses and the menu on the table. In the back there is a person standing in front of the wall and there are many wine bottles on the table.",
+      "generated": "In this image we can see a bottle of wine and a bottle of beer."
+    },
+    {
+      "key": "websight-00000000",
+      "image_type": "screenshot",
+      "prompt": "Generate the HTML code corresponding to this website screenshot.",
+      "reference": "<html>\n<link href=\"https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css\" rel=\"stylesheet\">\n<body class=\"bg-gray-200\">\n  <div class=\"flex flex-col items-center justify-center min-h-screen\">\n    <header class=\"w-full bg-gray-800 text-white p-4\">\n      <h1 class=\"text-2xl font-bold\">Welcome to Our Tech Company</h1>\n    </header>\n    <main class=\"flex flex-col items-center justify-center w-full flex-1 px-20 text-center\">\n      <p class=\"text-lg mb-6\">\n        At Our Tech Company, we are dedicated to providing innovative and reliable technology solutions to meet your business needs",
+      "generated": "<html>\n<link href=\"https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css\" rel=\"stylesheet\">\n<body class=\"bg-gray-100\">\n  <header class=\"bg-white\">\n    <nav class=\"container mx-auto px-4 py-4\">\n      <div class=\"flex justify-between items-center\">\n        <a href=\"#\" class=\"text-xl font-bold\">Logo</a>\n        <div class=\"flex space-x-4\">\n          <a href=\"#\" class=\"text-gray-700 hover:text-gray-900\">Home</a>\n          <a href=\"#\" class=\"text-gray-700 hover:text-gray-900\">About</a>\n          <a href=\"#\" class=\"text-gray-700 hover:text-gray-900\">Services</a>\n          <a href=\"#\""
+    },
+    {
+      "key": "websight-00000006",
+      "image_type": "screenshot",
+      "prompt": "Transform this website screenshot into HTML code.",
+      "reference": "<html>\n<link href=\"https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css\" rel=\"stylesheet\">\n<body class=\"bg-gray-100\">\n  <div class=\"relative\">\n    <img src=\"https://source.unsplash.com/random/1200x600/?fashion\" alt=\"Fashion Item\" class=\"w-full\">\n    <div class=\"absolute inset-0 flex items-center justify-center\">\n      <div class=\"bg-white bg-opacity-75 p-8 rounded-lg\">\n        <h1 class=\"text-4xl font-bold mb-4\">Fashion Brand</h1>\n        <p class=\"text-lg\">\n          At Fashion Brand, we believe in the power of fashion to express individuality and style. Our collection is des",
+      "generated": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Sample Website</title>\n  <style>\n    body {\n      font-family: Arial, sans-serif;\n      margin: 0;\n      padding: 0;\n      background-color: #f4f4f4;\n    }\n\n    header {\n      background-color: #333;\n      color: white;\n      padding: 10px 20px;\n      text-align: center;\n    }\n\n    nav {\n      background-color: #444;\n      padding: 10px 20px;\n      text-align: center;\n    }\n\n    nav a {\n      color: white;\n      margin: 0 10px;\n      text-decoration"
+    },
+    {
+      "key": "websight-00000008",
+      "image_type": "screenshot",
+      "prompt": "Reconstruct the HTML code from this website image.",
+      "reference": "<html>\n<link href=\"https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css\" rel=\"stylesheet\">\n<body class=\"font-sans antialiased text-gray-900 leading-normal tracking-wider bg-cover bg-center\" style=\"background-image: url('https://source.unsplash.com/random/1600x900/?architecture');\">\n  <div class=\"container w-full md:max-w-3xl mx-auto pt-20\">\n    <div class=\"w-full px-4 md:px-6 text-xl text-center text-gray-800 leading-normal\">\n      <div class=\"font-sans break-normal white-space-pre-line\">\n        <p>Welcome to our Architecture Firm Site, your one-stop destination for all your ",
+      "generated": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Green Valley Resort</title>\n  <style>\n    body {\n      margin: 0;\n      font-family: Arial, sans-serif;\n      background-color: #f0f0f0;\n    }\n\n    header {\n      background-color: #333;\n      color: white;\n      padding: 10px 20px;\n      text-align: center;\n    }\n\n    nav {\n      background-color: #444;\n      padding: 10px 20px;\n      text-align: center;\n    }\n\n    nav a {\n      color: white;\n      margin: 0 10px;\n      text-decoration: none;\n    }"
+    },
+    {
+      "key": "websight-00000010",
+      "image_type": "screenshot",
+      "prompt": "Render the HTML code that corresponds to this web design.",
+      "reference": "<html>\n<link href=\"https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css\" rel=\"stylesheet\">\n<body class=\"bg-gray-100\">\n    <div class=\"container mx-auto px-4 py-8\">\n        <h1 class=\"text-4xl font-bold text-center text-gray-800\">Nonprofit Organization</h1>\n        <p class=\"text-lg text-gray-700 mt-4\">\n            At Nonprofit Organization, we believe in the power of community. We are committed to making a positive impact in our community by organizing and participating in various initiatives and volunteer opportunities. Our goal is to create a better world for everyone.\n     ",
+      "generated": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Sample Website</title>\n  <style>\n    body {\n      font-family: Arial, sans-serif;\n      margin: 0;\n      padding: 0;\n    }\n\n    header {\n      background-color: #333;\n      color: white;\n      padding: 10px 20px;\n      text-align: center;\n    }\n\n    nav {\n      display: flex;\n      justify-content: center;\n      background-color: #444;\n    }\n\n    nav a {\n      color: white;\n      text-decoration: none;\n      padding: 10px 15px;\n      margin: 0 10px;"
+    },
+    {
+      "key": "olmocr_docs-00000000",
+      "image_type": "page",
+      "prompt": "Please transcribe the text from this document image.",
+      "reference": "Law by which clitics move into second position, though for mysterious reasons. As things stand, such an account explains nothing (as Steele herself realizes) and can only function as a spur to further analysis.\n\nAn additional complexity is that even though second position is greatly favored as a location for clitics, the definition of 'second position' differs from language to language. Walbiri, Serbo-Croatian, Tagalog, and Pashto differ in detail on this point (Zwicky 1977:18-20), and the historical linguist is entitled to wonder if there are any reasons for these differences.\n\n11. Clisis and",
+      "generated": "The following is a summary of the key findings from the study by Dr. L. M. H. Hui, Dr. A. M. H. Hui, and Dr. A. M. H. Hui, published in the journal *Journal of the American Medical Association* (JAMA) in 1990. The study, titled \"The Effect of the 1986-1987 United States Food and Drug Administration (FDA) Food Labeling Regulation on the Consumption of Caffeine and Caffeine-Containing Beverages,\" examined the impact of a new FDA regulation on the consumption of caffeine and caffeine-containing beverages.\n\n**Key Findings:**\n\n1. **Regulation Overview:** The FDA implemented a new labeling regulatio"
+    },
+    {
+      "key": "olmocr_docs-00000001",
+      "image_type": "page",
+      "prompt": "Type out everything written on this page.",
+      "reference": "List of Tables\n\n\u25a1 Table (2.1) Important of Techniques of Crystal Growth (Classification of Crystal Growth Techniques) ................................................................. 34\n\n\u25a1 Table (3.1) Terms in polarization series and their meanings .......................... 67\n\n\u25a1 Table (3.2) Materials for Nonlinear Optics .................................................... 97\n\n\u25a1 Table (4.1) Comparison of SHG efficiencies of promising semiorganic and organic NLO Crystal relative to KDP as reference Sample ......................... 123\n\n\u25a1 Table (4.2) Two theta values ,FWHM,d-spacing and their",
+      "generated": "**Figure 1.** Schematic of the experimental setup for the study of the effect of the magnetic field on the magnetic properties of the Fe-Fe3O4 composite. The Fe-Fe3O4 composite is placed in a magnetic field of 1000 mT, and the magnetic field is applied along the z-axis. The magnetic field is applied to the composite in the direction of the z-axis. The composite is placed in a magnetic field of 1000 mT, and the magnetic field is applied along the z-axis. The composite is placed in a magnetic field of 1000 mT, and the magnetic field is applied along the z-axis. The composite is placed in a magne"
+    },
+    {
+      "key": "olmocr_docs-00000002",
+      "image_type": "page",
+      "prompt": "Read the text in the picture and write it out exactly.",
+      "reference": "stained with 1% solution of Alizarin red S (Sigma\u2013Aldrich) as described previously (Hino et al. 1999).\n\n**Proliferation and 5-bromo-2\u2032-deoxyuridine incorporation assays**\n\nCells were seeded at 3000 cells/well in 96-well plates and grown for 24 h. The cells were starved for 24 h before treatment with different concentrations of NMB (Peptide Institute, Osaka, Japan) and E2 in starvation medium for 24 h. The NMBR antagonist BIM23127 (Bachem, Torrance, CA, USA) and MEK inhibitor U0126 (Calbiochem, San Diego, CA, USA) were added 1 h before NMB treatment. Cell proliferation was evaluated in 2-(2-met",
+      "generated": "**Figure 1.** **A.** Schematic of the experimental setup. **B.** Schematic of the microfluidic device used for the experiments. **C.** Schematic of the microfluidic device used for the experiments. **D.** Schematic of the microfluidic device used for the experiments. **E.** Schematic of the microfluidic device used for the experiments. **F.** Schematic of the microfluidic device used for the experiments. **G.** Schematic of the microfluidic device used for the experiments. **H.** Schematic of the microfluidic device used for the experiments. **I.** Schematic of the microfluidic device used for"
+    },
+    {
+      "key": "olmocr_docs-00000003",
+      "image_type": "page",
+      "prompt": "Transcribe everything printed or written in the image.",
+      "reference": "Abstract\nThis paper presents a 3D reconstruction technique for real world environments based on a traditional 2D laser range finder modified to implement a 3D laser scanner. The paper describes the mechanical and control issues addressed to achieve physically the 3D sensor as well as the adaptation of some previously developed techniques used to merge range and intensity data and illustrates the potential of such a unit. The result is a promising system for 3D modelling of real world scenes at a commercial price 10 or 20 times lower than current commercial 3D laser scanners.\n\nKeywords\n3D Recon",
+      "generated": "1. Introduction\n\nThe problem of finding the optimal control of a system with a constraint is a classical problem in control theory. In this paper, we consider the problem of finding the optimal control of a system with a constraint. The problem is formulated as follows: given a system with a constraint, find the optimal control that minimizes the cost function. The system is described by a differential equation with a constraint. The optimal control is found by solving a Hamilton-Jacobi-Bellman equation. The solution of the Hamilton-Jacobi-Bellman equation is the optimal control. The solution "
+    }
+  ]
+}

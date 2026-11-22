@@ -1,0 +1,328 @@
+{
+  "run_id": "HYB-S3-Q3-4B-LORA64-4000",
+  "init": "exports/hybrid-q3-4b-aligned",
+  "data": [
+    {
+      "path": "manifests/s3/docvqa",
+      "weight": 0.06,
+      "normalize_format": "qa"
+    },
+    {
+      "path": "manifests/s3/infographic_vqa",
+      "weight": 0.035,
+      "normalize_format": "qa"
+    },
+    {
+      "path": "manifests/s3/pdfvqa",
+      "weight": 0.008,
+      "normalize_format": "qa"
+    },
+    {
+      "path": "manifests/s3/visualmrc",
+      "weight": 0.015,
+      "normalize_format": "qa"
+    },
+    {
+      "path": "manifests/s3/ureader_qa",
+      "weight": 0.025,
+      "normalize_format": "qa"
+    },
+    {
+      "path": "manifests/s3/ureader_kg",
+      "weight": 0.015,
+      "normalize_format": "qa"
+    },
+    {
+      "path": "manifests/s2/ureader_ie",
+      "weight": 0.01,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s2/olmocr_docs",
+      "weight": 0.015,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s3/olmocr_books",
+      "weight": 0.01,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s2/doclingmatix",
+      "weight": 0.01,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s3/cosyn_document",
+      "weight": 0.025,
+      "normalize_format": "qa"
+    },
+    {
+      "path": "manifests/s2/sroie",
+      "weight": 0.005,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s3/invoices_receipts",
+      "weight": 0.008,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s3/tat_dqa",
+      "weight": 0.008,
+      "normalize_format": "qa"
+    },
+    {
+      "path": "manifests/s2/slidevqa",
+      "weight": 0.005,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s3/chartqa",
+      "weight": 0.045,
+      "normalize_format": "qa"
+    },
+    {
+      "path": "manifests/s3/plotqa",
+      "weight": 0.01,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s3/dvqa",
+      "weight": 0.01,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s3/figureqa",
+      "weight": 0.008,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s3/unichart",
+      "weight": 0.02,
+      "normalize_format": "qa"
+    },
+    {
+      "path": "manifests/s3/mmc_instruct",
+      "weight": 0.015,
+      "normalize_format": "qa"
+    },
+    {
+      "path": "manifests/s3/vistext",
+      "weight": 0.008,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s3/cosyn_chart",
+      "weight": 0.025,
+      "normalize_format": "qa"
+    },
+    {
+      "path": "manifests/s3/cosyn_table",
+      "weight": 0.015,
+      "normalize_format": "qa"
+    },
+    {
+      "path": "manifests/s3/robut_wtq",
+      "weight": 0.01,
+      "normalize_format": "qa"
+    },
+    {
+      "path": "manifests/s3/mapqa",
+      "weight": 0.005,
+      "normalize_format": "qa"
+    },
+    {
+      "path": "manifests/s3c/chart2text",
+      "weight": 0.005,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s3c/hitab",
+      "weight": 0.005,
+      "normalize_format": "qa"
+    },
+    {
+      "path": "manifests/s2/tat_qa",
+      "weight": 0.004,
+      "normalize_format": "qa"
+    },
+    {
+      "path": "manifests/s3/textvqa",
+      "weight": 0.035,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s3/st_vqa",
+      "weight": 0.02,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s3/ocrvqa",
+      "weight": 0.02,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s3/llavar",
+      "weight": 0.015,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s3/textocr_gpt4v",
+      "weight": 0.015,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s3/cocotext",
+      "weight": 0.01,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s3/rendered_text",
+      "weight": 0.005,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s3/iam",
+      "weight": 0.005,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s3/infographic_gpt4v",
+      "weight": 0.005,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s3/ai2d",
+      "weight": 0.015,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s2/scienceqa",
+      "weight": 0.006,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s3c/tqa",
+      "weight": 0.006,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s2/iconqa",
+      "weight": 0.004,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s2/geo170k_qa",
+      "weight": 0.002,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s2/arxivqa",
+      "weight": 0.003,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s2/vqav2",
+      "weight": 0.025,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s3c/aokvqa",
+      "weight": 0.01,
+      "normalize_format": "qa"
+    },
+    {
+      "path": "manifests/s3c/visual7w",
+      "weight": 0.008,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s3c/tallyqa",
+      "weight": 0.01,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s3c/vsr",
+      "weight": 0.005,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s3c/pixmo_cap",
+      "weight": 0.02,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s3c/densefusion",
+      "weight": 0.015,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s2/localized_narratives",
+      "weight": 0.005,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s2/lnqa",
+      "weight": 0.007,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s3c/screenqa",
+      "weight": 0.03,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s3c/screen2words",
+      "weight": 0.01,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s3c/visualwebinstruct",
+      "weight": 0.02,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/s2/websight",
+      "weight": 0.005,
+      "normalize_format": true
+    },
+    {
+      "path": "manifests/synth-reading-200k",
+      "weight": 0.02
+    },
+    {
+      "path": "manifests/traces-q3-1b7-v3",
+      "weight": 0.01
+    },
+    {
+      "path": "manifests/traces-q3-1b7-s2-v3",
+      "weight": 0.015
+    },
+    {
+      "path": "manifests/replay-q3-4b-16k",
+      "weight": 0.14
+    },
+    {
+      "path": "manifests/replay-q3-4b-ifsafety-4k",
+      "weight": 0.04
+    }
+  ],
+  "lr_merger": 5e-05,
+  "vit_top_blocks": 0,
+  "lora": {
+    "r": 64,
+    "alpha": 128,
+    "dropout": 0.0
+  },
+  "lr_lora": 0.0001,
+  "max_steps": 4000,
+  "grad_accum": 32,
+  "warmup_ratio": 0.03,
+  "save_every": 1000,
+  "log_every": 25,
+  "max_pixels": 1600000,
+  "max_length": 6144,
+  "num_workers": 16,
+  "gradient_checkpointing": false
+}

@@ -1,0 +1,132 @@
+{
+  "checkpoint": "step-0000170",
+  "eval_data": "manifests/s1-eval300",
+  "reliance": {
+    "all": {
+      "real": 2.141969669465634,
+      "blind": 3.159654952965453,
+      "swapped": 2.1457776405640665,
+      "zeroed": 2.930212044202362,
+      "n_samples": 201,
+      "gap_blind": 1.017685283499819,
+      "gap_swapped": 0.00380797109843245,
+      "gap_zeroed": 0.7882423747367278
+    },
+    "page": {
+      "real": 2.4305675062362417,
+      "blind": 3.2484959699663345,
+      "swapped": 2.433136025978564,
+      "zeroed": 3.0789850090520514,
+      "n_samples": 75,
+      "gap_blind": 0.8179284637300928,
+      "gap_swapped": 0.002568519742322195,
+      "gap_zeroed": 0.6484175028158097
+    },
+    "photo": {
+      "real": 2.5877595734259455,
+      "blind": 4.5330456273651905,
+      "swapped": 2.5960722816617867,
+      "zeroed": 3.993889649573261,
+      "n_samples": 94,
+      "gap_blind": 1.945286053939245,
+      "gap_swapped": 0.008312708235841182,
+      "gap_zeroed": 1.4061300761473157
+    },
+    "screenshot": {
+      "real": 0.6600093339546388,
+      "blind": 1.183703267014995,
+      "swapped": 0.6622899858641024,
+      "zeroed": 1.141085801513589,
+      "n_samples": 32,
+      "gap_blind": 0.5236939330603562,
+      "gap_swapped": 0.0022806519094635824,
+      "gap_zeroed": 0.48107646755895017
+    }
+  },
+  "generations": [
+    {
+      "key": "pixmo_cap-00000000",
+      "image_type": "photo",
+      "prompt": "Describe this image in detail.",
+      "reference": "The blurry photograph appears to be taken in a garage or a kitchen setting, featuring a gray concrete floor and wooden cupboards in the background. Central to the image are two folding tables with black stands and light brown tabletops, seemingly set up for a party. The table to the left is cluttered with various items, including an open can of Coke, a small white foam bowl, and several brightly colored objects potentially linked to party supplies like balloons or candy. Blue flip-flops are noticeable on the floor near a white object. Folded chairs are arranged around the tables, and cabinets ",
+      "generated": "In the background, we see a white wall with a black and white pattern. On the wall, there are two black and white stripes. In the center of the wall, there is a black and white rectangle. On the right side of the wall, there is a black and white rectangle. On the left side of the wall, there is a black and white rectangle. In the center of the wall, there is a black and white rectangle. On the right side of the wall, there is a black and white rectangle. On the left side of the wall, there is a black and white rectangle. In the center of the wall, there is a black and white rectangle. On the r"
+    },
+    {
+      "key": "pixmo_cap-00000006",
+      "image_type": "photo",
+      "prompt": "Give a detailed description of the picture.",
+      "reference": "In this image, we see a cartoon depiction of an airplane set against an all-white background. The airplane is predominantly red, with gray wheels visible. Although the propeller is not entirely shown, motion lines near the front of the plane suggest a spinning propeller. In the cockpit area, we can see the face of Reddit\u2019s mascot, known as Snoo. The mascot features a round face, red eyes, a smile, and a distinctive antenna on top of its head. The antenna consists of a straight line with a smaller line branching out at a 90-degree angle, ending in a round circle. The image contains no text, foc",
+      "generated": "This image showcases a vibrant, colorful, and bustling marketplace located in the heart of a bustling city. The scene is alive with activity, as people of all ages and backgrounds are engaged in various tasks, from shopping and socializing to cooking and crafting. The market is a hub of energy, with a mix of traditional and modern elements that reflect the city's rich cultural heritage.\n\nAt the center of the image is a large, colorful market stall, which is a focal point of the scene. The stall is adorned with various items, including fruits, vegetables, and other goods, all of which are displ"
+    },
+    {
+      "key": "pixmo_cap-00000012",
+      "image_type": "photo",
+      "prompt": "Write a detailed caption for this image.",
+      "reference": "The image showcases a lavishly detailed, first-person, top-down view of an ornate and expensive dessert presented on a sophisticated table setting. The table surface is highly polished and appears to be made of marble or granite, featuring a white base interspersed with faded black veins in a non-repeating pattern. The dessert rests on a uniquely shaped white plate, characterized by undulating sides that create a wavy effect.\n\nIn the bottom right corner of the plate lies a shiny glazed strawberry, subtly showcasing its tiny black seeds, though some are missing. The bottom left corner features ",
+      "generated": "This image captures a vibrant scene at a bustling market, where the air is thick with the scent of spices and the sounds of lively conversations. At the center of the frame is a woman, her face illuminated by the soft glow of a lantern, her hands adorned with intricate jewelry that adds to the visual richness. She is surrounded by a group of people, their faces illuminated by the lantern's light, creating a warm and inviting atmosphere. The background is a mix of colorful fabrics and vibrant colors, adding depth and texture to the scene. The overall mood is one of warmth and community, highlig"
+    },
+    {
+      "key": "pixmo_cap-00000016",
+      "image_type": "photo",
+      "prompt": "Describe this image in detail.",
+      "reference": "In the image, a diverse group of people is gathered on a field bordered by leafy trees and a chain-link fence. The group includes individuals both in casual clothing and construction attire, with some wearing safety vests and white hard hats. At the center of the image, people are facing each other, seemingly focused on the ground, though it is unclear what exactly holds their attention. Scattered across the grass are several round balls, predominantly black, interspersed with orange ones. On the right side of the picture, a woman in a khaki hat, short-sleeved green shirt, and white capri pant",
+      "generated": "In this image, we can see a man in a white shirt, wearing a black hat, standing in front of a white wall. The man is holding a black bag, which is open, and he is wearing a black jacket. In the background, we can see a white wall with a black door. The man is standing in front of a white wall, and there are two white walls behind him. In the background, there are two white walls, one with a black door and another with a black door. The man is wearing a black jacket, and there are two black bags in front of him. The man is wearing a black hat, and there are two black bags in front of him. The m"
+    },
+    {
+      "key": "screen2words-00000001",
+      "image_type": "screenshot",
+      "prompt": "Give me a narrative description of this picture.",
+      "reference": "Settings page displayed of a ebook reading app.",
+      "generated": "A screen displaying a list of available games."
+    },
+    {
+      "key": "screen2words-00000003",
+      "image_type": "screenshot",
+      "prompt": "Provide a textual representation of this image.",
+      "reference": "Pop-up displaying the wifi auto connection.",
+      "generated": "A screen displaying the text \"Welcome to the 2023-2024 Academic Year\" in a large font."
+    },
+    {
+      "key": "screen2words-00000006",
+      "image_type": "screenshot",
+      "prompt": "What is the overall content of this screenshot?",
+      "reference": "Sign up page of a business app.",
+      "generated": "This screenshot appears to be a visual representation of a website or application interface. It shows a series of buttons and text fields, possibly related to a user account or profile management. The interface includes a username field, a password field, and a \"Sign In\" button. Additionally, there are options to \"Create New Account\" and \"Forgot Password,\" which are common features on login pages. The layout is clean and organized, with the \"Sign In\" button prominently displayed at the bottom."
+    },
+    {
+      "key": "screen2words-00000007",
+      "image_type": "screenshot",
+      "prompt": "Explain the elements present in this screenshot.",
+      "reference": "Page shows to create your alerts.",
+      "generated": "This is a screenshot of a website that appears to be a dashboard or interface for managing a project or task. The interface is divided into several sections, each with its own purpose.\n\n1. **Top Navigation Bar**: This is the top part of the screen, which contains the logo of the website and a few buttons. The logo is likely the name of the company or organization that created the website. The buttons are probably for navigation, such as \"Home,\" \"Projects,\" \"Tasks,\" \"Settings,\" and \"Logout.\"\n\n2. **Main Content Area**: This is the central part of the screen, which contains the main content of th"
+    },
+    {
+      "key": "olmocr_docs-00000000",
+      "image_type": "page",
+      "prompt": "Please transcribe the text from this document image.",
+      "reference": "Law by which clitics move into second position, though for mysterious reasons. As things stand, such an account explains nothing (as Steele herself realizes) and can only function as a spur to further analysis.\n\nAn additional complexity is that even though second position is greatly favored as a location for clitics, the definition of 'second position' differs from language to language. Walbiri, Serbo-Croatian, Tagalog, and Pashto differ in detail on this point (Zwicky 1977:18-20), and the historical linguist is entitled to wonder if there are any reasons for these differences.\n\n11. Clisis and",
+      "generated": "**1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1"
+    },
+    {
+      "key": "olmocr_docs-00000001",
+      "image_type": "page",
+      "prompt": "Type out everything written on this page.",
+      "reference": "List of Tables\n\n\u25a1 Table (2.1) Important of Techniques of Crystal Growth (Classification of Crystal Growth Techniques) ................................................................. 34\n\n\u25a1 Table (3.1) Terms in polarization series and their meanings .......................... 67\n\n\u25a1 Table (3.2) Materials for Nonlinear Optics .................................................... 97\n\n\u25a1 Table (4.1) Comparison of SHG efficiencies of promising semiorganic and organic NLO Crystal relative to KDP as reference Sample ......................... 123\n\n\u25a1 Table (4.2) Two theta values ,FWHM,d-spacing and their",
+      "generated": "The following is a list of the books that were published in the 1990s."
+    },
+    {
+      "key": "olmocr_docs-00000002",
+      "image_type": "page",
+      "prompt": "Read the text in the picture and write it out exactly.",
+      "reference": "stained with 1% solution of Alizarin red S (Sigma\u2013Aldrich) as described previously (Hino et al. 1999).\n\n**Proliferation and 5-bromo-2\u2032-deoxyuridine incorporation assays**\n\nCells were seeded at 3000 cells/well in 96-well plates and grown for 24 h. The cells were starved for 24 h before treatment with different concentrations of NMB (Peptide Institute, Osaka, Japan) and E2 in starvation medium for 24 h. The NMBR antagonist BIM23127 (Bachem, Torrance, CA, USA) and MEK inhibitor U0126 (Calbiochem, San Diego, CA, USA) were added 1 h before NMB treatment. Cell proliferation was evaluated in 2-(2-met",
+      "generated": "**The following is a list of the books that were published in 2018.**\n\n1. **The Last of the Mohicans** by James Fenimore Cooper\n2. **The Last of the Mohicans** by James Fenimore Cooper\n3. **The Last of the Mohicans** by James Fenimore Cooper\n4. **The Last of the Mohicans** by James Fenimore Cooper\n5. **The Last of the Mohicans** by James Fenimore Cooper\n6. **The Last of the Mohicans** by James Fenimore Cooper\n7. **The Last of the Mohicans** by James Fenimore Cooper\n8. **The Last of the Mohicans** by James Fenimore Cooper\n9. **The Last of the Mohicans** by James Fenimore Cooper\n10. **The Last o"
+    },
+    {
+      "key": "olmocr_docs-00000003",
+      "image_type": "page",
+      "prompt": "Transcribe everything printed or written in the image.",
+      "reference": "Abstract\nThis paper presents a 3D reconstruction technique for real world environments based on a traditional 2D laser range finder modified to implement a 3D laser scanner. The paper describes the mechanical and control issues addressed to achieve physically the 3D sensor as well as the adaptation of some previously developed techniques used to merge range and intensity data and illustrates the potential of such a unit. The result is a promising system for 3D modelling of real world scenes at a commercial price 10 or 20 times lower than current commercial 3D laser scanners.\n\nKeywords\n3D Recon",
+      "generated": "**1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1"
+    }
+  ]
+}
