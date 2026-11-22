@@ -1,0 +1,94 @@
+{
+  "time": "2026-09-24T05:11:04",
+  "model": "Qwen/Qwen3-0.6B",
+  "env": {
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "compute_capability": "12.0",
+    "total_memory_gb": 95.0,
+    "driver": "590.48.01",
+    "torch": "2.11.0+cu128",
+    "torch_cuda": "12.8",
+    "cudnn": 91900,
+    "python": "3.12.14",
+    "transformers": "5.17.0",
+    "triton": "3.6.0",
+    "torchao": "0.18.0",
+    "liger-kernel": "0.8.3",
+    "peft": "0.21.0",
+    "accelerate": "1.15.0",
+    "bitsandbytes": null,
+    "vllm": null
+  },
+  "gpu_availability": {
+    "pass": true,
+    "free_gb": 51.7,
+    "total_gb": 95.0,
+    "physical_gpu": "1",
+    "gpu_util_pct_snapshot": "1",
+    "required_free_gb": 40.0
+  },
+  "checks": {
+    "sdpa_fwd_bwd": {
+      "pass": true,
+      "loss": 13.783344268798828,
+      "n_grads": 310
+    },
+    "packing_isolation": {
+      "pass": false,
+      "leak_into_A_max_abs": 0.0,
+      "leak_into_C_max_abs": 0.0,
+      "packed_vs_alone_max_abs": [
+        0.625,
+        0.5625,
+        0.5
+      ],
+      "tolerance": 0.25
+    },
+    "grad_checkpointing": {
+      "pass": true,
+      "loss_plain": 13.695809364318848,
+      "loss_ckpt": 13.695809364318848,
+      "grad_cosine": 0.999994695186615
+    },
+    "fused_ce": {
+      "naive": {
+        "loss": 13.325058937072754,
+        "peak_gb": 6.96
+      },
+      "chunked": {
+        "loss": 13.325058937072754,
+        "peak_gb": 1.75,
+        "grad_cosine_vs_naive": 0.9999930262565613
+      },
+      "liger": {
+        "loss": 13.32505989074707,
+        "peak_gb": 0.02,
+        "grad_cosine_vs_naive": 0.9999964237213135,
+        "pass": true
+      },
+      "selected_backend": "liger",
+      "pass": true
+    },
+    "optim_fp32_master": {
+      "pass": true,
+      "loss_first": 14.012571334838867,
+      "loss_last": 5.896433867746964e-05,
+      "median_step_s": 0.11997204646468163,
+      "peak_allocated_gb": 9.78
+    },
+    "optim_bf16_stochastic_round": {
+      "pass": true,
+      "loss_first": 14.003661155700684,
+      "loss_last": 6.237292836885899e-05,
+      "median_step_s": 0.2276773825287819,
+      "peak_allocated_gb": 5.2,
+      "optimizer": "torchao.optim.adam._AdamW"
+    },
+    "bf16_rounding_demo": {
+      "pass": true,
+      "lr": 5e-06,
+      "fraction_unchanged": 0.9365
+    }
+  },
+  "all_pass": false
+}

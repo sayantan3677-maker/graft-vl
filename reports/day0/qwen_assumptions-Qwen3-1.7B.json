@@ -1,0 +1,62 @@
+{
+  "model": "Qwen/Qwen3-1.7B",
+  "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "hidden_size": 2048,
+  "num_layers": 28,
+  "vocab_size": 151936,
+  "tie_word_embeddings": true,
+  "embedding_rows": 151936,
+  "vocab_norm_mean": 1.5416,
+  "vocab_norm_std": 0.2552,
+  "special_tokens": {
+    "<|vision_start|>": {
+      "single_id": true,
+      "id": 151652,
+      "norm": 0.3876,
+      "z_vs_vocab": -4.52
+    },
+    "<|vision_end|>": {
+      "single_id": true,
+      "id": 151653,
+      "norm": 0.3876,
+      "z_vs_vocab": -4.52
+    },
+    "<|image_pad|>": {
+      "single_id": true,
+      "id": 151655,
+      "norm": 0.3876,
+      "z_vs_vocab": -4.52
+    },
+    "<|box_start|>": {
+      "single_id": true,
+      "id": 151648,
+      "norm": 0.3876,
+      "z_vs_vocab": -4.52
+    },
+    "<|box_end|>": {
+      "single_id": true,
+      "id": 151649,
+      "norm": 0.3876,
+      "z_vs_vocab": -4.52
+    },
+    "<think>": {
+      "single_id": true,
+      "id": 151667,
+      "norm": 0.4305,
+      "z_vs_vocab": -4.35
+    },
+    "</think>": {
+      "single_id": true,
+      "id": 151668,
+      "norm": 0.4491,
+      "z_vs_vocab": -4.28
+    }
+  },
+  "template": {
+    "non_thinking_generation_prompt_tail": "|im_start|>assistant\n<think>\n\n</think>\n\n",
+    "non_thinking_inserts_empty_think": true,
+    "thinking_generation_prompt_tail": "user\nHi<|im_end|>\n<|im_start|>assistant\n",
+    "earlier_turn_reasoning_stripped": true,
+    "final_turn_reasoning_kept": true
+  }
+}

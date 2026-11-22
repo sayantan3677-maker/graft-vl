@@ -1,0 +1,174 @@
+{
+  "model": "exports/hyb-1b7-s3000-l10-llm",
+  "results": {
+    "mmlu_pro/think": {
+      "n_items": 500,
+      "seeds": 2,
+      "acc_mean": 54.5,
+      "acc_std": 2.1213203435596424,
+      "acc_per_seed": [
+        56.0,
+        53.0
+      ],
+      "mean_gen_tokens": 4444.211,
+      "truncated_frac": 0.013,
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "top_k": 20,
+        "min_p": 0.0
+      },
+      "max_tokens": 32768,
+      "minutes": 152.36883237361909,
+      "minutes_note": "whole combined call"
+    },
+    "mmlu_pro/nothink": {
+      "n_items": 500,
+      "seeds": 2,
+      "acc_mean": 39.9,
+      "acc_std": 1.2727922061357835,
+      "acc_per_seed": [
+        40.8,
+        39.0
+      ],
+      "mean_gen_tokens": 517.822,
+      "truncated_frac": 0.02,
+      "sampling": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0
+      },
+      "max_tokens": 4096,
+      "minutes": 152.36883237361909,
+      "minutes_note": "whole combined call"
+    },
+    "gsm8k/think": {
+      "n_items": 500,
+      "seeds": 2,
+      "acc_mean": 90.19999999999999,
+      "acc_std": 0.565685424949236,
+      "acc_per_seed": [
+        90.6,
+        89.8
+      ],
+      "mean_gen_tokens": 2213.16,
+      "truncated_frac": 0.002,
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "top_k": 20,
+        "min_p": 0.0
+      },
+      "max_tokens": 32768,
+      "minutes": 152.36883237361909,
+      "minutes_note": "whole combined call"
+    },
+    "gsm8k/nothink": {
+      "n_items": 500,
+      "seeds": 2,
+      "acc_mean": 81.5,
+      "acc_std": 0.7071067811865476,
+      "acc_per_seed": [
+        82.0,
+        81.0
+      ],
+      "mean_gen_tokens": 300.162,
+      "truncated_frac": 0.0,
+      "sampling": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0
+      },
+      "max_tokens": 4096,
+      "minutes": 152.36883237361909,
+      "minutes_note": "whole combined call"
+    },
+    "ifeval/think": {
+      "n_items": 541,
+      "seeds": 2,
+      "acc_mean": 68.76155268022181,
+      "acc_std": 2.6140731282312197,
+      "acc_per_seed": [
+        70.60998151571164,
+        66.91312384473198
+      ],
+      "mean_gen_tokens": 3228.550831792976,
+      "truncated_frac": 0.06746765249537892,
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "top_k": 20,
+        "min_p": 0.0
+      },
+      "max_tokens": 32768,
+      "minutes": 152.36883237361909,
+      "minutes_note": "whole combined call"
+    },
+    "ifeval/nothink": {
+      "n_items": 541,
+      "seeds": 2,
+      "acc_mean": 66.45101663585952,
+      "acc_std": 0.13070365641155998,
+      "acc_per_seed": [
+        66.54343807763401,
+        66.35859519408503
+      ],
+      "mean_gen_tokens": 459.050831792976,
+      "truncated_frac": 0.04805914972273567,
+      "sampling": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0
+      },
+      "max_tokens": 4096,
+      "minutes": 152.36883237361909,
+      "minutes_note": "whole combined call"
+    },
+    "math500/think": {
+      "n_items": 200,
+      "seeds": 2,
+      "acc_mean": 87.75,
+      "acc_std": 1.7677669529663689,
+      "acc_per_seed": [
+        86.5,
+        89.0
+      ],
+      "mean_gen_tokens": 5907.9775,
+      "truncated_frac": 0.0125,
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "top_k": 20,
+        "min_p": 0.0
+      },
+      "max_tokens": 32768,
+      "minutes": 152.36883237361909,
+      "minutes_note": "whole combined call"
+    },
+    "math500/nothink": {
+      "n_items": 200,
+      "seeds": 2,
+      "acc_mean": 78.0,
+      "acc_std": 0.7071067811865476,
+      "acc_per_seed": [
+        78.5,
+        77.5
+      ],
+      "mean_gen_tokens": 846.8275,
+      "truncated_frac": 0.0275,
+      "sampling": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0
+      },
+      "max_tokens": 4096,
+      "minutes": 152.36883237361909,
+      "minutes_note": "whole combined call"
+    }
+  },
+  "runner": "eval_text_batched.py (all task x mode in one generate call)"
+}

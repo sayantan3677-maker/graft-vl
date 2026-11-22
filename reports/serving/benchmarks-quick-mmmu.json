@@ -1,0 +1,16 @@
+{
+  "ours": {
+    "mmmu_val": {
+      "metric": "acc",
+      "value": 38.6,
+      "n": 500
+    }
+  },
+  "qwen": {
+    "mmmu_val": {
+      "metric": "acc",
+      "value": 39.8,
+      "n": 500
+    }
+  }
+}

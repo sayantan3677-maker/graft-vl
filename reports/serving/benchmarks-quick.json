@@ -1,0 +1,149 @@
+{
+  "ours (hybrid s2000)": {
+    "docvqa_val": {
+      "metric": "ANLS",
+      "value": 62.51,
+      "n": 500
+    },
+    "infovqa_val": {
+      "metric": "ANLS",
+      "value": 34.14,
+      "n": 500
+    },
+    "chartqa": {
+      "metric": "relaxed acc",
+      "value": 41.2,
+      "n": 500
+    },
+    "textvqa_val": {
+      "metric": "VQA acc",
+      "value": 58.62,
+      "n": 500
+    },
+    "ocrbench": {
+      "metric": "score/n",
+      "value": 74.4,
+      "n": 500
+    },
+    "ai2d": {
+      "metric": "EM (flexible-extract)",
+      "value": 0.0,
+      "n": 500,
+      "lenient_letter_acc": 57.2
+    },
+    "mmbench_en_dev": {
+      "metric": "gpt_eval_score (rule match; no GPT key)",
+      "value": 68.6,
+      "n": 500
+    },
+    "pope": {
+      "metric": "F1",
+      "value": 80.82,
+      "n": 500
+    },
+    "realworldqa": {
+      "metric": "EM",
+      "value": 51.6,
+      "n": 500,
+      "lenient_letter_acc": 51.6
+    }
+  },
+  "Qwen3-VL-2B (default px)": {
+    "docvqa_val": {
+      "metric": "ANLS",
+      "value": 93.3,
+      "n": 500
+    },
+    "infovqa_val": {
+      "metric": "ANLS",
+      "value": 69.99,
+      "n": 500
+    },
+    "chartqa": {
+      "metric": "relaxed acc",
+      "value": 68.2,
+      "n": 500
+    },
+    "textvqa_val": {
+      "metric": "VQA acc",
+      "value": 79.66,
+      "n": 500
+    },
+    "ocrbench": {
+      "metric": "score/n",
+      "value": 90.0,
+      "n": 500
+    },
+    "ai2d": {
+      "metric": "EM (flexible-extract)",
+      "value": 76.2,
+      "n": 500,
+      "lenient_letter_acc": 76.2
+    },
+    "mmbench_en_dev": {
+      "metric": "gpt_eval_score (rule match; no GPT key)",
+      "value": 81.4,
+      "n": 500
+    },
+    "pope": {
+      "metric": "F1",
+      "value": 87.98,
+      "n": 500
+    },
+    "realworldqa": {
+      "metric": "EM",
+      "value": 65.8,
+      "n": 500,
+      "lenient_letter_acc": 65.8
+    }
+  },
+  "Qwen3-VL-2B (1.6MP cap)": {
+    "docvqa_val": {
+      "metric": "ANLS",
+      "value": 92.18,
+      "n": 500
+    },
+    "infovqa_val": {
+      "metric": "ANLS",
+      "value": 66.83,
+      "n": 500
+    },
+    "chartqa": {
+      "metric": "relaxed acc",
+      "value": 67.8,
+      "n": 500
+    },
+    "textvqa_val": {
+      "metric": "VQA acc",
+      "value": 79.94,
+      "n": 500
+    },
+    "ocrbench": {
+      "metric": "score/n",
+      "value": 90.0,
+      "n": 500
+    },
+    "ai2d": {
+      "metric": "EM (flexible-extract)",
+      "value": 75.8,
+      "n": 500,
+      "lenient_letter_acc": 75.8
+    },
+    "mmbench_en_dev": {
+      "metric": "gpt_eval_score (rule match; no GPT key)",
+      "value": 81.0,
+      "n": 500
+    },
+    "pope": {
+      "metric": "F1",
+      "value": 88.21,
+      "n": 500
+    },
+    "realworldqa": {
+      "metric": "EM",
+      "value": 67.0,
+      "n": 500,
+      "lenient_letter_acc": 67.0
+    }
+  }
+}

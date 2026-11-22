@@ -1,0 +1,42 @@
+{
+  "hybrid": "exports/hybrid-q3-4b-vit4b",
+  "llm": "Qwen/Qwen3-4B",
+  "dtype": "float32",
+  "max_abs_dlogit": 0.0,
+  "rows": [
+    {
+      "len": 5,
+      "max_abs_dlogit": 0.0,
+      "greedy_equal": true
+    },
+    {
+      "len": 11,
+      "max_abs_dlogit": 0.0,
+      "greedy_equal": true
+    },
+    {
+      "len": 11,
+      "max_abs_dlogit": 0.0,
+      "greedy_equal": true
+    },
+    {
+      "len": 161,
+      "max_abs_dlogit": 0.0,
+      "greedy_equal": true
+    },
+    {
+      "len": 19,
+      "max_abs_dlogit": 0.0,
+      "greedy_equal": true
+    },
+    {
+      "len": 23,
+      "max_abs_dlogit": 0.0,
+      "greedy_equal": true
+    }
+  ],
+  "hybrid_lm_head_tied": true,
+  "hybrid_tie_cfg": true,
+  "llm_tie_cfg": true,
+  "rope_theta_hybrid": 1000000
+}

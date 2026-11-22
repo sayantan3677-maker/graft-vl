@@ -1,0 +1,88 @@
+{
+  "tag": "bf16",
+  "model": "serve-hyb-1b7-s2000",
+  "max_tokens": 64,
+  "levels": [
+    {
+      "concurrency": 1,
+      "requests": 24,
+      "wall_s": 19.92,
+      "ttft_mean_ms": 236.2,
+      "ttft_p50_ms": 260.4,
+      "ttft_p90_ms": 358.8,
+      "tpot_mean_ms": 9.42,
+      "per_request_decode_tok_s": 106.2,
+      "output_tok_s": 77.1,
+      "req_s": 1.2,
+      "mean_prompt_tokens": 961.5,
+      "by_type": {
+        "page": {
+          "ttft_mean_ms": 414.7,
+          "prompt_tokens": 1455
+        },
+        "photo": {
+          "ttft_mean_ms": 78.6,
+          "prompt_tokens": 275.6
+        },
+        "screenshot": {
+          "ttft_mean_ms": 215.4,
+          "prompt_tokens": 1153.8
+        }
+      }
+    },
+    {
+      "concurrency": 8,
+      "requests": 48,
+      "wall_s": 8.96,
+      "ttft_mean_ms": 414.7,
+      "ttft_p50_ms": 410.4,
+      "ttft_p90_ms": 729.6,
+      "tpot_mean_ms": 16.32,
+      "per_request_decode_tok_s": 61.3,
+      "output_tok_s": 343.0,
+      "req_s": 5.36,
+      "mean_prompt_tokens": 975.7,
+      "by_type": {
+        "page": {
+          "ttft_mean_ms": 542.2,
+          "prompt_tokens": 1499.2
+        },
+        "photo": {
+          "ttft_mean_ms": 273.5,
+          "prompt_tokens": 297.5
+        },
+        "screenshot": {
+          "ttft_mean_ms": 428.5,
+          "prompt_tokens": 1130.4
+        }
+      }
+    },
+    {
+      "concurrency": 32,
+      "requests": 192,
+      "wall_s": 20.18,
+      "ttft_mean_ms": 1034.7,
+      "ttft_p50_ms": 945.5,
+      "ttft_p90_ms": 1751.5,
+      "tpot_mean_ms": 36.14,
+      "per_request_decode_tok_s": 27.7,
+      "output_tok_s": 609.0,
+      "req_s": 9.52,
+      "mean_prompt_tokens": 1049.0,
+      "by_type": {
+        "page": {
+          "ttft_mean_ms": 1183.5,
+          "prompt_tokens": 1522.9
+        },
+        "photo": {
+          "ttft_mean_ms": 837.0,
+          "prompt_tokens": 280.7
+        },
+        "screenshot": {
+          "ttft_mean_ms": 1083.6,
+          "prompt_tokens": 1343.4
+        }
+      }
+    }
+  ]
+}

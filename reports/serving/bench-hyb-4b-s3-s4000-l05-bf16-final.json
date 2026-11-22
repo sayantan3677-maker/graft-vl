@@ -1,0 +1,2081 @@
+{
+  "tag": "bf16",
+  "model": "hyb-4b-s3-s4000-l05",
+  "max_tokens": 64,
+  "levels": [
+    {
+      "concurrency": 1,
+      "requests": 12,
+      "wall_s": 7.52,
+      "ttft_mean_ms": 173.7,
+      "ttft_p50_ms": 219.9,
+      "ttft_p90_ms": 266.0,
+      "tpot_mean_ms": 7.01,
+      "per_request_decode_tok_s": 142.7,
+      "output_tok_s": 102.1,
+      "req_s": 1.59,
+      "mean_prompt_tokens": 979.9,
+      "by_type": {
+        "page": {
+          "ttft_mean_ms": 244.7,
+          "prompt_tokens": 1363
+        },
+        "photo": {
+          "ttft_mean_ms": 74.2,
+          "prompt_tokens": 298.2
+        },
+        "screenshot": {
+          "ttft_mean_ms": 202.1,
+          "prompt_tokens": 1278.5
+        }
+      }
+    },
+    {
+      "concurrency": 8,
+      "requests": 24,
+      "wall_s": 3.51,
+      "ttft_mean_ms": 423.5,
+      "ttft_p50_ms": 390.6,
+      "ttft_p90_ms": 607.6,
+      "tpot_mean_ms": 9.32,
+      "per_request_decode_tok_s": 107.3,
+      "output_tok_s": 437.4,
+      "req_s": 6.83,
+      "mean_prompt_tokens": 884.0,
+      "by_type": {
+        "page": {
+          "ttft_mean_ms": 572.4,
+          "prompt_tokens": 1477.5
+        },
+        "photo": {
+          "ttft_mean_ms": 361.4,
+          "prompt_tokens": 303
+        },
+        "screenshot": {
+          "ttft_mean_ms": 336.8,
+          "prompt_tokens": 871.4
+        }
+      }
+    },
+    {
+      "concurrency": 32,
+      "requests": 96,
+      "wall_s": 7.6,
+      "ttft_mean_ms": 1046.4,
+      "ttft_p50_ms": 930.4,
+      "ttft_p90_ms": 1642.0,
+      "tpot_mean_ms": 20.16,
+      "per_request_decode_tok_s": 49.6,
+      "output_tok_s": 808.2,
+      "req_s": 12.63,
+      "mean_prompt_tokens": 1046.5,
+      "by_type": {
+        "page": {
+          "ttft_mean_ms": 1220.9,
+          "prompt_tokens": 1532.2
+        },
+        "photo": {
+          "ttft_mean_ms": 902.7,
+          "prompt_tokens": 270.0
+        },
+        "screenshot": {
+          "ttft_mean_ms": 1015.4,
+          "prompt_tokens": 1337.4
+        }
+      }
+    }
+  ],
+  "accuracy": {
+    "n": 210,
+    "overall": 64.76,
+    "per_source": {
+      "ai2d_test": 66.7,
+      "chartqa_test": 50.0,
+      "docvqa_val": 70.0,
+      "infovqa_val": 50.0,
+      "ocrbench2_screen": 76.7,
+      "textvqa_val": 73.3,
+      "vqav2_val": 66.7
+    },
+    "rows": [
+      {
+        "key": "ai2d_test-00000",
+        "source": "ai2d_test",
+        "pred": "C",
+        "golds": [
+          "C"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ai2d_test-00001",
+        "source": "ai2d_test",
+        "pred": "C",
+        "golds": [
+          "A"
+        ],
+        "ok": false
+      },
+      {
+        "key": "ai2d_test-00002",
+        "source": "ai2d_test",
+        "pred": "A",
+        "golds": [
+          "D"
+        ],
+        "ok": false
+      },
+      {
+        "key": "ai2d_test-00003",
+        "source": "ai2d_test",
+        "pred": "D",
+        "golds": [
+          "A"
+        ],
+        "ok": false
+      },
+      {
+        "key": "ai2d_test-00004",
+        "source": "ai2d_test",
+        "pred": "D",
+        "golds": [
+          "C"
+        ],
+        "ok": false
+      },
+      {
+        "key": "ai2d_test-00005",
+        "source": "ai2d_test",
+        "pred": "B",
+        "golds": [
+          "B"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ai2d_test-00006",
+        "source": "ai2d_test",
+        "pred": "D",
+        "golds": [
+          "A"
+        ],
+        "ok": false
+      },
+      {
+        "key": "ai2d_test-00007",
+        "source": "ai2d_test",
+        "pred": "C",
+        "golds": [
+          "C"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ai2d_test-00008",
+        "source": "ai2d_test",
+        "pred": "C",
+        "golds": [
+          "C"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ai2d_test-00009",
+        "source": "ai2d_test",
+        "pred": "A",
+        "golds": [
+          "A"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ai2d_test-00010",
+        "source": "ai2d_test",
+        "pred": "D",
+        "golds": [
+          "D"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ai2d_test-00011",
+        "source": "ai2d_test",
+        "pred": "C",
+        "golds": [
+          "C"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ai2d_test-00012",
+        "source": "ai2d_test",
+        "pred": "C",
+        "golds": [
+          "B"
+        ],
+        "ok": false
+      },
+      {
+        "key": "ai2d_test-00013",
+        "source": "ai2d_test",
+        "pred": "D",
+        "golds": [
+          "D"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ai2d_test-00014",
+        "source": "ai2d_test",
+        "pred": "A",
+        "golds": [
+          "A"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ai2d_test-00015",
+        "source": "ai2d_test",
+        "pred": "D",
+        "golds": [
+          "B"
+        ],
+        "ok": false
+      },
+      {
+        "key": "ai2d_test-00016",
+        "source": "ai2d_test",
+        "pred": "D",
+        "golds": [
+          "D"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ai2d_test-00017",
+        "source": "ai2d_test",
+        "pred": "C",
+        "golds": [
+          "C"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ai2d_test-00018",
+        "source": "ai2d_test",
+        "pred": "C",
+        "golds": [
+          "C"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ai2d_test-00019",
+        "source": "ai2d_test",
+        "pred": "C",
+        "golds": [
+          "C"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ai2d_test-00020",
+        "source": "ai2d_test",
+        "pred": "B",
+        "golds": [
+          "B"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ai2d_test-00021",
+        "source": "ai2d_test",
+        "pred": "A",
+        "golds": [
+          "C"
+        ],
+        "ok": false
+      },
+      {
+        "key": "ai2d_test-00022",
+        "source": "ai2d_test",
+        "pred": "A",
+        "golds": [
+          "A"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ai2d_test-00023",
+        "source": "ai2d_test",
+        "pred": "B",
+        "golds": [
+          "A"
+        ],
+        "ok": false
+      },
+      {
+        "key": "ai2d_test-00024",
+        "source": "ai2d_test",
+        "pred": "C",
+        "golds": [
+          "C"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ai2d_test-00025",
+        "source": "ai2d_test",
+        "pred": "A",
+        "golds": [
+          "A"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ai2d_test-00026",
+        "source": "ai2d_test",
+        "pred": "B",
+        "golds": [
+          "A"
+        ],
+        "ok": false
+      },
+      {
+        "key": "ai2d_test-00027",
+        "source": "ai2d_test",
+        "pred": "C",
+        "golds": [
+          "C"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ai2d_test-00028",
+        "source": "ai2d_test",
+        "pred": "D",
+        "golds": [
+          "D"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ai2d_test-00029",
+        "source": "ai2d_test",
+        "pred": "C",
+        "golds": [
+          "C"
+        ],
+        "ok": true
+      },
+      {
+        "key": "chartqa_test-00000",
+        "source": "chartqa_test",
+        "pred": "444428",
+        "golds": [
+          "444428"
+        ],
+        "ok": true
+      },
+      {
+        "key": "chartqa_test-00001",
+        "source": "chartqa_test",
+        "pred": "315",
+        "golds": [
+          "361"
+        ],
+        "ok": false
+      },
+      {
+        "key": "chartqa_test-00002",
+        "source": "chartqa_test",
+        "pred": "Blue",
+        "golds": [
+          "light blue"
+        ],
+        "ok": false
+      },
+      {
+        "key": "chartqa_test-00003",
+        "source": "chartqa_test",
+        "pred": "105.3",
+        "golds": [
+          "105.3"
+        ],
+        "ok": true
+      },
+      {
+        "key": "chartqa_test-00004",
+        "source": "chartqa_test",
+        "pred": "35",
+        "golds": [
+          "32.5"
+        ],
+        "ok": false
+      },
+      {
+        "key": "chartqa_test-00005",
+        "source": "chartqa_test",
+        "pred": "0.54",
+        "golds": [
+          "1.051388889"
+        ],
+        "ok": false
+      },
+      {
+        "key": "chartqa_test-00006",
+        "source": "chartqa_test",
+        "pred": "31",
+        "golds": [
+          "54"
+        ],
+        "ok": false
+      },
+      {
+        "key": "chartqa_test-00007",
+        "source": "chartqa_test",
+        "pred": "Yes",
+        "golds": [
+          "No"
+        ],
+        "ok": false
+      },
+      {
+        "key": "chartqa_test-00008",
+        "source": "chartqa_test",
+        "pred": "Georgia",
+        "golds": [
+          "Georgia"
+        ],
+        "ok": true
+      },
+      {
+        "key": "chartqa_test-00009",
+        "source": "chartqa_test",
+        "pred": "31",
+        "golds": [
+          "31"
+        ],
+        "ok": true
+      },
+      {
+        "key": "chartqa_test-00010",
+        "source": "chartqa_test",
+        "pred": "Lidl",
+        "golds": [
+          "Lidl"
+        ],
+        "ok": true
+      },
+      {
+        "key": "chartqa_test-00011",
+        "source": "chartqa_test",
+        "pred": "Generation Z",
+        "golds": [
+          "Generation Z"
+        ],
+        "ok": true
+      },
+      {
+        "key": "chartqa_test-00012",
+        "source": "chartqa_test",
+        "pred": "32",
+        "golds": [
+          "32.66"
+        ],
+        "ok": true
+      },
+      {
+        "key": "chartqa_test-00013",
+        "source": "chartqa_test",
+        "pred": "62",
+        "golds": [
+          "62"
+        ],
+        "ok": true
+      },
+      {
+        "key": "chartqa_test-00014",
+        "source": "chartqa_test",
+        "pred": "46.3",
+        "golds": [
+          "46.3"
+        ],
+        "ok": true
+      },
+      {
+        "key": "chartqa_test-00015",
+        "source": "chartqa_test",
+        "pred": "8.3",
+        "golds": [
+          "8.3"
+        ],
+        "ok": true
+      },
+      {
+        "key": "chartqa_test-00016",
+        "source": "chartqa_test",
+        "pred": "5G",
+        "golds": [
+          "5G"
+        ],
+        "ok": true
+      },
+      {
+        "key": "chartqa_test-00017",
+        "source": "chartqa_test",
+        "pred": "253",
+        "golds": [
+          "273"
+        ],
+        "ok": false
+      },
+      {
+        "key": "chartqa_test-00018",
+        "source": "chartqa_test",
+        "pred": "33",
+        "golds": [
+          "25"
+        ],
+        "ok": false
+      },
+      {
+        "key": "chartqa_test-00019",
+        "source": "chartqa_test",
+        "pred": "North West",
+        "golds": [
+          "Scotland"
+        ],
+        "ok": false
+      },
+      {
+        "key": "chartqa_test-00020",
+        "source": "chartqa_test",
+        "pred": "Right decision",
+        "golds": [
+          "Right decision"
+        ],
+        "ok": true
+      },
+      {
+        "key": "chartqa_test-00021",
+        "source": "chartqa_test",
+        "pred": "27.23",
+        "golds": [
+          "23.16"
+        ],
+        "ok": false
+      },
+      {
+        "key": "chartqa_test-00022",
+        "source": "chartqa_test",
+        "pred": "3613",
+        "golds": [
+          "3613"
+        ],
+        "ok": true
+      },
+      {
+        "key": "chartqa_test-00023",
+        "source": "chartqa_test",
+        "pred": "10",
+        "golds": [
+          "6"
+        ],
+        "ok": false
+      },
+      {
+        "key": "chartqa_test-00024",
+        "source": "chartqa_test",
+        "pred": "28.87",
+        "golds": [
+          "28.49"
+        ],
+        "ok": true
+      },
+      {
+        "key": "chartqa_test-00025",
+        "source": "chartqa_test",
+        "pred": "0",
+        "golds": [
+          "8"
+        ],
+        "ok": false
+      },
+      {
+        "key": "chartqa_test-00026",
+        "source": "chartqa_test",
+        "pred": "Male",
+        "golds": [
+          "Female"
+        ],
+        "ok": false
+      },
+      {
+        "key": "chartqa_test-00027",
+        "source": "chartqa_test",
+        "pred": "14.5",
+        "golds": [
+          "14.5"
+        ],
+        "ok": true
+      },
+      {
+        "key": "chartqa_test-00028",
+        "source": "chartqa_test",
+        "pred": "44.73",
+        "golds": [
+          "37.24"
+        ],
+        "ok": false
+      },
+      {
+        "key": "chartqa_test-00029",
+        "source": "chartqa_test",
+        "pred": "32",
+        "golds": [
+          "33.7"
+        ],
+        "ok": false
+      },
+      {
+        "key": "docvqa_val-00000",
+        "source": "docvqa_val",
+        "pred": "22.80",
+        "golds": [
+          "22.80"
+        ],
+        "ok": true
+      },
+      {
+        "key": "docvqa_val-00001",
+        "source": "docvqa_val",
+        "pred": "Renovation Expenses",
+        "golds": [
+          "renovation of swanson center",
+          "Renovation of Swanson center",
+          "renovation of swanson center  summary 10/30/82"
+        ],
+        "ok": false
+      },
+      {
+        "key": "docvqa_val-00002",
+        "source": "docvqa_val",
+        "pred": "Millions of pounds",
+        "golds": [
+          "MILLIONS OF POUNDS"
+        ],
+        "ok": true
+      },
+      {
+        "key": "docvqa_val-00003",
+        "source": "docvqa_val",
+        "pred": "1957",
+        "golds": [
+          "1957"
+        ],
+        "ok": true
+      },
+      {
+        "key": "docvqa_val-00004",
+        "source": "docvqa_val",
+        "pred": "US Department of Agriculture",
+        "golds": [
+          "US Department of Agriculture"
+        ],
+        "ok": true
+      },
+      {
+        "key": "docvqa_val-00005",
+        "source": "docvqa_val",
+        "pred": "Triglycerides (m mol /I)",
+        "golds": [
+          "Triglycerides",
+          "Triglycerides (mmol/l)"
+        ],
+        "ok": true
+      },
+      {
+        "key": "docvqa_val-00006",
+        "source": "docvqa_val",
+        "pred": "Round-Robin Tennis Match",
+        "golds": [
+          "Round-Robin",
+          "Round-Robin tennis match"
+        ],
+        "ok": true
+      },
+      {
+        "key": "docvqa_val-00007",
+        "source": "docvqa_val",
+        "pred": "21",
+        "golds": [
+          "21"
+        ],
+        "ok": true
+      },
+      {
+        "key": "docvqa_val-00008",
+        "source": "docvqa_val",
+        "pred": "52118",
+        "golds": [
+          "52118"
+        ],
+        "ok": true
+      },
+      {
+        "key": "docvqa_val-00009",
+        "source": "docvqa_val",
+        "pred": "Wednesday A.M.",
+        "golds": [
+          "cardiovascular disease -- recent advances",
+          "Cardiovascular disease -- Recent Advances"
+        ],
+        "ok": false
+      },
+      {
+        "key": "docvqa_val-00010",
+        "source": "docvqa_val",
+        "pred": "24.42",
+        "golds": [
+          "24.42"
+        ],
+        "ok": true
+      },
+      {
+        "key": "docvqa_val-00011",
+        "source": "docvqa_val",
+        "pred": "$57.24",
+        "golds": [
+          "$ 57.24"
+        ],
+        "ok": true
+      },
+      {
+        "key": "docvqa_val-00012",
+        "source": "docvqa_val",
+        "pred": "42%",
+        "golds": [
+          "42%"
+        ],
+        "ok": true
+      },
+      {
+        "key": "docvqa_val-00013",
+        "source": "docvqa_val",
+        "pred": "1.977",
+        "golds": [
+          "1.75"
+        ],
+        "ok": false
+      },
+      {
+        "key": "docvqa_val-00014",
+        "source": "docvqa_val",
+        "pred": "31 March 2004",
+        "golds": [
+          "28th April, 2003"
+        ],
+        "ok": false
+      },
+      {
+        "key": "docvqa_val-00015",
+        "source": "docvqa_val",
+        "pred": "III",
+        "golds": [
+          "iii",
+          "table iii.",
+          "III"
+        ],
+        "ok": true
+      },
+      {
+        "key": "docvqa_val-00016",
+        "source": "docvqa_val",
+        "pred": "Consumer Dynamics GPC",
+        "golds": [
+          "Consumer Dynamics GPC",
+          "Consumer Dynamics"
+        ],
+        "ok": true
+      },
+      {
+        "key": "docvqa_val-00017",
+        "source": "docvqa_val",
+        "pred": "2/15/80",
+        "golds": [
+          "2/25/80"
+        ],
+        "ok": false
+      },
+      {
+        "key": "docvqa_val-00018",
+        "source": "docvqa_val",
+        "pred": "122.21",
+        "golds": [
+          "122.21 rupees in lac",
+          "122.21"
+        ],
+        "ok": true
+      },
+      {
+        "key": "docvqa_val-00019",
+        "source": "docvqa_val",
+        "pred": "Oil Investment & Finance Limited",
+        "golds": [
+          "olive investment & finance limited",
+          "Olive Investment & Finance Limited"
+        ],
+        "ok": false
+      },
+      {
+        "key": "docvqa_val-00020",
+        "source": "docvqa_val",
+        "pred": "1996 PROJ",
+        "golds": [
+          "1996",
+          "1996 Proj"
+        ],
+        "ok": true
+      },
+      {
+        "key": "docvqa_val-00021",
+        "source": "docvqa_val",
+        "pred": "Dr. Giuseppe Battista Gorini",
+        "golds": [
+          "Dr. Gio Batta Gori"
+        ],
+        "ok": false
+      },
+      {
+        "key": "docvqa_val-00022",
+        "source": "docvqa_val",
+        "pred": "30",
+        "golds": [
+          "30"
+        ],
+        "ok": true
+      },
+      {
+        "key": "docvqa_val-00023",
+        "source": "docvqa_val",
+        "pred": "26",
+        "golds": [
+          "26"
+        ],
+        "ok": true
+      },
+      {
+        "key": "docvqa_val-00024",
+        "source": "docvqa_val",
+        "pred": "Trimegestone - Publication and Abstract Tracking Report",
+        "golds": [
+          "Trimegestone - Publication and Abstract Tracking Report",
+          "Trimegestone - Publication and  Abstract Tracking Report"
+        ],
+        "ok": true
+      },
+      {
+        "key": "docvqa_val-00025",
+        "source": "docvqa_val",
+        "pred": "908-666-2276",
+        "golds": [
+          "800-686-2276"
+        ],
+        "ok": false
+      },
+      {
+        "key": "docvqa_val-00026",
+        "source": "docvqa_val",
+        "pred": "Their proprietary cellulose acetate",
+        "golds": [
+          "proprietary cellulose acetate web",
+          "their proprietary cellulose acetate web"
+        ],
+        "ok": false
+      },
+      {
+        "key": "docvqa_val-00027",
+        "source": "docvqa_val",
+        "pred": "6/14/76",
+        "golds": [
+          "6/14/76"
+        ],
+        "ok": true
+      },
+      {
+        "key": "docvqa_val-00028",
+        "source": "docvqa_val",
+        "pred": "january 1948",
+        "golds": [
+          "JANUARY 1948",
+          "january 1948"
+        ],
+        "ok": true
+      },
+      {
+        "key": "docvqa_val-00029",
+        "source": "docvqa_val",
+        "pred": "31",
+        "golds": [
+          "31"
+        ],
+        "ok": true
+      },
+      {
+        "key": "infovqa_val-00000",
+        "source": "infovqa_val",
+        "pred": "81%",
+        "golds": [
+          "81%",
+          "81"
+        ],
+        "ok": true
+      },
+      {
+        "key": "infovqa_val-00001",
+        "source": "infovqa_val",
+        "pred": "in the first person, in the third person",
+        "golds": [
+          "in the third person, in the first person"
+        ],
+        "ok": false
+      },
+      {
+        "key": "infovqa_val-00002",
+        "source": "infovqa_val",
+        "pred": "Nausea",
+        "golds": [
+          "nausea"
+        ],
+        "ok": true
+      },
+      {
+        "key": "infovqa_val-00003",
+        "source": "infovqa_val",
+        "pred": "600,000",
+        "golds": [
+          "600,000"
+        ],
+        "ok": true
+      },
+      {
+        "key": "infovqa_val-00004",
+        "source": "infovqa_val",
+        "pred": "$14.6bn",
+        "golds": [
+          "$708bn"
+        ],
+        "ok": false
+      },
+      {
+        "key": "infovqa_val-00005",
+        "source": "infovqa_val",
+        "pred": "Twitter",
+        "golds": [
+          "twitter"
+        ],
+        "ok": true
+      },
+      {
+        "key": "infovqa_val-00006",
+        "source": "infovqa_val",
+        "pred": "2",
+        "golds": [
+          "2"
+        ],
+        "ok": true
+      },
+      {
+        "key": "infovqa_val-00007",
+        "source": "infovqa_val",
+        "pred": "2004",
+        "golds": [
+          "2004"
+        ],
+        "ok": true
+      },
+      {
+        "key": "infovqa_val-00008",
+        "source": "infovqa_val",
+        "pred": "Mumbai",
+        "golds": [
+          "bangalore"
+        ],
+        "ok": false
+      },
+      {
+        "key": "infovqa_val-00009",
+        "source": "infovqa_val",
+        "pred": "2001",
+        "golds": [
+          "2001"
+        ],
+        "ok": true
+      },
+      {
+        "key": "infovqa_val-00010",
+        "source": "infovqa_val",
+        "pred": "Engineering",
+        "golds": [
+          "engineering"
+        ],
+        "ok": true
+      },
+      {
+        "key": "infovqa_val-00011",
+        "source": "infovqa_val",
+        "pred": "2.8 children",
+        "golds": [
+          "2.38"
+        ],
+        "ok": false
+      },
+      {
+        "key": "infovqa_val-00012",
+        "source": "infovqa_val",
+        "pred": "$18,000",
+        "golds": [
+          "$11,000"
+        ],
+        "ok": false
+      },
+      {
+        "key": "infovqa_val-00013",
+        "source": "infovqa_val",
+        "pred": "2009, 2012",
+        "golds": [
+          "2009, 2012"
+        ],
+        "ok": true
+      },
+      {
+        "key": "infovqa_val-00014",
+        "source": "infovqa_val",
+        "pred": "100000",
+        "golds": [
+          "6"
+        ],
+        "ok": false
+      },
+      {
+        "key": "infovqa_val-00015",
+        "source": "infovqa_val",
+        "pred": "Russia",
+        "golds": [
+          "china"
+        ],
+        "ok": false
+      },
+      {
+        "key": "infovqa_val-00016",
+        "source": "infovqa_val",
+        "pred": "60\" x 39\"",
+        "golds": [
+          "60\" x 39\""
+        ],
+        "ok": true
+      },
+      {
+        "key": "infovqa_val-00017",
+        "source": "infovqa_val",
+        "pred": "6",
+        "golds": [
+          "7"
+        ],
+        "ok": false
+      },
+      {
+        "key": "infovqa_val-00018",
+        "source": "infovqa_val",
+        "pred": "Japan",
+        "golds": [
+          "great britain"
+        ],
+        "ok": false
+      },
+      {
+        "key": "infovqa_val-00019",
+        "source": "infovqa_val",
+        "pred": "2000",
+        "golds": [
+          "93,047,785"
+        ],
+        "ok": false
+      },
+      {
+        "key": "infovqa_val-00020",
+        "source": "infovqa_val",
+        "pred": "41%",
+        "golds": [
+          "50%",
+          "50"
+        ],
+        "ok": false
+      },
+      {
+        "key": "infovqa_val-00021",
+        "source": "infovqa_val",
+        "pred": "Twitter",
+        "golds": [
+          "whatsapp"
+        ],
+        "ok": false
+      },
+      {
+        "key": "infovqa_val-00022",
+        "source": "infovqa_val",
+        "pred": "5%",
+        "golds": [
+          "5"
+        ],
+        "ok": true
+      },
+      {
+        "key": "infovqa_val-00023",
+        "source": "infovqa_val",
+        "pred": "Restaurants, Interior design, Wedding venues",
+        "golds": [
+          "restaurants, interior design, wedding venues"
+        ],
+        "ok": true
+      },
+      {
+        "key": "infovqa_val-00024",
+        "source": "infovqa_val",
+        "pred": "USA",
+        "golds": [
+          "china"
+        ],
+        "ok": false
+      },
+      {
+        "key": "infovqa_val-00025",
+        "source": "infovqa_val",
+        "pred": "2",
+        "golds": [
+          "4"
+        ],
+        "ok": false
+      },
+      {
+        "key": "infovqa_val-00026",
+        "source": "infovqa_val",
+        "pred": "487",
+        "golds": [
+          "403,673"
+        ],
+        "ok": false
+      },
+      {
+        "key": "infovqa_val-00027",
+        "source": "infovqa_val",
+        "pred": "The South African Reserve Bank",
+        "golds": [
+          "south african reserve bank"
+        ],
+        "ok": true
+      },
+      {
+        "key": "infovqa_val-00028",
+        "source": "infovqa_val",
+        "pred": "Internet of Things",
+        "golds": [
+          "internet of things"
+        ],
+        "ok": true
+      },
+      {
+        "key": "infovqa_val-00029",
+        "source": "infovqa_val",
+        "pred": "Velodrome",
+        "golds": [
+          "velodrome"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ocrbench2_screen-00000",
+        "source": "ocrbench2_screen",
+        "pred": "on",
+        "golds": [
+          "enabled",
+          "on"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ocrbench2_screen-00001",
+        "source": "ocrbench2_screen",
+        "pred": "12:42 PM",
+        "golds": [
+          "12:42 p.m.",
+          "12:42 PM"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ocrbench2_screen-00002",
+        "source": "ocrbench2_screen",
+        "pred": "1",
+        "golds": [
+          "zero likes",
+          "no likes",
+          "0"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ocrbench2_screen-00003",
+        "source": "ocrbench2_screen",
+        "pred": "aardvark",
+        "golds": [
+          "aardvark",
+          "\"aardvark\""
+        ],
+        "ok": true
+      },
+      {
+        "key": "ocrbench2_screen-00004",
+        "source": "ocrbench2_screen",
+        "pred": "$44500",
+        "golds": [
+          "$44500",
+          "$44,500",
+          "$ 44500"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ocrbench2_screen-00005",
+        "source": "ocrbench2_screen",
+        "pred": "No",
+        "golds": [
+          "not ordered",
+          "have not ordered anything yet",
+          "haven't ordered anything yet"
+        ],
+        "ok": false
+      },
+      {
+        "key": "ocrbench2_screen-00006",
+        "source": "ocrbench2_screen",
+        "pred": "1,195",
+        "golds": [
+          "1195",
+          "1195 comments",
+          "1,195 comments"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ocrbench2_screen-00007",
+        "source": "ocrbench2_screen",
+        "pred": "No",
+        "golds": [
+          "no",
+          "no ownership data available",
+          "not available"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ocrbench2_screen-00008",
+        "source": "ocrbench2_screen",
+        "pred": "0.65 miles",
+        "golds": [
+          "<no answer>"
+        ],
+        "ok": false
+      },
+      {
+        "key": "ocrbench2_screen-00009",
+        "source": "ocrbench2_screen",
+        "pred": "Wiccan's assistant",
+        "golds": [
+          "Wiccan's assistant"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ocrbench2_screen-00010",
+        "source": "ocrbench2_screen",
+        "pred": "Today",
+        "golds": [
+          "<no answer>"
+        ],
+        "ok": false
+      },
+      {
+        "key": "ocrbench2_screen-00011",
+        "source": "ocrbench2_screen",
+        "pred": "Off",
+        "golds": [
+          "off",
+          "disabled"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ocrbench2_screen-00012",
+        "source": "ocrbench2_screen",
+        "pred": "Action, Adventure",
+        "golds": [
+          "Action, Adventure"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ocrbench2_screen-00013",
+        "source": "ocrbench2_screen",
+        "pred": "v3.0.2",
+        "golds": [
+          "version 3.0.2",
+          "v3.0.2",
+          "3.0.2"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ocrbench2_screen-00014",
+        "source": "ocrbench2_screen",
+        "pred": "Home",
+        "golds": [
+          "\"Home\" tab",
+          "Home"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ocrbench2_screen-00015",
+        "source": "ocrbench2_screen",
+        "pred": "English",
+        "golds": [
+          "English"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ocrbench2_screen-00016",
+        "source": "ocrbench2_screen",
+        "pred": "\"for music\"",
+        "golds": [
+          "\"for music\" option",
+          "for music"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ocrbench2_screen-00017",
+        "source": "ocrbench2_screen",
+        "pred": "Gasoline",
+        "golds": [
+          "Gasoline",
+          "gas",
+          "gasoline"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ocrbench2_screen-00018",
+        "source": "ocrbench2_screen",
+        "pred": "SCHOLLY",
+        "golds": [
+          "SCHOLLY"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ocrbench2_screen-00019",
+        "source": "ocrbench2_screen",
+        "pred": "+1 234 567 8901",
+        "golds": [
+          "<no answer>"
+        ],
+        "ok": false
+      },
+      {
+        "key": "ocrbench2_screen-00020",
+        "source": "ocrbench2_screen",
+        "pred": "1.25%",
+        "golds": [
+          "1.25%",
+          "1.25",
+          "1.25 percent"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ocrbench2_screen-00021",
+        "source": "ocrbench2_screen",
+        "pred": "Feb 1, 2015",
+        "golds": [
+          "February 1st, 2015",
+          "February 1, 2015",
+          "February first, 2015"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ocrbench2_screen-00022",
+        "source": "ocrbench2_screen",
+        "pred": "NIV Study Bible",
+        "golds": [
+          "NIV Study Bible"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ocrbench2_screen-00023",
+        "source": "ocrbench2_screen",
+        "pred": "3",
+        "golds": [
+          "three bedrooms",
+          "three",
+          "3"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ocrbench2_screen-00024",
+        "source": "ocrbench2_screen",
+        "pred": "Facebook",
+        "golds": [
+          "public profile and email address"
+        ],
+        "ok": false
+      },
+      {
+        "key": "ocrbench2_screen-00025",
+        "source": "ocrbench2_screen",
+        "pred": "Truth or Dare",
+        "golds": [
+          "Truth or Dare"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ocrbench2_screen-00026",
+        "source": "ocrbench2_screen",
+        "pred": "Laura",
+        "golds": [
+          "Laura"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ocrbench2_screen-00027",
+        "source": "ocrbench2_screen",
+        "pred": "1-800-531-6154",
+        "golds": [
+          "(212) 555-1212",
+          "1-800-531-6154"
+        ],
+        "ok": true
+      },
+      {
+        "key": "ocrbench2_screen-00028",
+        "source": "ocrbench2_screen",
+        "pred": "Facebook, Versy, BBM, Google Voice, Idealo Shopping, Android Beam, Bluetooth, Fake GPS - Search Location",
+        "golds": [
+          "\"Facebook\", \"Versy\", \"BBM\", \"Google Voice\", \"idealo Shopping\", \"Android Beam\", \"Bluetooth\", \"Fake GPS - Search location\"",
+          "Facebook, Versy, BBM, Google Voice, idealo, Android Beam, Bluetooth and Fake GPS - Search location",
+          "Facebook, Versy, BBM, Google Voice, idealo, Android Beam, Bluetooth, Fake GPS - Search location"
+        ],
+        "ok": false
+      },
+      {
+        "key": "ocrbench2_screen-00029",
+        "source": "ocrbench2_screen",
+        "pred": "44",
+        "golds": [
+          "51 years",
+          "51",
+          "51 years old"
+        ],
+        "ok": false
+      },
+      {
+        "key": "textvqa_val-00000",
+        "source": "textvqa_val",
+        "pred": "forces",
+        "golds": [
+          "sports"
+        ],
+        "ok": false
+      },
+      {
+        "key": "textvqa_val-00001",
+        "source": "textvqa_val",
+        "pred": "sheppy's",
+        "golds": [
+          "sheppy's",
+          "sheppy's farmhouse cider",
+          "sheppy's"
+        ],
+        "ok": true
+      },
+      {
+        "key": "textvqa_val-00002",
+        "source": "textvqa_val",
+        "pred": "http://BookWormLaser.com",
+        "golds": [
+          "bookwormlaser.com",
+          "http://bookwormlaser.com",
+          "apparel"
+        ],
+        "ok": true
+      },
+      {
+        "key": "textvqa_val-00003",
+        "source": "textvqa_val",
+        "pred": "2",
+        "golds": [
+          "2"
+        ],
+        "ok": true
+      },
+      {
+        "key": "textvqa_val-00004",
+        "source": "textvqa_val",
+        "pred": "Yes",
+        "golds": [
+          "no",
+          "not a question",
+          "no signs are presented on picture"
+        ],
+        "ok": false
+      },
+      {
+        "key": "textvqa_val-00005",
+        "source": "textvqa_val",
+        "pred": "yes",
+        "golds": [
+          "hallmark",
+          "answering does not require reading text in the image",
+          "no it is a greeting card store"
+        ],
+        "ok": true
+      },
+      {
+        "key": "textvqa_val-00006",
+        "source": "textvqa_val",
+        "pred": "hot wheels",
+        "golds": [
+          "hot wheels",
+          "hot wheelts"
+        ],
+        "ok": true
+      },
+      {
+        "key": "textvqa_val-00007",
+        "source": "textvqa_val",
+        "pred": "R275 ULO",
+        "golds": [
+          "r275ulo",
+          "r275 ulo"
+        ],
+        "ok": true
+      },
+      {
+        "key": "textvqa_val-00008",
+        "source": "textvqa_val",
+        "pred": "Pt",
+        "golds": [
+          "pt",
+          "to trams"
+        ],
+        "ok": true
+      },
+      {
+        "key": "textvqa_val-00009",
+        "source": "textvqa_val",
+        "pred": "u.",
+        "golds": [
+          "u"
+        ],
+        "ok": true
+      },
+      {
+        "key": "textvqa_val-00010",
+        "source": "textvqa_val",
+        "pred": "power",
+        "golds": [
+          "power",
+          "power!",
+          "autographs"
+        ],
+        "ok": true
+      },
+      {
+        "key": "textvqa_val-00011",
+        "source": "textvqa_val",
+        "pred": "coffee",
+        "golds": [
+          "coffee",
+          "cofffee"
+        ],
+        "ok": true
+      },
+      {
+        "key": "textvqa_val-00012",
+        "source": "textvqa_val",
+        "pred": "433-679-1066",
+        "golds": [
+          "443-309-6457",
+          "443 3096457",
+          "046 304 5467"
+        ],
+        "ok": false
+      },
+      {
+        "key": "textvqa_val-00013",
+        "source": "textvqa_val",
+        "pred": "in",
+        "golds": [
+          "in"
+        ],
+        "ok": true
+      },
+      {
+        "key": "textvqa_val-00014",
+        "source": "textvqa_val",
+        "pred": "20",
+        "golds": [
+          "17"
+        ],
+        "ok": false
+      },
+      {
+        "key": "textvqa_val-00015",
+        "source": "textvqa_val",
+        "pred": "child",
+        "golds": [
+          "child",
+          "free child",
+          "free child shark"
+        ],
+        "ok": true
+      },
+      {
+        "key": "textvqa_val-00016",
+        "source": "textvqa_val",
+        "pred": "yes",
+        "golds": [
+          "answering does not require reading text in the image",
+          "yes",
+          "unanswerable"
+        ],
+        "ok": true
+      },
+      {
+        "key": "textvqa_val-00017",
+        "source": "textvqa_val",
+        "pred": "100",
+        "golds": [
+          "300ml",
+          "200 ml",
+          "200 mls"
+        ],
+        "ok": false
+      },
+      {
+        "key": "textvqa_val-00018",
+        "source": "textvqa_val",
+        "pred": "Yes",
+        "golds": [
+          "answering does not require reading text in the image",
+          "yes",
+          "unanswerable"
+        ],
+        "ok": true
+      },
+      {
+        "key": "textvqa_val-00019",
+        "source": "textvqa_val",
+        "pred": "yes",
+        "golds": [
+          "yes",
+          "ruination"
+        ],
+        "ok": true
+      },
+      {
+        "key": "textvqa_val-00020",
+        "source": "textvqa_val",
+        "pred": "fanatical",
+        "golds": [
+          "fanatical",
+          "fanatical support",
+          "rackspace"
+        ],
+        "ok": true
+      },
+      {
+        "key": "textvqa_val-00021",
+        "source": "textvqa_val",
+        "pred": "10:10",
+        "golds": [
+          "5:46",
+          "5:45",
+          "45 minutes past 5"
+        ],
+        "ok": false
+      },
+      {
+        "key": "textvqa_val-00022",
+        "source": "textvqa_val",
+        "pred": "22",
+        "golds": [
+          "22"
+        ],
+        "ok": true
+      },
+      {
+        "key": "textvqa_val-00023",
+        "source": "textvqa_val",
+        "pred": "welcome",
+        "golds": [
+          "welcome",
+          "rail canada",
+          "answering does not require reading text in the image"
+        ],
+        "ok": true
+      },
+      {
+        "key": "textvqa_val-00024",
+        "source": "textvqa_val",
+        "pred": "16th-18th july 2015",
+        "golds": [
+          "16th-18th july 2015",
+          "16th - 18th july 2015",
+          "july 2015"
+        ],
+        "ok": true
+      },
+      {
+        "key": "textvqa_val-00025",
+        "source": "textvqa_val",
+        "pred": "auto service",
+        "golds": [
+          "auto service",
+          "auto service experts",
+          "yes"
+        ],
+        "ok": true
+      },
+      {
+        "key": "textvqa_val-00026",
+        "source": "textvqa_val",
+        "pred": "Yes",
+        "golds": [
+          "unanswerable",
+          "no",
+          "answering does not require reading text in the image"
+        ],
+        "ok": false
+      },
+      {
+        "key": "textvqa_val-00027",
+        "source": "textvqa_val",
+        "pred": "macbook",
+        "golds": [
+          "macbook",
+          "macbook'"
+        ],
+        "ok": true
+      },
+      {
+        "key": "textvqa_val-00028",
+        "source": "textvqa_val",
+        "pred": "clas",
+        "golds": [
+          "clas mild",
+          "yes"
+        ],
+        "ok": false
+      },
+      {
+        "key": "textvqa_val-00029",
+        "source": "textvqa_val",
+        "pred": "rx",
+        "golds": [
+          "rx",
+          "r",
+          "hamilton beach"
+        ],
+        "ok": true
+      },
+      {
+        "key": "vqav2_val-00000",
+        "source": "vqav2_val",
+        "pred": "1",
+        "golds": [
+          "1"
+        ],
+        "ok": true
+      },
+      {
+        "key": "vqav2_val-00001",
+        "source": "vqav2_val",
+        "pred": "No",
+        "golds": [
+          "no"
+        ],
+        "ok": true
+      },
+      {
+        "key": "vqav2_val-00002",
+        "source": "vqav2_val",
+        "pred": "Trees",
+        "golds": [
+          "no 1"
+        ],
+        "ok": false
+      },
+      {
+        "key": "vqav2_val-00003",
+        "source": "vqav2_val",
+        "pred": "Yes",
+        "golds": [
+          "yes"
+        ],
+        "ok": true
+      },
+      {
+        "key": "vqav2_val-00004",
+        "source": "vqav2_val",
+        "pred": "Train",
+        "golds": [
+          "train"
+        ],
+        "ok": true
+      },
+      {
+        "key": "vqav2_val-00005",
+        "source": "vqav2_val",
+        "pred": "Yes",
+        "golds": [
+          "no"
+        ],
+        "ok": false
+      },
+      {
+        "key": "vqav2_val-00006",
+        "source": "vqav2_val",
+        "pred": "Yes",
+        "golds": [
+          "no"
+        ],
+        "ok": false
+      },
+      {
+        "key": "vqav2_val-00007",
+        "source": "vqav2_val",
+        "pred": "2",
+        "golds": [
+          "2"
+        ],
+        "ok": true
+      },
+      {
+        "key": "vqav2_val-00008",
+        "source": "vqav2_val",
+        "pred": "No",
+        "golds": [
+          "no"
+        ],
+        "ok": true
+      },
+      {
+        "key": "vqav2_val-00009",
+        "source": "vqav2_val",
+        "pred": "Yes",
+        "golds": [
+          "no"
+        ],
+        "ok": false
+      },
+      {
+        "key": "vqav2_val-00010",
+        "source": "vqav2_val",
+        "pred": "$150",
+        "golds": [
+          "$150"
+        ],
+        "ok": true
+      },
+      {
+        "key": "vqav2_val-00011",
+        "source": "vqav2_val",
+        "pred": "Teenage",
+        "golds": [
+          "25"
+        ],
+        "ok": false
+      },
+      {
+        "key": "vqav2_val-00012",
+        "source": "vqav2_val",
+        "pred": "Yes",
+        "golds": [
+          "yes"
+        ],
+        "ok": true
+      },
+      {
+        "key": "vqav2_val-00013",
+        "source": "vqav2_val",
+        "pred": "Yes",
+        "golds": [
+          "yes"
+        ],
+        "ok": true
+      },
+      {
+        "key": "vqav2_val-00014",
+        "source": "vqav2_val",
+        "pred": "Yes",
+        "golds": [
+          "yes"
+        ],
+        "ok": true
+      },
+      {
+        "key": "vqav2_val-00015",
+        "source": "vqav2_val",
+        "pred": "Kite",
+        "golds": [
+          "kite string"
+        ],
+        "ok": false
+      },
+      {
+        "key": "vqav2_val-00016",
+        "source": "vqav2_val",
+        "pred": "Person",
+        "golds": [
+          "man"
+        ],
+        "ok": false
+      },
+      {
+        "key": "vqav2_val-00017",
+        "source": "vqav2_val",
+        "pred": "12/28",
+        "golds": [
+          "1/7"
+        ],
+        "ok": false
+      },
+      {
+        "key": "vqav2_val-00018",
+        "source": "vqav2_val",
+        "pred": "Yes",
+        "golds": [
+          "yes"
+        ],
+        "ok": true
+      },
+      {
+        "key": "vqav2_val-00019",
+        "source": "vqav2_val",
+        "pred": "On table",
+        "golds": [
+          "table"
+        ],
+        "ok": true
+      },
+      {
+        "key": "vqav2_val-00020",
+        "source": "vqav2_val",
+        "pred": "Red",
+        "golds": [
+          "red"
+        ],
+        "ok": true
+      },
+      {
+        "key": "vqav2_val-00021",
+        "source": "vqav2_val",
+        "pred": "1",
+        "golds": [
+          "1"
+        ],
+        "ok": true
+      },
+      {
+        "key": "vqav2_val-00022",
+        "source": "vqav2_val",
+        "pred": "2",
+        "golds": [
+          "2"
+        ],
+        "ok": true
+      },
+      {
+        "key": "vqav2_val-00023",
+        "source": "vqav2_val",
+        "pred": "Tennis",
+        "golds": [
+          "tennis"
+        ],
+        "ok": true
+      },
+      {
+        "key": "vqav2_val-00024",
+        "source": "vqav2_val",
+        "pred": "Chopsticks",
+        "golds": [
+          "chopsticks"
+        ],
+        "ok": true
+      },
+      {
+        "key": "vqav2_val-00025",
+        "source": "vqav2_val",
+        "pred": "No",
+        "golds": [
+          "no"
+        ],
+        "ok": true
+      },
+      {
+        "key": "vqav2_val-00026",
+        "source": "vqav2_val",
+        "pred": "Grace",
+        "golds": [
+          "grace"
+        ],
+        "ok": true
+      },
+      {
+        "key": "vqav2_val-00027",
+        "source": "vqav2_val",
+        "pred": "No",
+        "golds": [
+          "yes"
+        ],
+        "ok": false
+      },
+      {
+        "key": "vqav2_val-00028",
+        "source": "vqav2_val",
+        "pred": "Cars",
+        "golds": [
+          "stop"
+        ],
+        "ok": false
+      },
+      {
+        "key": "vqav2_val-00029",
+        "source": "vqav2_val",
+        "pred": "Red",
+        "golds": [
+          "red"
+        ],
+        "ok": true
+      }
+    ]
+  }
+}

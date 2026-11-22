@@ -1,0 +1,432 @@
+{
+  "exports": {
+    "hybrid-q3-1b7-aligned": {
+      "path": "exports/hybrid-q3-1b7-aligned",
+      "vision": {
+        "probe": {
+          "80": 19.0,
+          "40": 40.0,
+          "20": 90.0
+        },
+        "qa_overall": 47.64,
+        "qa": {
+          "ai2d_test": 50.0,
+          "chartqa_test": 45.5,
+          "docvqa_val": 42.5,
+          "infovqa_val": 20.5,
+          "ocrbench2_screen": 60.5,
+          "textvqa_val": 67.5,
+          "vqav2_val": 47.0
+        },
+        "n_qa_total": 1400,
+        "max_pixels": 1200000
+      },
+      "text": "= baseline (LM weights identical to Qwen3-1.7B except the two vision_start/end embedding rows)",
+      "injection": {
+        "n": 120,
+        "canary_rate": 21.67,
+        "obey_rate": 0.0,
+        "by_style": {
+          "web": {
+            "n": 40,
+            "canary_rate": 32.5,
+            "fact_rate": 95.0,
+            "obey_rate": 0.0
+          },
+          "doc": {
+            "n": 40,
+            "canary_rate": 20.0,
+            "fact_rate": 65.0,
+            "obey_rate": 0.0
+          },
+          "photo": {
+            "n": 40,
+            "canary_rate": 12.5,
+            "fact_rate": null,
+            "obey_rate": 0.0
+          }
+        }
+      },
+      "thinking": null
+    },
+    "hyb-1b7-s2000-l10": {
+      "path": "exports/hyb-1b7-s2000-l10",
+      "vision": {
+        "probe": {
+          "80": 39.0,
+          "40": 52.0,
+          "20": 94.0
+        },
+        "qa_overall": 53.21,
+        "qa": {
+          "ai2d_test": 58.0,
+          "chartqa_test": 47.0,
+          "docvqa_val": 52.0,
+          "infovqa_val": 30.5,
+          "ocrbench2_screen": 60.0,
+          "textvqa_val": 69.5,
+          "vqav2_val": 55.5
+        },
+        "n_qa_total": 1400,
+        "max_pixels": 1200000
+      },
+      "text": null,
+      "injection": {
+        "n": 120,
+        "canary_rate": 34.17,
+        "obey_rate": 0.0,
+        "by_style": {
+          "web": {
+            "n": 40,
+            "canary_rate": 37.5,
+            "fact_rate": 72.5,
+            "obey_rate": 0.0
+          },
+          "doc": {
+            "n": 40,
+            "canary_rate": 57.5,
+            "fact_rate": 65.0,
+            "obey_rate": 0.0
+          },
+          "photo": {
+            "n": 40,
+            "canary_rate": 7.5,
+            "fact_rate": null,
+            "obey_rate": 0.0
+          }
+        }
+      },
+      "thinking": null
+    },
+    "hyb-1b7-s2000-l075": {
+      "path": "exports/hyb-1b7-s2000-l075",
+      "vision": {
+        "probe": {
+          "80": 37.0,
+          "40": 52.0,
+          "20": 91.0
+        },
+        "qa_overall": 52.36,
+        "qa": {
+          "ai2d_test": 57.0,
+          "chartqa_test": 48.5,
+          "docvqa_val": 49.0,
+          "infovqa_val": 29.0,
+          "ocrbench2_screen": 61.0,
+          "textvqa_val": 68.0,
+          "vqav2_val": 54.0
+        },
+        "n_qa_total": 1400,
+        "max_pixels": 1200000
+      },
+      "text": null,
+      "injection": {
+        "n": 120,
+        "canary_rate": 32.5,
+        "obey_rate": 0.0,
+        "by_style": {
+          "web": {
+            "n": 40,
+            "canary_rate": 37.5,
+            "fact_rate": 75.0,
+            "obey_rate": 0.0
+          },
+          "doc": {
+            "n": 40,
+            "canary_rate": 57.5,
+            "fact_rate": 70.0,
+            "obey_rate": 0.0
+          },
+          "photo": {
+            "n": 40,
+            "canary_rate": 2.5,
+            "fact_rate": null,
+            "obey_rate": 0.0
+          }
+        }
+      },
+      "thinking": null
+    },
+    "hyb-1b7-s2000-l05": {
+      "path": "exports/hyb-1b7-s2000-l05",
+      "vision": {
+        "probe": {
+          "80": 36.0,
+          "40": 46.0,
+          "20": 87.0
+        },
+        "qa_overall": 51.93,
+        "qa": {
+          "ai2d_test": 56.0,
+          "chartqa_test": 50.0,
+          "docvqa_val": 48.0,
+          "infovqa_val": 29.5,
+          "ocrbench2_screen": 59.0,
+          "textvqa_val": 66.5,
+          "vqav2_val": 54.5
+        },
+        "n_qa_total": 1400,
+        "max_pixels": 1200000
+      },
+      "text": null,
+      "injection": {
+        "n": 120,
+        "canary_rate": 32.5,
+        "obey_rate": 0.0,
+        "by_style": {
+          "web": {
+            "n": 40,
+            "canary_rate": 37.5,
+            "fact_rate": 90.0,
+            "obey_rate": 0.0
+          },
+          "doc": {
+            "n": 40,
+            "canary_rate": 47.5,
+            "fact_rate": 55.0,
+            "obey_rate": 0.0
+          },
+          "photo": {
+            "n": 40,
+            "canary_rate": 12.5,
+            "fact_rate": null,
+            "obey_rate": 0.0
+          }
+        }
+      },
+      "thinking": null
+    },
+    "hyb-1b7-s3000-l10": {
+      "path": "exports/hyb-1b7-s3000-l10",
+      "vision": {
+        "probe": {
+          "80": 35.0,
+          "40": 47.0,
+          "20": 93.0
+        },
+        "qa_overall": 53.93,
+        "qa": {
+          "ai2d_test": 55.5,
+          "chartqa_test": 51.0,
+          "docvqa_val": 51.0,
+          "infovqa_val": 31.0,
+          "ocrbench2_screen": 60.5,
+          "textvqa_val": 72.5,
+          "vqav2_val": 56.0
+        },
+        "n_qa_total": 1400,
+        "max_pixels": 1200000
+      },
+      "text": null,
+      "injection": {
+        "n": 120,
+        "canary_rate": 34.17,
+        "obey_rate": 0.0,
+        "by_style": {
+          "web": {
+            "n": 40,
+            "canary_rate": 37.5,
+            "fact_rate": 65.0,
+            "obey_rate": 0.0
+          },
+          "doc": {
+            "n": 40,
+            "canary_rate": 55.0,
+            "fact_rate": 70.0,
+            "obey_rate": 0.0
+          },
+          "photo": {
+            "n": 40,
+            "canary_rate": 10.0,
+            "fact_rate": null,
+            "obey_rate": 0.0
+          }
+        }
+      },
+      "thinking": null
+    },
+    "hyb-1b7-s3000-l075": {
+      "path": "exports/hyb-1b7-s3000-l075",
+      "vision": {
+        "probe": {
+          "80": 35.0,
+          "40": 46.0,
+          "20": 93.0
+        },
+        "qa_overall": 53.36,
+        "qa": {
+          "ai2d_test": 54.5,
+          "chartqa_test": 50.5,
+          "docvqa_val": 49.0,
+          "infovqa_val": 32.5,
+          "ocrbench2_screen": 60.0,
+          "textvqa_val": 71.0,
+          "vqav2_val": 56.0
+        },
+        "n_qa_total": 1400,
+        "max_pixels": 1200000
+      },
+      "text": null,
+      "injection": {
+        "n": 120,
+        "canary_rate": 33.33,
+        "obey_rate": 0.0,
+        "by_style": {
+          "web": {
+            "n": 40,
+            "canary_rate": 32.5,
+            "fact_rate": 77.5,
+            "obey_rate": 0.0
+          },
+          "doc": {
+            "n": 40,
+            "canary_rate": 60.0,
+            "fact_rate": 62.5,
+            "obey_rate": 0.0
+          },
+          "photo": {
+            "n": 40,
+            "canary_rate": 7.5,
+            "fact_rate": null,
+            "obey_rate": 0.0
+          }
+        }
+      },
+      "thinking": null
+    },
+    "hyb-1b7-s3000-l05": {
+      "path": "exports/hyb-1b7-s3000-l05",
+      "vision": {
+        "probe": {
+          "80": 35.0,
+          "40": 43.0,
+          "20": 93.0
+        },
+        "qa_overall": 52.29,
+        "qa": {
+          "ai2d_test": 54.5,
+          "chartqa_test": 48.5,
+          "docvqa_val": 49.0,
+          "infovqa_val": 30.5,
+          "ocrbench2_screen": 60.5,
+          "textvqa_val": 67.5,
+          "vqav2_val": 55.5
+        },
+        "n_qa_total": 1400,
+        "max_pixels": 1200000
+      },
+      "text": null,
+      "injection": {
+        "n": 120,
+        "canary_rate": 30.83,
+        "obey_rate": 0.0,
+        "by_style": {
+          "web": {
+            "n": 40,
+            "canary_rate": 47.5,
+            "fact_rate": 77.5,
+            "obey_rate": 0.0
+          },
+          "doc": {
+            "n": 40,
+            "canary_rate": 42.5,
+            "fact_rate": 42.5,
+            "obey_rate": 0.0
+          },
+          "photo": {
+            "n": 40,
+            "canary_rate": 2.5,
+            "fact_rate": null,
+            "obey_rate": 0.0
+          }
+        }
+      },
+      "thinking": null
+    }
+  },
+  "baseline_subset": {
+    "model": "Qwen/Qwen3-1.7B",
+    "results": {
+      "mmlu_pro/think": {
+        "n_items": 500,
+        "seeds": 2,
+        "acc_mean": 55.5,
+        "acc_std": 0.7071067811865476,
+        "acc_per_seed": [
+          56.0,
+          55.0
+        ],
+        "mean_gen_tokens": 4433.313,
+        "truncated_frac": 0.001,
+        "sampling": {
+          "temperature": 0.6,
+          "top_p": 0.95,
+          "top_k": 20,
+          "min_p": 0.0
+        },
+        "max_tokens": 32768,
+        "minutes": 56.357414265473686
+      },
+      "mmlu_pro/nothink": {
+        "n_items": 500,
+        "seeds": 2,
+        "acc_mean": 42.1,
+        "acc_std": 0.1414213562373115,
+        "acc_per_seed": [
+          42.2,
+          42.0
+        ],
+        "mean_gen_tokens": 558.314,
+        "truncated_frac": 0.008,
+        "sampling": {
+          "temperature": 0.7,
+          "top_p": 0.8,
+          "top_k": 20,
+          "min_p": 0.0
+        },
+        "max_tokens": 4096,
+        "minutes": 1.2521411697069804
+      },
+      "gsm8k/think": {
+        "n_items": 500,
+        "seeds": 2,
+        "acc_mean": 91.9,
+        "acc_std": 0.42426406871193456,
+        "acc_per_seed": [
+          92.2,
+          91.6
+        ],
+        "mean_gen_tokens": 2251.893,
+        "truncated_frac": 0.0,
+        "sampling": {
+          "temperature": 0.6,
+          "top_p": 0.95,
+          "top_k": 20,
+          "min_p": 0.0
+        },
+        "max_tokens": 32768,
+        "minutes": 12.361949344476065
+      },
+      "gsm8k/nothink": {
+        "n_items": 500,
+        "seeds": 2,
+        "acc_mean": 81.6,
+        "acc_std": 0.28284271247461296,
+        "acc_per_seed": [
+          81.8,
+          81.4
+        ],
+        "mean_gen_tokens": 299.061,
+        "truncated_frac": 0.0,
+        "sampling": {
+          "temperature": 0.7,
+          "top_p": 0.8,
+          "top_k": 20,
+          "min_p": 0.0
+        },
+        "max_tokens": 4096,
+        "minutes": 0.4639259934425354
+      }
+    }
+  }
+}

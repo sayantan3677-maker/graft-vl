@@ -1,0 +1,614 @@
+{
+  "agent": "serving-bench",
+  "date": "2026-11-01",
+  "export": "exports/serve-hyb-1b7-s2000",
+  "export_source": {
+    "run": "experiments/HYB-S2-Q3-1B7-LORA32-3000",
+    "step": 2000,
+    "lora_scale": 1.0
+  },
+  "serving_files": "scripts/prepare_hybrid_serving.py (merged chat template, nothink template, max_pixels 1.6M, Qwen3 generation_config)",
+  "parity": {
+    "export": "exports/serve-hyb-1b7-s2000",
+    "max_pixels": 1600000,
+    "n_images": 24,
+    "n_cases": 48,
+    "prompt_ids_equal": 48,
+    "full_greedy_match": 28,
+    "full_greedy_match_short": 23,
+    "full_greedy_match_describe": 5,
+    "divergences": 20,
+    "near_tie_divergences": 17,
+    "max_gap_nats": 0.75,
+    "mean_prefix_agree_describe": 22.875,
+    "new_tokens": 64,
+    "near_tie_threshold": 0.5,
+    "template_checks": {
+      "nothink_has_empty_think_block": true,
+      "default_thinking_prompt_ends": "'\\n<|im_start|>assistant\\n'",
+      "default_thinking_has_no_empty_think_block": true,
+      "original_qwen3_template_via_vllm": {
+        "prompt_ids_equal_hf": false,
+        "prompt_text_head": "<|im_start|>user\n<|vision_start|><|vision_end|>\nWhat organism represents the producer of the food web shown?\n(A) Deer\n(B) Grass\n(C) Tiger\n(D) Grasshopper\nAnswer"
+      }
+    },
+    "teacher_forced": {
+      "hf_bf16": {
+        "cases": 48,
+        "tokens": 1399,
+        "mean_abs_dlogprob_vs_fp32": 0.0321,
+        "p99_abs_dlogprob_vs_fp32": 0.2946,
+        "max_abs_dlogprob_vs_fp32": 1.1006,
+        "top1_agree_with_fp32": 0.9707
+      },
+      "vllm_bf16": {
+        "cases": 46,
+        "tokens": 1271,
+        "mean_abs_dlogprob_vs_fp32": 0.032,
+        "p99_abs_dlogprob_vs_fp32": 0.3458,
+        "max_abs_dlogprob_vs_fp32": 0.6971,
+        "top1_agree_with_fp32": 0.974
+      }
+    },
+    "pass_strict": false,
+    "pass_numerics": true,
+    "pass": true
+  },
+  "performance": {
+    "setup": "vllm 0.30 serve, gpu-memory-utilization 0.45, max-model-len 16384, limit-mm-per-prompt image=1, 64 output tokens (ignore_eos), non-thinking, distinct images per request (page=docvqa, screenshot=ocrbench2_screen, photo=vqav2), GPU 1 shared with slot-A co-tenant at ~94% util",
+    "results": {
+      "bf16": {
+        "run1": [
+          {
+            "concurrency": 1,
+            "requests": 12,
+            "wall_s": 9.53,
+            "ttft_mean_ms": 207.3,
+            "ttft_p50_ms": 240.0,
+            "ttft_p90_ms": 349.8,
+            "tpot_mean_ms": 9.31,
+            "per_request_decode_tok_s": 107.5,
+            "output_tok_s": 80.6,
+            "req_s": 1.26,
+            "mean_prompt_tokens": 979.9,
+            "by_type": {
+              "page": {
+                "ttft_mean_ms": 310.3,
+                "prompt_tokens": 1363
+              },
+              "photo": {
+                "ttft_mean_ms": 82.5,
+                "prompt_tokens": 298.2
+              },
+              "screenshot": {
+                "ttft_mean_ms": 229.2,
+                "prompt_tokens": 1278.5
+              }
+            }
+          },
+          {
+            "concurrency": 8,
+            "requests": 24,
+            "wall_s": 6.21,
+            "ttft_mean_ms": 876.4,
+            "ttft_p50_ms": 506.3,
+            "ttft_p90_ms": 2094.1,
+            "tpot_mean_ms": 15.43,
+            "per_request_decode_tok_s": 64.8,
+            "output_tok_s": 247.3,
+            "req_s": 3.86,
+            "mean_prompt_tokens": 884.0,
+            "by_type": {
+              "page": {
+                "ttft_mean_ms": 1234.9,
+                "prompt_tokens": 1477.5
+              },
+              "photo": {
+                "ttft_mean_ms": 778.9,
+                "prompt_tokens": 303
+              },
+              "screenshot": {
+                "ttft_mean_ms": 615.3,
+                "prompt_tokens": 871.4
+              }
+            }
+          },
+          {
+            "concurrency": 32,
+            "requests": 96,
+            "wall_s": 10.44,
+            "ttft_mean_ms": 968.5,
+            "ttft_p50_ms": 935.8,
+            "ttft_p90_ms": 1681.0,
+            "tpot_mean_ms": 37.99,
+            "per_request_decode_tok_s": 26.3,
+            "output_tok_s": 588.7,
+            "req_s": 9.2,
+            "mean_prompt_tokens": 1046.5,
+            "by_type": {
+              "page": {
+                "ttft_mean_ms": 1196.7,
+                "prompt_tokens": 1532.2
+              },
+              "photo": {
+                "ttft_mean_ms": 721.9,
+                "prompt_tokens": 270.0
+              },
+              "screenshot": {
+                "ttft_mean_ms": 986.9,
+                "prompt_tokens": 1337.4
+              }
+            }
+          }
+        ],
+        "run2": [
+          {
+            "concurrency": 1,
+            "requests": 24,
+            "wall_s": 19.92,
+            "ttft_mean_ms": 236.2,
+            "ttft_p50_ms": 260.4,
+            "ttft_p90_ms": 358.8,
+            "tpot_mean_ms": 9.42,
+            "per_request_decode_tok_s": 106.2,
+            "output_tok_s": 77.1,
+            "req_s": 1.2,
+            "mean_prompt_tokens": 961.5,
+            "by_type": {
+              "page": {
+                "ttft_mean_ms": 414.7,
+                "prompt_tokens": 1455
+              },
+              "photo": {
+                "ttft_mean_ms": 78.6,
+                "prompt_tokens": 275.6
+              },
+              "screenshot": {
+                "ttft_mean_ms": 215.4,
+                "prompt_tokens": 1153.8
+              }
+            }
+          },
+          {
+            "concurrency": 8,
+            "requests": 48,
+            "wall_s": 8.96,
+            "ttft_mean_ms": 414.7,
+            "ttft_p50_ms": 410.4,
+            "ttft_p90_ms": 729.6,
+            "tpot_mean_ms": 16.32,
+            "per_request_decode_tok_s": 61.3,
+            "output_tok_s": 343.0,
+            "req_s": 5.36,
+            "mean_prompt_tokens": 975.7,
+            "by_type": {
+              "page": {
+                "ttft_mean_ms": 542.2,
+                "prompt_tokens": 1499.2
+              },
+              "photo": {
+                "ttft_mean_ms": 273.5,
+                "prompt_tokens": 297.5
+              },
+              "screenshot": {
+                "ttft_mean_ms": 428.5,
+                "prompt_tokens": 1130.4
+              }
+            }
+          },
+          {
+            "concurrency": 32,
+            "requests": 192,
+            "wall_s": 20.18,
+            "ttft_mean_ms": 1034.7,
+            "ttft_p50_ms": 945.5,
+            "ttft_p90_ms": 1751.5,
+            "tpot_mean_ms": 36.14,
+            "per_request_decode_tok_s": 27.7,
+            "output_tok_s": 609.0,
+            "req_s": 9.52,
+            "mean_prompt_tokens": 1049.0,
+            "by_type": {
+              "page": {
+                "ttft_mean_ms": 1183.5,
+                "prompt_tokens": 1522.9
+              },
+              "photo": {
+                "ttft_mean_ms": 837.0,
+                "prompt_tokens": 280.7
+              },
+              "screenshot": {
+                "ttft_mean_ms": 1083.6,
+                "prompt_tokens": 1343.4
+              }
+            }
+          }
+        ]
+      },
+      "fp8": {
+        "run1": [
+          {
+            "concurrency": 1,
+            "requests": 12,
+            "wall_s": 8.02,
+            "ttft_mean_ms": 193.1,
+            "ttft_p50_ms": 232.8,
+            "ttft_p90_ms": 274.8,
+            "tpot_mean_ms": 7.46,
+            "per_request_decode_tok_s": 134.1,
+            "output_tok_s": 95.8,
+            "req_s": 1.5,
+            "mean_prompt_tokens": 979.9,
+            "by_type": {
+              "page": {
+                "ttft_mean_ms": 257.8,
+                "prompt_tokens": 1363
+              },
+              "photo": {
+                "ttft_mean_ms": 93.2,
+                "prompt_tokens": 298.2
+              },
+              "screenshot": {
+                "ttft_mean_ms": 228.4,
+                "prompt_tokens": 1278.5
+              }
+            }
+          },
+          {
+            "concurrency": 8,
+            "requests": 24,
+            "wall_s": 5.31,
+            "ttft_mean_ms": 921.0,
+            "ttft_p50_ms": 588.4,
+            "ttft_p90_ms": 2016.1,
+            "tpot_mean_ms": 10.73,
+            "per_request_decode_tok_s": 93.2,
+            "output_tok_s": 289.1,
+            "req_s": 4.52,
+            "mean_prompt_tokens": 884.0,
+            "by_type": {
+              "page": {
+                "ttft_mean_ms": 1157.6,
+                "prompt_tokens": 1477.5
+              },
+              "photo": {
+                "ttft_mean_ms": 838.3,
+                "prompt_tokens": 303
+              },
+              "screenshot": {
+                "ttft_mean_ms": 767.2,
+                "prompt_tokens": 871.4
+              }
+            }
+          },
+          {
+            "concurrency": 32,
+            "requests": 96,
+            "wall_s": 8.98,
+            "ttft_mean_ms": 825.6,
+            "ttft_p50_ms": 657.8,
+            "ttft_p90_ms": 1637.3,
+            "tpot_mean_ms": 31.29,
+            "per_request_decode_tok_s": 32.0,
+            "output_tok_s": 684.4,
+            "req_s": 10.69,
+            "mean_prompt_tokens": 1046.5,
+            "by_type": {
+              "page": {
+                "ttft_mean_ms": 990.7,
+                "prompt_tokens": 1532.2
+              },
+              "photo": {
+                "ttft_mean_ms": 669.2,
+                "prompt_tokens": 270.0
+              },
+              "screenshot": {
+                "ttft_mean_ms": 816.8,
+                "prompt_tokens": 1337.4
+              }
+            }
+          }
+        ],
+        "run2": [
+          {
+            "concurrency": 1,
+            "requests": 24,
+            "wall_s": 20.87,
+            "ttft_mean_ms": 240.9,
+            "ttft_p50_ms": 234.2,
+            "ttft_p90_ms": 345.5,
+            "tpot_mean_ms": 9.58,
+            "per_request_decode_tok_s": 104.3,
+            "output_tok_s": 73.6,
+            "req_s": 1.15,
+            "mean_prompt_tokens": 961.5,
+            "by_type": {
+              "page": {
+                "ttft_mean_ms": 401.4,
+                "prompt_tokens": 1455
+              },
+              "photo": {
+                "ttft_mean_ms": 104.7,
+                "prompt_tokens": 275.6
+              },
+              "screenshot": {
+                "ttft_mean_ms": 216.5,
+                "prompt_tokens": 1153.8
+              }
+            }
+          },
+          {
+            "concurrency": 8,
+            "requests": 48,
+            "wall_s": 8.07,
+            "ttft_mean_ms": 346.0,
+            "ttft_p50_ms": 307.1,
+            "ttft_p90_ms": 584.1,
+            "tpot_mean_ms": 14.11,
+            "per_request_decode_tok_s": 70.9,
+            "output_tok_s": 380.9,
+            "req_s": 5.95,
+            "mean_prompt_tokens": 975.7,
+            "by_type": {
+              "page": {
+                "ttft_mean_ms": 494.1,
+                "prompt_tokens": 1499.2
+              },
+              "photo": {
+                "ttft_mean_ms": 220.8,
+                "prompt_tokens": 297.5
+              },
+              "screenshot": {
+                "ttft_mean_ms": 323.2,
+                "prompt_tokens": 1130.4
+              }
+            }
+          },
+          {
+            "concurrency": 32,
+            "requests": 192,
+            "wall_s": 19.59,
+            "ttft_mean_ms": 1031.2,
+            "ttft_p50_ms": 991.5,
+            "ttft_p90_ms": 1832.4,
+            "tpot_mean_ms": 33.72,
+            "per_request_decode_tok_s": 29.7,
+            "output_tok_s": 627.2,
+            "req_s": 9.8,
+            "mean_prompt_tokens": 1049.0,
+            "by_type": {
+              "page": {
+                "ttft_mean_ms": 1238.3,
+                "prompt_tokens": 1522.9
+              },
+              "photo": {
+                "ttft_mean_ms": 792.6,
+                "prompt_tokens": 280.7
+              },
+              "screenshot": {
+                "ttft_mean_ms": 1062.8,
+                "prompt_tokens": 1343.4
+              }
+            }
+          }
+        ]
+      }
+    },
+    "kv_cache_tokens": {
+      "bf16": 334272,
+      "fp8": 350320
+    },
+    "weights_gib": {
+      "bf16": 4.31,
+      "fp8": 2.63
+    }
+  },
+  "fp8_accuracy_subset": {
+    "bf16": {
+      "n": 210,
+      "overall": 52.86,
+      "per_source": {
+        "ai2d_test": 56.7,
+        "chartqa_test": 46.7,
+        "docvqa_val": 56.7,
+        "infovqa_val": 23.3,
+        "ocrbench2_screen": 60.0,
+        "textvqa_val": 66.7,
+        "vqav2_val": 60.0
+      }
+    },
+    "fp8": {
+      "n": 210,
+      "overall": 55.24,
+      "per_source": {
+        "ai2d_test": 70.0,
+        "chartqa_test": 43.3,
+        "docvqa_val": 56.7,
+        "infovqa_val": 30.0,
+        "ocrbench2_screen": 63.3,
+        "textvqa_val": 70.0,
+        "vqav2_val": 53.3
+      }
+    },
+    "paired": {
+      "bf16_only_correct": 4,
+      "fp8_only_correct": 9,
+      "identical_predictions": 170,
+      "n": 210,
+      "sign_test_p_two_sided": 0.27
+    }
+  },
+  "benchmarks_quick_limit500": {
+    "single_image": {
+      "ours (hybrid s2000)": {
+        "docvqa_val": {
+          "metric": "ANLS",
+          "value": 62.51,
+          "n": 500
+        },
+        "infovqa_val": {
+          "metric": "ANLS",
+          "value": 34.14,
+          "n": 500
+        },
+        "chartqa": {
+          "metric": "relaxed acc",
+          "value": 41.2,
+          "n": 500
+        },
+        "textvqa_val": {
+          "metric": "VQA acc",
+          "value": 58.62,
+          "n": 500
+        },
+        "ocrbench": {
+          "metric": "score/n",
+          "value": 74.4,
+          "n": 500
+        },
+        "ai2d": {
+          "metric": "EM (flexible-extract)",
+          "value": 0.0,
+          "n": 500,
+          "lenient_letter_acc": 57.2
+        },
+        "mmbench_en_dev": {
+          "metric": "gpt_eval_score (rule match; no GPT key)",
+          "value": 68.6,
+          "n": 500
+        },
+        "pope": {
+          "metric": "F1",
+          "value": 80.82,
+          "n": 500
+        },
+        "realworldqa": {
+          "metric": "EM",
+          "value": 51.6,
+          "n": 500,
+          "lenient_letter_acc": 51.6
+        }
+      },
+      "Qwen3-VL-2B (default px)": {
+        "docvqa_val": {
+          "metric": "ANLS",
+          "value": 93.3,
+          "n": 500
+        },
+        "infovqa_val": {
+          "metric": "ANLS",
+          "value": 69.99,
+          "n": 500
+        },
+        "chartqa": {
+          "metric": "relaxed acc",
+          "value": 68.2,
+          "n": 500
+        },
+        "textvqa_val": {
+          "metric": "VQA acc",
+          "value": 79.66,
+          "n": 500
+        },
+        "ocrbench": {
+          "metric": "score/n",
+          "value": 90.0,
+          "n": 500
+        },
+        "ai2d": {
+          "metric": "EM (flexible-extract)",
+          "value": 76.2,
+          "n": 500,
+          "lenient_letter_acc": 76.2
+        },
+        "mmbench_en_dev": {
+          "metric": "gpt_eval_score (rule match; no GPT key)",
+          "value": 81.4,
+          "n": 500
+        },
+        "pope": {
+          "metric": "F1",
+          "value": 87.98,
+          "n": 500
+        },
+        "realworldqa": {
+          "metric": "EM",
+          "value": 65.8,
+          "n": 500,
+          "lenient_letter_acc": 65.8
+        }
+      },
+      "Qwen3-VL-2B (1.6MP cap)": {
+        "docvqa_val": {
+          "metric": "ANLS",
+          "value": 92.18,
+          "n": 500
+        },
+        "infovqa_val": {
+          "metric": "ANLS",
+          "value": 66.83,
+          "n": 500
+        },
+        "chartqa": {
+          "metric": "relaxed acc",
+          "value": 67.8,
+          "n": 500
+        },
+        "textvqa_val": {
+          "metric": "VQA acc",
+          "value": 79.94,
+          "n": 500
+        },
+        "ocrbench": {
+          "metric": "score/n",
+          "value": 90.0,
+          "n": 500
+        },
+        "ai2d": {
+          "metric": "EM (flexible-extract)",
+          "value": 75.8,
+          "n": 500,
+          "lenient_letter_acc": 75.8
+        },
+        "mmbench_en_dev": {
+          "metric": "gpt_eval_score (rule match; no GPT key)",
+          "value": 81.0,
+          "n": 500
+        },
+        "pope": {
+          "metric": "F1",
+          "value": 88.21,
+          "n": 500
+        },
+        "realworldqa": {
+          "metric": "EM",
+          "value": 67.0,
+          "n": 500,
+          "lenient_letter_acc": 67.0
+        }
+      }
+    },
+    "mmmu_val_mm_limit5": {
+      "ours": {
+        "mmmu_val": {
+          "metric": "acc",
+          "value": 38.6,
+          "n": 500
+        }
+      },
+      "qwen": {
+        "mmmu_val": {
+          "metric": "acc",
+          "value": 39.8,
+          "n": 500
+        }
+      }
+    },
+    "notes": [
+      "ocrbench = mean score over the 500 evaluated (lmms-eval divides by 1000 regardless of --limit); first 500 OCRBench items are skewed to text recognition",
+      "ai2d official flexible-extract = 0 for ours because the model answers 'Answer: B'; lenient letter extraction 57.2",
+      "mmbench_en_dev gpt_eval_score without OPENAI_API_KEY (rule-based option matching)",
+      "Qwen3-VL-2B default-pixel run needed max_model_len 32768 (an InfoVQA prompt was 16,413 tokens)"
+    ]
+  }
+}

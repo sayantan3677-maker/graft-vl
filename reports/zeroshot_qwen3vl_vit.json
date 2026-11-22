@@ -1,0 +1,53 @@
+{
+  "C_qwen3vl2b_ceiling": {
+    "probe": {
+      "80": 80.0,
+      "40": 90.0,
+      "20": 100.0
+    },
+    "qa": {
+      "ai2d_test": 86.7,
+      "chartqa_test": 73.3,
+      "docvqa_val": 90.0,
+      "infovqa_val": 80.0,
+      "ocrbench2_screen": 80.0,
+      "textvqa_val": 80.0,
+      "vqav2_val": 73.3
+    },
+    "qa_overall": 80.5
+  },
+  "A_q3_1b7+vit": {
+    "probe": {
+      "80": 26.7,
+      "40": 50.0,
+      "20": 86.7
+    },
+    "qa": {
+      "ai2d_test": 23.3,
+      "chartqa_test": 6.7,
+      "docvqa_val": 0.0,
+      "infovqa_val": 16.7,
+      "ocrbench2_screen": 6.7,
+      "textvqa_val": 26.7,
+      "vqav2_val": 30.0
+    },
+    "qa_overall": 15.7
+  },
+  "B_q3_1b7+vit+deepstack": {
+    "probe": {
+      "80": 40.0,
+      "40": 43.3,
+      "20": 96.7
+    },
+    "qa": {
+      "ai2d_test": 33.3,
+      "chartqa_test": 10.0,
+      "docvqa_val": 26.7,
+      "infovqa_val": 20.0,
+      "ocrbench2_screen": 26.7,
+      "textvqa_val": 43.3,
+      "vqav2_val": 46.7
+    },
+    "qa_overall": 29.5
+  }
+}

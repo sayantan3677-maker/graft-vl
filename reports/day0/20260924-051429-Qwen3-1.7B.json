@@ -1,0 +1,59 @@
+{
+  "time": "2026-09-24T05:14:04",
+  "model": "Qwen/Qwen3-1.7B",
+  "env": {
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "compute_capability": "12.0",
+    "total_memory_gb": 95.0,
+    "driver": "590.48.01",
+    "torch": "2.11.0+cu128",
+    "torch_cuda": "12.8",
+    "cudnn": 91900,
+    "python": "3.12.14",
+    "transformers": "5.17.0",
+    "triton": "3.6.0",
+    "torchao": "0.18.0",
+    "liger-kernel": "0.8.3",
+    "peft": "0.21.0",
+    "accelerate": "1.15.0",
+    "bitsandbytes": null,
+    "vllm": null
+  },
+  "gpu_availability": {
+    "pass": true,
+    "free_gb": 51.7,
+    "total_gb": 95.0,
+    "physical_gpu": "1",
+    "gpu_util_pct_snapshot": "0",
+    "required_free_gb": 40.0
+  },
+  "checks": {
+    "optim_fp32_master": {
+      "pass": true,
+      "loss_first": 13.8031644821167,
+      "loss_last": 3.572717105271295e-05,
+      "median_step_s": 0.1499757431447506,
+      "peak_allocated_gb": 26.82
+    },
+    "fused_ce": {
+      "naive": {
+        "loss": 13.052230834960938,
+        "peak_gb": 6.96
+      },
+      "chunked": {
+        "loss": 13.052230834960938,
+        "peak_gb": 1.76,
+        "grad_cosine_vs_naive": 0.9999940991401672
+      },
+      "liger": {
+        "loss": 13.052230834960938,
+        "peak_gb": 0.03,
+        "grad_cosine_vs_naive": 0.9999964833259583,
+        "pass": true
+      },
+      "selected_backend": "liger",
+      "pass": true
+    }
+  },
+  "all_pass": true
+}

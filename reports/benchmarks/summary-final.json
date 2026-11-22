@@ -1,0 +1,226 @@
+{
+  "1b7-s2000": {
+    "docvqa_val": {
+      "metric": "ANLS",
+      "value": 62.51,
+      "n": 500
+    },
+    "infovqa_val": {
+      "metric": "ANLS",
+      "value": 34.14,
+      "n": 500
+    },
+    "chartqa": {
+      "metric": "relaxed acc",
+      "value": 41.2,
+      "n": 500
+    },
+    "textvqa_val": {
+      "metric": "VQA acc",
+      "value": 58.62,
+      "n": 500
+    },
+    "ocrbench": {
+      "metric": "score/n",
+      "value": 74.4,
+      "n": 500
+    },
+    "ai2d": {
+      "metric": "EM (flexible-extract)",
+      "value": 0.0,
+      "n": 500,
+      "lenient_letter_acc": 57.2
+    },
+    "mmbench_en_dev": {
+      "metric": "gpt_eval_score (rule match; no GPT key)",
+      "value": 68.6,
+      "n": 500
+    },
+    "pope": {
+      "metric": "F1",
+      "value": 80.82,
+      "n": 500
+    },
+    "realworldqa": {
+      "metric": "EM",
+      "value": 51.6,
+      "n": 500,
+      "lenient_letter_acc": 51.6
+    }
+  },
+  "1b7-s2000-mmmu": {
+    "mmmu_val": {
+      "metric": "acc",
+      "value": 38.6,
+      "n": 500
+    }
+  },
+  "4b-l05": {
+    "docvqa_val": {
+      "metric": "ANLS",
+      "value": 65.14,
+      "n": 500
+    },
+    "infovqa_val": {
+      "metric": "ANLS",
+      "value": 35.17,
+      "n": 500
+    },
+    "chartqa": {
+      "metric": "relaxed acc",
+      "value": 34.6,
+      "n": 500
+    },
+    "textvqa_val": {
+      "metric": "VQA acc",
+      "value": 61.7,
+      "n": 500
+    },
+    "ocrbench": {
+      "metric": "score/n",
+      "value": 74.2,
+      "n": 500
+    },
+    "ai2d": {
+      "metric": "EM (flexible-extract)",
+      "value": 3.0,
+      "n": 500,
+      "lenient_letter_acc": 61.4
+    },
+    "mmbench_en_dev": {
+      "metric": "gpt_eval_score (rule match; no GPT key)",
+      "value": 79.6,
+      "n": 500
+    },
+    "pope": {
+      "metric": "F1",
+      "value": 84.1,
+      "n": 500
+    },
+    "realworldqa": {
+      "metric": "EM",
+      "value": 51.4,
+      "n": 500,
+      "lenient_letter_acc": 51.6
+    }
+  },
+  "4b-l05-mmmu": {
+    "mmmu_val": {
+      "metric": "acc",
+      "value": 43.6,
+      "n": 500
+    }
+  },
+  "4b-l10": {
+    "docvqa_val": {
+      "metric": "ANLS",
+      "value": 65.9,
+      "n": 500
+    },
+    "infovqa_val": {
+      "metric": "ANLS",
+      "value": 35.04,
+      "n": 500
+    },
+    "chartqa": {
+      "metric": "relaxed acc",
+      "value": 35.2,
+      "n": 500
+    },
+    "textvqa_val": {
+      "metric": "VQA acc",
+      "value": 61.24,
+      "n": 500
+    },
+    "ocrbench": {
+      "metric": "score/n",
+      "value": 72.6,
+      "n": 500
+    },
+    "ai2d": {
+      "metric": "EM (flexible-extract)",
+      "value": 0.6,
+      "n": 500,
+      "lenient_letter_acc": 63.8
+    },
+    "mmbench_en_dev": {
+      "metric": "gpt_eval_score (rule match; no GPT key)",
+      "value": 79.0,
+      "n": 500
+    },
+    "pope": {
+      "metric": "F1",
+      "value": 83.47,
+      "n": 500
+    },
+    "realworldqa": {
+      "metric": "EM",
+      "value": 54.6,
+      "n": 500,
+      "lenient_letter_acc": 54.6
+    }
+  },
+  "4b-l10-mmmu": {
+    "mmmu_val": {
+      "metric": "acc",
+      "value": 42.8,
+      "n": 500
+    }
+  },
+  "qwen3vl2b": {
+    "docvqa_val": {
+      "metric": "ANLS",
+      "value": 93.3,
+      "n": 500
+    },
+    "infovqa_val": {
+      "metric": "ANLS",
+      "value": 69.99,
+      "n": 500
+    },
+    "chartqa": {
+      "metric": "relaxed acc",
+      "value": 68.2,
+      "n": 500
+    },
+    "textvqa_val": {
+      "metric": "VQA acc",
+      "value": 79.66,
+      "n": 500
+    },
+    "ocrbench": {
+      "metric": "score/n",
+      "value": 90.0,
+      "n": 500
+    },
+    "ai2d": {
+      "metric": "EM (flexible-extract)",
+      "value": 76.2,
+      "n": 500,
+      "lenient_letter_acc": 76.2
+    },
+    "mmbench_en_dev": {
+      "metric": "gpt_eval_score (rule match; no GPT key)",
+      "value": 81.4,
+      "n": 500
+    },
+    "pope": {
+      "metric": "F1",
+      "value": 87.98,
+      "n": 500
+    },
+    "realworldqa": {
+      "metric": "EM",
+      "value": 65.8,
+      "n": 500,
+      "lenient_letter_acc": 65.8
+    }
+  },
+  "qwen3vl2b-mmmu": {
+    "mmmu_val": {
+      "metric": "acc",
+      "value": 39.8,
+      "n": 500
+    }
+  }
+}

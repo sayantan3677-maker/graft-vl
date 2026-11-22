@@ -1,0 +1,19 @@
+{
+  "D_hybrid": {
+    "probe": {
+      "80": 13.3,
+      "40": 3.3,
+      "20": 53.3
+    },
+    "qa": {
+      "ai2d_test": 6.7,
+      "chartqa_test": 3.3,
+      "docvqa_val": 6.7,
+      "infovqa_val": 16.7,
+      "ocrbench2_screen": 16.7,
+      "textvqa_val": 26.7,
+      "vqav2_val": 50.0
+    },
+    "qa_overall": 18.1
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "model": "exports/hyb-4b-s2000-l05-llm",
+  "results": {
+    "mmlu_pro/think": {
+      "n_items": 500,
+      "seeds": 2,
+      "acc_mean": 68.4,
+      "acc_std": 0.0,
+      "acc_per_seed": [
+        68.4,
+        68.4
+      ],
+      "mean_gen_tokens": 3279.341,
+      "truncated_frac": 0.004,
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "top_k": 20,
+        "min_p": 0.0
+      },
+      "max_tokens": 32768,
+      "minutes": 34.249535501003265
+    },
+    "mmlu_pro/nothink": {
+      "n_items": 500,
+      "seeds": 2,
+      "acc_mean": 56.2,
+      "acc_std": 1.979898987322336,
+      "acc_per_seed": [
+        54.8,
+        57.6
+      ],
+      "mean_gen_tokens": 420.439,
+      "truncated_frac": 0.017,
+      "sampling": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0
+      },
+      "max_tokens": 4096,
+      "minutes": 1.2802324930826823
+    },
+    "gsm8k/think": {
+      "n_items": 500,
+      "seeds": 2,
+      "acc_mean": 94.4,
+      "acc_std": 0.28284271247461296,
+      "acc_per_seed": [
+        94.2,
+        94.6
+      ],
+      "mean_gen_tokens": 2283.352,
+      "truncated_frac": 0.001,
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "top_k": 20,
+        "min_p": 0.0
+      },
+      "max_tokens": 32768,
+      "minutes": 14.362604502836863
+    },
+    "gsm8k/nothink": {
+      "n_items": 500,
+      "seeds": 2,
+      "acc_mean": 89.8,
+      "acc_std": 0.0,
+      "acc_per_seed": [
+        89.8,
+        89.8
+      ],
+      "mean_gen_tokens": 313.822,
+      "truncated_frac": 0.001,
+      "sampling": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0
+      },
+      "max_tokens": 4096,
+      "minutes": 0.7823793093363444
+    },
+    "ifeval/think": {
+      "n_items": 541,
+      "seeds": 2,
+      "acc_mean": 83.82624768946397,
+      "acc_std": 0.91492559488093,
+      "acc_per_seed": [
+        84.4731977818854,
+        83.17929759704252
+      ],
+      "mean_gen_tokens": 1923.0018484288355,
+      "truncated_frac": 0.02865064695009242,
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "top_k": 20,
+        "min_p": 0.0
+      },
+      "max_tokens": 32768,
+      "minutes": 35.675170870622
+    },
+    "ifeval/nothink": {
+      "n_items": 541,
+      "seeds": 2,
+      "acc_mean": 80.59149722735674,
+      "acc_std": 1.0456292512924898,
+      "acc_per_seed": [
+        79.85212569316081,
+        81.33086876155268
+      ],
+      "mean_gen_tokens": 393.31053604436227,
+      "truncated_frac": 0.013863216266173753,
+      "sampling": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0
+      },
+      "max_tokens": 4096,
+      "minutes": 1.148884892463684
+    },
+    "math500/think": {
+      "n_items": 200,
+      "seeds": 2,
+      "acc_mean": 93.25,
+      "acc_std": 1.0606601717798212,
+      "acc_per_seed": [
+        94.0,
+        92.5
+      ],
+      "mean_gen_tokens": 5304.93,
+      "truncated_frac": 0.0025,
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "top_k": 20,
+        "min_p": 0.0
+      },
+      "max_tokens": 32768,
+      "minutes": 24.066368826230367
+    },
+    "math500/nothink": {
+      "n_items": 200,
+      "seeds": 2,
+      "acc_mean": 83.75,
+      "acc_std": 0.3535533905932738,
+      "acc_per_seed": [
+        84.0,
+        83.5
+      ],
+      "mean_gen_tokens": 913.19,
+      "truncated_frac": 0.0575,
+      "sampling": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0
+      },
+      "max_tokens": 4096,
+      "minutes": 1.2473083893458048
+    }
+  }
+}
