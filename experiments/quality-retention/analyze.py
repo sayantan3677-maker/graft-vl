@@ -5,7 +5,7 @@ import math
 import statistics
 from pathlib import Path
 
-ROOT = Path("/home/sayantan_dev/vlm_training")
+ROOT = Path(__file__).resolve().parents[2]
 D = ROOT / "experiments/quality-retention"
 T = ROOT / "reports/text/quality-retention"
 REF = json.loads((ROOT / "reports/text/qwen3-1.7b-original.json").read_text())["results"]

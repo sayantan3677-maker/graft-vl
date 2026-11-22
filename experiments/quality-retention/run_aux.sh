@@ -1,7 +1,7 @@
 #!/bin/bash
 # quality-retention aux queue: runs inside slot A while run_main.sh (which holds locks/gpu1-slotA.lock) is active;
 # waits for the vision sub-queue to finish so only one HF job shares the slot with vLLM (0.36).
-cd /home/sayantan_dev/vlm_training
+cd "$(dirname "$0")/../.."
 export CUDA_VISIBLE_DEVICES=1
 PY=~/.conda/envs/vlm-train/bin/python; D=experiments/quality-retention; mkdir -p $D/injection $D/thinking
 until [ ! -f $D/vision.running ]; do sleep 30; done

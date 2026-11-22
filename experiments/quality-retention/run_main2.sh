@@ -2,7 +2,7 @@
 # quality-retention text queue v2 (replaces the per-task loop of run_main.sh after the baseline finished):
 # same settings, but eval_text_batched.py (one combined vLLM call) to avoid long-tail GPU idling.
 # Run under locks/gpu1-slotA.lock. vLLM 0.36 while an HF job shares the slot (vision.running), else 0.45.
-cd /home/sayantan_dev/vlm_training
+cd "$(dirname "$0")/../.."
 export CUDA_VISIBLE_DEVICES=1 VLLM_USE_FLASHINFER_SAMPLER=0
 EVAL_PY=~/.conda/envs/vlm-eval/bin/python; D=experiments/quality-retention; T=reports/text/quality-retention
 for N in hyb-1b7-s2000-l10 hyb-1b7-s2000-l05 hyb-1b7-s3000-l10 hyb-1b7-s3000-l05 hyb-1b7-s2000-l075 hyb-1b7-s3000-l075; do

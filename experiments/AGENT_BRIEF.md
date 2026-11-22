@@ -1,6 +1,6 @@
 # Agent brief — Qwen3 text-only → VLM project (read fully before acting)
 
-Repo: /home/sayantan_dev/vlm_training. Plan: roadmap.md (§3.5 = current architecture). How-to: README.md.
+Repo: this repository (paths below are relative to its root). Plan: roadmap.md (§3.5 = current architecture). How-to: README.md.
 Today: 2026-11-01. Machine: 2× RTX PRO 6000 Blackwell (97 GB each), 64 CPU cores shared with other users.
 
 ## Environments

@@ -2,7 +2,7 @@
 # quality-retention main queue (run under locks/gpu1-slotA.lock, GPU 1 only).
 # Two parallel sub-queues inside the slot: (a) vLLM text retention, (b) HF vision eval of exports.
 # Slot memory cap ~45 GB: while (b) runs (~<10 GB), vLLM uses 0.36; afterwards 0.45.
-cd /home/sayantan_dev/vlm_training
+cd "$(dirname "$0")/../.."
 export CUDA_VISIBLE_DEVICES=1 VLLM_USE_FLASHINFER_SAMPLER=0
 PY=~/.conda/envs/vlm-train/bin/python; EVAL_PY=~/.conda/envs/vlm-eval/bin/python
 D=experiments/quality-retention; mkdir -p $D/vision reports/text/quality-retention

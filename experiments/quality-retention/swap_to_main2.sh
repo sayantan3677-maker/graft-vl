@@ -1,6 +1,6 @@
 #!/bin/bash
 # wait until run_main.sh finished the baseline, then stop its session (my own processes only) and start run_main2.sh
-cd /home/sayantan_dev/vlm_training; D=experiments/quality-retention
+cd "$(dirname "$0")/../.."; D=experiments/quality-retention
 until grep -q '=== text hyb-1b7-s2000-l10' $D/main.log; do sleep 10; done
 PG=$(ps -eo pgid,args | grep "flock locks/gpu1-slotA.lock experiments/quality-retention/run_main.sh" | grep -v grep | awk '{print $1}' | head -1)
 echo "killing process group $PG $(date +%T)"; ps -eo pid,pgid,args | awk -v g=$PG '$2==g'

@@ -1,6 +1,6 @@
 #!/bin/bash
 # quality-retention: 6 exports (steps 2000/3000 x LoRA scale 1.0/0.75/0.5). Run under locks/gpu1-slotA.lock.
-cd /home/sayantan_dev/vlm_training
+cd "$(dirname "$0")/../.."
 PY=~/.conda/envs/vlm-train/bin/python
 for STEP in 2000 3000; do for S in 1.0 0.75 0.5; do
   TAG=$(echo $S | sed 's/\.//; s/^10$/10/'); case $S in 1.0) TAG=10;; 0.75) TAG=075;; 0.5) TAG=05;; esac
