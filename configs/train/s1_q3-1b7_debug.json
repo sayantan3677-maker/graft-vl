@@ -1,0 +1,28 @@
+{
+  "run_id": "EXP-S1-Q3-1B7-S2P16-384-144T-MLP-DEBUG",
+  "stage": "S1",
+  "data": "manifests/s1-debug200",
+  "model": {
+    "llm_name": "Qwen/Qwen3-1.7B",
+    "vision_name": "google/siglip2-so400m-patch16-384",
+    "feature_layer": -2,
+    "loss_impl": "chunked"
+  },
+  "processor": {
+    "max_tiles": 6
+  },
+  "special_rows": [
+    "vision"
+  ],
+  "llm_dtype": "bfloat16",
+  "lr_projector": 0.001,
+  "lr_special_rows": 0.001,
+  "max_steps": 50,
+  "grad_accum": 2,
+  "pack_tokens": 4096,
+  "pack_tiles": 32,
+  "num_workers": 2,
+  "log_every": 5,
+  "save_every": 50,
+  "attn_implementation": "sdpa"
+}

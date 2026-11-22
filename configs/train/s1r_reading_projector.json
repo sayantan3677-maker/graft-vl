@@ -1,0 +1,58 @@
+{
+  "run_id": "EXP-S1R-Q3-1B7-384-MLP-READING-2K",
+  "stage": "S1",
+  "data": [
+    {
+      "path": "manifests/synth-reading-200k",
+      "weight": 0.6
+    },
+    {
+      "path": "manifests/s2/textvqa",
+      "weight": 0.07
+    },
+    {
+      "path": "manifests/s2/ocrvqa",
+      "weight": 0.06
+    },
+    {
+      "path": "manifests/s2/olmocr_docs",
+      "weight": 0.06
+    },
+    {
+      "path": "manifests/s2/st_vqa",
+      "weight": 0.03
+    },
+    {
+      "path": "manifests/s1-50k",
+      "weight": 0.18
+    }
+  ],
+  "model": {
+    "llm_name": "Qwen/Qwen3-1.7B",
+    "vision_name": "google/siglip2-so400m-patch16-384",
+    "feature_layer": -2,
+    "loss_impl": "liger"
+  },
+  "processor": {
+    "max_tiles": 6
+  },
+  "special_rows": [
+    "vision"
+  ],
+  "llm_dtype": "bfloat16",
+  "lr_projector": 0.001,
+  "lr_special_rows": 0.001,
+  "warmup_ratio": 0.03,
+  "max_steps": 2000,
+  "grad_accum": 4,
+  "pack_tokens": 8192,
+  "pack_tiles": 48,
+  "num_workers": 12,
+  "log_every": 50,
+  "save_every": 1000,
+  "attn_implementation": "flex_attention",
+  "gradient_checkpointing": false,
+  "init_from": "experiments/EXP-S1-Q3-1B7-S2P16-384-MLP-50K-LR1e-3/checkpoints/step-0001700",
+  "train_llm": false,
+  "train_vision": false
+}

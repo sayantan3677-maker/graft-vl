@@ -1,0 +1,30 @@
+{
+  "run_id": "EXP-S1-Q3-8B-S2P16-384-MLP-50K-LR1e-3",
+  "stage": "S1",
+  "data": "manifests/s1-50k",
+  "model": {
+    "llm_name": "Qwen/Qwen3-8B",
+    "vision_name": "google/siglip2-so400m-patch16-384",
+    "feature_layer": -2,
+    "loss_impl": "liger"
+  },
+  "processor": {
+    "max_tiles": 6
+  },
+  "special_rows": [
+    "vision"
+  ],
+  "llm_dtype": "bfloat16",
+  "lr_projector": 0.001,
+  "lr_special_rows": 0.001,
+  "warmup_ratio": 0.03,
+  "max_steps": 1700,
+  "grad_accum": 4,
+  "pack_tokens": 8192,
+  "pack_tiles": 48,
+  "num_workers": 12,
+  "log_every": 25,
+  "save_every": 425,
+  "attn_implementation": "flex_attention",
+  "gradient_checkpointing": true
+}

@@ -1,0 +1,13 @@
+{
+  "stage": "S1",
+  "description": "Stage-1 alignment captions. Real images across photos, screenshots and pages; synthetic <= 5%.",
+  "weights": {
+    "pixmo_cap": 0.35,
+    "localized_narratives": 0.15,
+    "textcaps": 0.10,
+    "screen2words": 0.10,
+    "websight": 0.05,
+    "olmocr_docs": 0.15,
+    "ureader_cap": 0.10
+  }
+}

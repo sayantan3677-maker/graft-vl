@@ -1,0 +1,6 @@
+{
+  "stage": "eval",
+  "description": "Held-out short-answer QA across product image types (seed 11, deduped vs. training manifests at eval time).",
+  "weights": {"docvqa": 0.14, "infographic_vqa": 0.08, "chartqa": 0.12, "tat_qa": 0.06, "textvqa": 0.12,
+              "screenqa": 0.16, "ai2d": 0.08, "tallyqa": 0.10, "vsr": 0.06, "vqav2": 0.08}
+}

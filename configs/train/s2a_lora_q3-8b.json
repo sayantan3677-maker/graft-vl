@@ -1,0 +1,53 @@
+{
+  "run_id": "EXP-S2A-Q3-8B-384-LORA32-MATCHED",
+  "stage": "S2",
+  "data": [
+    {
+      "path": "manifests/s2-mm-300k",
+      "weight": 0.7
+    },
+    {
+      "path": "manifests/traces-q3-1b7",
+      "weight": 0.1
+    },
+    {
+      "path": "manifests/replay-q3-1b7-20k",
+      "weight": 0.2
+    }
+  ],
+  "init_from": "experiments/EXP-S1-Q3-8B-S2P16-384-MLP-50K-LR1e-3/checkpoints/step-0001700",
+  "model": {
+    "llm_name": "Qwen/Qwen3-8B",
+    "vision_name": "google/siglip2-so400m-patch16-384",
+    "feature_layer": -2,
+    "loss_impl": "liger",
+    "lora": {
+      "r": 32,
+      "alpha": 64,
+      "dropout": 0.05
+    }
+  },
+  "processor": {
+    "max_tiles": 6
+  },
+  "train_llm": true,
+  "train_vision": false,
+  "special_rows": [
+    "vision"
+  ],
+  "llm_dtype": "bfloat16",
+  "lr_projector": 5e-05,
+  "lr_llm": 0.00015,
+  "lr_special_rows": 5e-05,
+  "weight_decay": 0.0,
+  "warmup_ratio": 0.03,
+  "max_steps": 3300,
+  "grad_accum": 4,
+  "pack_tokens": 8192,
+  "pack_tiles": 48,
+  "num_workers": 12,
+  "attn_implementation": "flex_attention",
+  "gradient_checkpointing": true,
+  "log_every": 25,
+  "save_every": 1100
+}

@@ -1,0 +1,28 @@
+{
+  "run_id": "EXP-S1-Q3-1B7-CPU-DRYRUN",
+  "stage": "S1",
+  "data": "manifests/s1-debug200",
+  "model": {
+    "llm_name": "Qwen/Qwen3-1.7B",
+    "vision_name": "google/siglip2-so400m-patch16-384",
+    "feature_layer": -2,
+    "loss_impl": "chunked"
+  },
+  "processor": {
+    "max_tiles": 2
+  },
+  "special_rows": [
+    "vision"
+  ],
+  "llm_dtype": "bfloat16",
+  "lr_projector": 0.001,
+  "lr_special_rows": 0.001,
+  "max_steps": 50,
+  "grad_accum": 1,
+  "pack_tokens": 1536,
+  "pack_tiles": 8,
+  "num_workers": 0,
+  "log_every": 1,
+  "save_every": 3,
+  "attn_implementation": "sdpa"
+}
