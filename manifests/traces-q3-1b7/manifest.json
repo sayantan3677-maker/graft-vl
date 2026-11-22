@@ -1,0 +1,27 @@
+{
+  "name": "traces-q3-1b7",
+  "teacher": "Qwen/Qwen3-1.7B",
+  "questions": 5612,
+  "kept": 792,
+  "acceptance": 0.14112615823235922,
+  "stats": {
+    "mentions_description": 19606,
+    "question_dropped": 4820,
+    "correct": 1974,
+    "wrong": 856,
+    "unfinished": 12
+  },
+  "by_source": {
+    "textvqa": 57,
+    "ai2d": 105,
+    "chartqa": 205,
+    "infographic_vqa": 64,
+    "tat_qa": 73,
+    "docvqa": 56,
+    "screenqa": 10,
+    "iconqa": 81,
+    "scienceqa": 137,
+    "vsr": 1,
+    "tallyqa": 3
+  }
+}

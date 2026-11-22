@@ -1,0 +1,44 @@
+{
+  "name": "s2/aokvqa",
+  "mixture_file": null,
+  "mixture": {
+    "aokvqa": 1.0
+  },
+  "seed": 3,
+  "requested": 9000,
+  "written": 8990,
+  "counts": {
+    "aokvqa": 8990
+  },
+  "quotas": {
+    "aokvqa": 9000
+  },
+  "by_image_type": {
+    "photo": 9000
+  },
+  "by_origin": {
+    "real": 9000
+  },
+  "synthetic_fraction": 0.0,
+  "rejections": {
+    "aokvqa:duplicate": 1
+  },
+  "max_target_tokens": 2048,
+  "sources": {
+    "aokvqa": {
+      "name": "aokvqa",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "aokvqa",
+      "kind": "finevision",
+      "image_type": "photo",
+      "task": "vqa",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    }
+  },
+  "manifest_hash": "2baeb7e19c602c2d",
+  "contamination_checked": false,
+  "dropped_eval_overlap": 10
+}

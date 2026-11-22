@@ -1,0 +1,44 @@
+{
+  "name": "s3/ai2d",
+  "mixture_file": null,
+  "mixture": {
+    "ai2d": 1.0
+  },
+  "seed": 11,
+  "requested": 12000,
+  "written": 4501,
+  "counts": {
+    "ai2d": 4501
+  },
+  "quotas": {
+    "ai2d": 12000
+  },
+  "by_image_type": {
+    "diagram": 4575
+  },
+  "by_origin": {
+    "real": 4575
+  },
+  "synthetic_fraction": 0.0,
+  "rejections": {
+    "ai2d:duplicate": 28
+  },
+  "max_target_tokens": 2048,
+  "sources": {
+    "ai2d": {
+      "name": "ai2d",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "ai2d_merged",
+      "kind": "finevision",
+      "image_type": "diagram",
+      "task": "diagram_qa",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    }
+  },
+  "manifest_hash": "969ba3f366d68ef3",
+  "contamination_checked": false,
+  "dropped_eval_overlap": 74
+}

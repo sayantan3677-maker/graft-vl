@@ -1,0 +1,45 @@
+{
+  "name": "s3/docvqa",
+  "mixture_file": null,
+  "mixture": {
+    "docvqa": 1.0
+  },
+  "seed": 11,
+  "requested": 40000,
+  "written": 9291,
+  "counts": {
+    "docvqa": 9291
+  },
+  "quotas": {
+    "docvqa": 40000
+  },
+  "by_image_type": {
+    "page": 9292
+  },
+  "by_origin": {
+    "real": 9292
+  },
+  "synthetic_fraction": 0.0,
+  "rejections": {
+    "docvqa:duplicate": 50
+  },
+  "all_turns": true,
+  "max_target_tokens": 2048,
+  "sources": {
+    "docvqa": {
+      "name": "docvqa",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "docvqa",
+      "kind": "finevision",
+      "image_type": "page",
+      "task": "doc_qa",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    }
+  },
+  "manifest_hash": "8787f955f579d42e",
+  "contamination_checked": false,
+  "dropped_eval_overlap": 1
+}

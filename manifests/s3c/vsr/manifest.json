@@ -1,0 +1,42 @@
+{
+  "name": "s2/vsr",
+  "mixture_file": null,
+  "mixture": {
+    "vsr": 1.0
+  },
+  "seed": 3,
+  "requested": 6000,
+  "written": 1542,
+  "counts": {
+    "vsr": 1542
+  },
+  "quotas": {
+    "vsr": 6000
+  },
+  "by_image_type": {
+    "photo": 1544
+  },
+  "by_origin": {
+    "real": 1544
+  },
+  "synthetic_fraction": 0.0,
+  "rejections": {},
+  "max_target_tokens": 2048,
+  "sources": {
+    "vsr": {
+      "name": "vsr",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "vsr",
+      "kind": "finevision",
+      "image_type": "photo",
+      "task": "spatial",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    }
+  },
+  "manifest_hash": "0de51d14f88b3d67",
+  "contamination_checked": false,
+  "dropped_eval_overlap": 2
+}

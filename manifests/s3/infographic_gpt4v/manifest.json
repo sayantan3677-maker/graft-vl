@@ -1,0 +1,41 @@
+{
+  "name": "s3/infographic_gpt4v",
+  "mixture_file": null,
+  "mixture": {
+    "infographic_gpt4v": 1.0
+  },
+  "seed": 11,
+  "requested": 2000,
+  "written": 1975,
+  "counts": {
+    "infographic_gpt4v": 1975
+  },
+  "quotas": {
+    "infographic_gpt4v": 2000
+  },
+  "by_image_type": {
+    "page": 1975
+  },
+  "by_origin": {
+    "real": 1975
+  },
+  "synthetic_fraction": 0.0,
+  "rejections": {},
+  "max_target_tokens": 2048,
+  "sources": {
+    "infographic_gpt4v": {
+      "name": "infographic_gpt4v",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "infographic(gpt4v)",
+      "kind": "finevision",
+      "image_type": "page",
+      "task": "caption",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    }
+  },
+  "manifest_hash": "f12fb78d103ca067",
+  "contamination_checked": false
+}

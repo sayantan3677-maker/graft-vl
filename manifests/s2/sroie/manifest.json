@@ -1,0 +1,45 @@
+{
+  "name": "s2/sroie",
+  "mixture_file": null,
+  "mixture": {
+    "sroie": 1.0
+  },
+  "seed": 3,
+  "requested": 3000,
+  "written": 3000,
+  "counts": {
+    "sroie": 3000
+  },
+  "quotas": {
+    "sroie": 3000
+  },
+  "by_image_type": {
+    "page": 3000
+  },
+  "by_origin": {
+    "real": 3000
+  },
+  "synthetic_fraction": 0.0,
+  "rejections": {
+    "sroie:too_small": 2971,
+    "sroie:extreme_aspect": 6,
+    "sroie:duplicate": 1
+  },
+  "max_target_tokens": 2048,
+  "sources": {
+    "sroie": {
+      "name": "sroie",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "sroie",
+      "kind": "finevision",
+      "image_type": "page",
+      "task": "doc_ie",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    }
+  },
+  "manifest_hash": "72ad4ef071d9bd0b",
+  "contamination_checked": false
+}

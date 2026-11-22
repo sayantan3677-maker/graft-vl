@@ -1,0 +1,41 @@
+{
+  "name": "s2/lnqa",
+  "mixture_file": null,
+  "mixture": {
+    "lnqa": 1.0
+  },
+  "seed": 3,
+  "requested": 9000,
+  "written": 8928,
+  "counts": {
+    "lnqa": 8928
+  },
+  "quotas": {
+    "lnqa": 9000
+  },
+  "by_image_type": {
+    "photo": 8928
+  },
+  "by_origin": {
+    "real": 8928
+  },
+  "synthetic_fraction": 0.0,
+  "rejections": {},
+  "max_target_tokens": 2048,
+  "sources": {
+    "lnqa": {
+      "name": "lnqa",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "lnqa",
+      "kind": "finevision",
+      "image_type": "photo",
+      "task": "vqa",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    }
+  },
+  "manifest_hash": "e11b12dcc005aaf4",
+  "contamination_checked": false
+}

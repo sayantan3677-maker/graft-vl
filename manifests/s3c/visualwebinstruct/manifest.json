@@ -1,0 +1,47 @@
+{
+  "name": "s2/visualwebinstruct",
+  "mixture_file": null,
+  "mixture": {
+    "visualwebinstruct": 1.0
+  },
+  "seed": 3,
+  "requested": 18000,
+  "written": 17999,
+  "counts": {
+    "visualwebinstruct": 17999
+  },
+  "quotas": {
+    "visualwebinstruct": 18000
+  },
+  "by_image_type": {
+    "screenshot": 18000
+  },
+  "by_origin": {
+    "real": 18000
+  },
+  "synthetic_fraction": 0.0,
+  "rejections": {
+    "visualwebinstruct:duplicate": 1739,
+    "visualwebinstruct:too_small": 7,
+    "visualwebinstruct:target_length": 5,
+    "visualwebinstruct:extreme_aspect": 4
+  },
+  "max_target_tokens": 2048,
+  "sources": {
+    "visualwebinstruct": {
+      "name": "visualwebinstruct",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "visualwebinstruct(filtered)",
+      "kind": "finevision",
+      "image_type": "screenshot",
+      "task": "web_qa",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    }
+  },
+  "manifest_hash": "841cc141ccb11c23",
+  "contamination_checked": false,
+  "dropped_eval_overlap": 1
+}

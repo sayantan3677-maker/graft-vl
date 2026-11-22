@@ -1,0 +1,44 @@
+{
+  "name": "s3/textocr_gpt4v",
+  "mixture_file": null,
+  "mixture": {
+    "textocr_gpt4v": 1.0
+  },
+  "seed": 11,
+  "requested": 10000,
+  "written": 9923,
+  "counts": {
+    "textocr_gpt4v": 9923
+  },
+  "quotas": {
+    "textocr_gpt4v": 10000
+  },
+  "by_image_type": {
+    "photo": 10000
+  },
+  "by_origin": {
+    "real": 10000
+  },
+  "synthetic_fraction": 0.0,
+  "rejections": {
+    "textocr_gpt4v:duplicate": 2
+  },
+  "max_target_tokens": 2048,
+  "sources": {
+    "textocr_gpt4v": {
+      "name": "textocr_gpt4v",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "textocr(gpt4v)",
+      "kind": "finevision",
+      "image_type": "photo",
+      "task": "ocr",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    }
+  },
+  "manifest_hash": "802fdc02807ff4df",
+  "contamination_checked": false,
+  "dropped_eval_overlap": 77
+}

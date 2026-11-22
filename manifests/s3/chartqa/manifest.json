@@ -1,0 +1,45 @@
+{
+  "name": "s3/chartqa",
+  "mixture_file": null,
+  "mixture": {
+    "chartqa": 1.0
+  },
+  "seed": 11,
+  "requested": 30000,
+  "written": 15870,
+  "counts": {
+    "chartqa": 15870
+  },
+  "quotas": {
+    "chartqa": 30000
+  },
+  "by_image_type": {
+    "chart": 15884
+  },
+  "by_origin": {
+    "real": 15884
+  },
+  "synthetic_fraction": 0.0,
+  "rejections": {
+    "chartqa:duplicate": 1151
+  },
+  "all_turns": true,
+  "max_target_tokens": 2048,
+  "sources": {
+    "chartqa": {
+      "name": "chartqa",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "chartqa",
+      "kind": "finevision",
+      "image_type": "chart",
+      "task": "chart_qa",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    }
+  },
+  "manifest_hash": "738112bd2435220a",
+  "contamination_checked": false,
+  "dropped_eval_overlap": 14
+}

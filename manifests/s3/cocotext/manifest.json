@@ -1,0 +1,43 @@
+{
+  "name": "s3/cocotext",
+  "mixture_file": null,
+  "mixture": {
+    "cocotext": 1.0
+  },
+  "seed": 11,
+  "requested": 10000,
+  "written": 10000,
+  "counts": {
+    "cocotext": 10000
+  },
+  "quotas": {
+    "cocotext": 10000
+  },
+  "by_image_type": {
+    "photo": 10000
+  },
+  "by_origin": {
+    "real": 10000
+  },
+  "synthetic_fraction": 0.0,
+  "rejections": {
+    "cocotext:duplicate": 1
+  },
+  "max_target_tokens": 2048,
+  "sources": {
+    "cocotext": {
+      "name": "cocotext",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "cocotext",
+      "kind": "finevision",
+      "image_type": "photo",
+      "task": "ocr",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    }
+  },
+  "manifest_hash": "cc96bbf3744fcafe",
+  "contamination_checked": false
+}

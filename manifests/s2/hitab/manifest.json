@@ -1,0 +1,44 @@
+{
+  "name": "s2/hitab",
+  "mixture_file": null,
+  "mixture": {
+    "hitab": 1.0
+  },
+  "seed": 3,
+  "requested": 3000,
+  "written": 2054,
+  "counts": {
+    "hitab": 2054
+  },
+  "quotas": {
+    "hitab": 3000
+  },
+  "by_image_type": {
+    "chart": 2054
+  },
+  "by_origin": {
+    "real": 2054
+  },
+  "synthetic_fraction": 0.0,
+  "rejections": {
+    "hitab:target_length": 3,
+    "hitab:duplicate": 66
+  },
+  "max_target_tokens": 2048,
+  "sources": {
+    "hitab": {
+      "name": "hitab",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "hitab",
+      "kind": "finevision",
+      "image_type": "chart",
+      "task": "table_qa",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    }
+  },
+  "manifest_hash": "66a8eaa915ec3416",
+  "contamination_checked": false
+}

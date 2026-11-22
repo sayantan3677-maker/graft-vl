@@ -1,0 +1,12 @@
+{
+  "name": "synth-reading-200k",
+  "written": 200000,
+  "by_task": {
+    "read_word": 70049,
+    "read_lines": 59972,
+    "read_overlay": 30264,
+    "read_form": 39715
+  },
+  "origin": "synthetic",
+  "license": "generated in-house"
+}

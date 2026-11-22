@@ -1,0 +1,44 @@
+{
+  "name": "s2/screenqa",
+  "mixture_file": null,
+  "mixture": {
+    "screenqa": 1.0
+  },
+  "seed": 3,
+  "requested": 27000,
+  "written": 26960,
+  "counts": {
+    "screenqa": 26960
+  },
+  "quotas": {
+    "screenqa": 27000
+  },
+  "by_image_type": {
+    "screenshot": 27000
+  },
+  "by_origin": {
+    "real": 27000
+  },
+  "synthetic_fraction": 0.0,
+  "rejections": {
+    "screenqa:duplicate": 29067
+  },
+  "max_target_tokens": 2048,
+  "sources": {
+    "screenqa": {
+      "name": "screenqa",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "screenqa",
+      "kind": "finevision",
+      "image_type": "screenshot",
+      "task": "ui_qa",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    }
+  },
+  "manifest_hash": "b0e0b7e528c42dd2",
+  "contamination_checked": false,
+  "dropped_eval_overlap": 40
+}

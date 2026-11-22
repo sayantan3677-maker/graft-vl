@@ -1,0 +1,44 @@
+{
+  "name": "s2/doclingmatix",
+  "mixture_file": null,
+  "mixture": {
+    "doclingmatix": 1.0
+  },
+  "seed": 3,
+  "requested": 6000,
+  "written": 6000,
+  "counts": {
+    "doclingmatix": 6000
+  },
+  "quotas": {
+    "doclingmatix": 6000
+  },
+  "by_image_type": {
+    "page": 6000
+  },
+  "by_origin": {
+    "real": 6000
+  },
+  "synthetic_fraction": 0.0,
+  "rejections": {
+    "doclingmatix:duplicate": 94,
+    "doclingmatix:extreme_aspect": 1
+  },
+  "max_target_tokens": 2048,
+  "sources": {
+    "doclingmatix": {
+      "name": "doclingmatix",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "DoclingMatix",
+      "kind": "finevision",
+      "image_type": "page",
+      "task": "doc_conversion",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 1
+    }
+  },
+  "manifest_hash": "3d987eb02cf04f37",
+  "contamination_checked": false
+}

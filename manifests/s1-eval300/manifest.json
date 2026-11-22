@@ -1,0 +1,136 @@
+{
+  "name": "s1-eval300",
+  "mixture_file": "configs/data/s1.json",
+  "mixture": {
+    "pixmo_cap": 0.35,
+    "localized_narratives": 0.15,
+    "textcaps": 0.1,
+    "screen2words": 0.1,
+    "websight": 0.05,
+    "olmocr_docs": 0.15,
+    "ureader_cap": 0.1
+  },
+  "seed": 1,
+  "requested": 300,
+  "written": 300,
+  "counts": {
+    "pixmo_cap": 105,
+    "localized_narratives": 45,
+    "textcaps": 30,
+    "screen2words": 30,
+    "websight": 15,
+    "olmocr_docs": 45,
+    "ureader_cap": 30
+  },
+  "quotas": {
+    "pixmo_cap": 105,
+    "localized_narratives": 45,
+    "textcaps": 30,
+    "screen2words": 30,
+    "websight": 15,
+    "olmocr_docs": 45,
+    "ureader_cap": 30
+  },
+  "by_image_type": {
+    "photo": 180,
+    "screenshot": 45,
+    "page": 75
+  },
+  "by_origin": {
+    "real": 285,
+    "synthetic": 15
+  },
+  "synthetic_fraction": 0.05,
+  "rejections": {
+    "olmocr_docs:target_length": 7
+  },
+  "max_target_tokens": 1024,
+  "sources": {
+    "pixmo_cap": {
+      "name": "pixmo_cap",
+      "hf_id": "allenai/pixmo-cap",
+      "config": null,
+      "kind": "pixmo_url",
+      "image_type": "photo",
+      "task": "caption",
+      "origin": "real",
+      "license": "ODC-BY (captions); images: web",
+      "commercial_ok": null,
+      "min_ratings": 3
+    },
+    "localized_narratives": {
+      "name": "localized_narratives",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "localized_narratives",
+      "kind": "finevision",
+      "image_type": "photo",
+      "task": "caption",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    },
+    "textcaps": {
+      "name": "textcaps",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "textcaps",
+      "kind": "finevision",
+      "image_type": "photo",
+      "task": "caption",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    },
+    "screen2words": {
+      "name": "screen2words",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "screen2words",
+      "kind": "finevision",
+      "image_type": "screenshot",
+      "task": "caption",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    },
+    "websight": {
+      "name": "websight",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "websight",
+      "kind": "finevision",
+      "image_type": "screenshot",
+      "task": "caption",
+      "origin": "synthetic",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    },
+    "olmocr_docs": {
+      "name": "olmocr_docs",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "olmOCR-mix-0225-documents",
+      "kind": "finevision",
+      "image_type": "page",
+      "task": "ocr",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 1
+    },
+    "ureader_cap": {
+      "name": "ureader_cap",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "ureader_cap",
+      "kind": "finevision",
+      "image_type": "page",
+      "task": "caption",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    }
+  },
+  "manifest_hash": "0b2f38ff6a1be202",
+  "contamination_checked": false
+}

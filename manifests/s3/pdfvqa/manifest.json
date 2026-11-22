@@ -1,0 +1,44 @@
+{
+  "name": "s3/pdfvqa",
+  "mixture_file": null,
+  "mixture": {
+    "pdfvqa": 1.0
+  },
+  "seed": 11,
+  "requested": 12000,
+  "written": 294,
+  "counts": {
+    "pdfvqa": 294
+  },
+  "quotas": {
+    "pdfvqa": 12000
+  },
+  "by_image_type": {
+    "page": 294
+  },
+  "by_origin": {
+    "real": 294
+  },
+  "synthetic_fraction": 0.0,
+  "rejections": {
+    "pdfvqa:target_length": 16
+  },
+  "all_turns": true,
+  "max_target_tokens": 2048,
+  "sources": {
+    "pdfvqa": {
+      "name": "pdfvqa",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "pdfvqa",
+      "kind": "finevision",
+      "image_type": "page",
+      "task": "doc_qa",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    }
+  },
+  "manifest_hash": "984a466ab5f18f47",
+  "contamination_checked": false
+}

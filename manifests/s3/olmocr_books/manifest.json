@@ -1,0 +1,44 @@
+{
+  "name": "s3/olmocr_books",
+  "mixture_file": null,
+  "mixture": {
+    "olmocr_books": 1.0
+  },
+  "seed": 11,
+  "requested": 6000,
+  "written": 6000,
+  "counts": {
+    "olmocr_books": 6000
+  },
+  "quotas": {
+    "olmocr_books": 6000
+  },
+  "by_image_type": {
+    "page": 6000
+  },
+  "by_origin": {
+    "real": 6000
+  },
+  "synthetic_fraction": 0.0,
+  "rejections": {
+    "olmocr_books:target_length": 54,
+    "olmocr_books:duplicate": 19
+  },
+  "max_target_tokens": 2048,
+  "sources": {
+    "olmocr_books": {
+      "name": "olmocr_books",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "olmOCR-mix-0225-books",
+      "kind": "finevision",
+      "image_type": "page",
+      "task": "ocr",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 1
+    }
+  },
+  "manifest_hash": "d82c18c393b7a550",
+  "contamination_checked": false
+}

@@ -1,0 +1,46 @@
+{
+  "name": "s3/unichart",
+  "mixture_file": null,
+  "mixture": {
+    "unichart": 1.0
+  },
+  "seed": 11,
+  "requested": 15000,
+  "written": 14998,
+  "counts": {
+    "unichart": 14998
+  },
+  "quotas": {
+    "unichart": 15000
+  },
+  "by_image_type": {
+    "chart": 15000
+  },
+  "by_origin": {
+    "real": 15000
+  },
+  "synthetic_fraction": 0.0,
+  "rejections": {
+    "unichart:duplicate": 394,
+    "unichart:target_length": 1
+  },
+  "all_turns": true,
+  "max_target_tokens": 2048,
+  "sources": {
+    "unichart": {
+      "name": "unichart",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "Unichart",
+      "kind": "finevision",
+      "image_type": "chart",
+      "task": "chart_qa",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    }
+  },
+  "manifest_hash": "b00094cd6609d6d1",
+  "contamination_checked": false,
+  "dropped_eval_overlap": 2
+}

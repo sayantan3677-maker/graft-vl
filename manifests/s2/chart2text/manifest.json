@@ -1,0 +1,43 @@
+{
+  "name": "s2/chart2text",
+  "mixture_file": null,
+  "mixture": {
+    "chart2text": 1.0
+  },
+  "seed": 3,
+  "requested": 3000,
+  "written": 3000,
+  "counts": {
+    "chart2text": 3000
+  },
+  "quotas": {
+    "chart2text": 3000
+  },
+  "by_image_type": {
+    "chart": 3000
+  },
+  "by_origin": {
+    "real": 3000
+  },
+  "synthetic_fraction": 0.0,
+  "rejections": {
+    "chart2text:duplicate": 70
+  },
+  "max_target_tokens": 2048,
+  "sources": {
+    "chart2text": {
+      "name": "chart2text",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "chart2text",
+      "kind": "finevision",
+      "image_type": "chart",
+      "task": "chart_caption",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    }
+  },
+  "manifest_hash": "8ad93e53cf03df4c",
+  "contamination_checked": false
+}

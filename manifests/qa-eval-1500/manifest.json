@@ -1,0 +1,183 @@
+{
+  "name": "qa-eval-1500",
+  "mixture_file": "configs/data/qa_eval.json",
+  "mixture": {
+    "docvqa": 0.14,
+    "infographic_vqa": 0.08,
+    "chartqa": 0.12,
+    "tat_qa": 0.06,
+    "textvqa": 0.12,
+    "screenqa": 0.16,
+    "ai2d": 0.08,
+    "tallyqa": 0.1,
+    "vsr": 0.06,
+    "vqav2": 0.08
+  },
+  "seed": 11,
+  "requested": 1500,
+  "written": 1500,
+  "counts": {
+    "docvqa": 210,
+    "infographic_vqa": 120,
+    "chartqa": 180,
+    "tat_qa": 90,
+    "textvqa": 180,
+    "screenqa": 240,
+    "ai2d": 120,
+    "tallyqa": 150,
+    "vsr": 90,
+    "vqav2": 120
+  },
+  "quotas": {
+    "docvqa": 210,
+    "infographic_vqa": 120,
+    "chartqa": 180,
+    "tat_qa": 90,
+    "textvqa": 180,
+    "screenqa": 240,
+    "ai2d": 120,
+    "tallyqa": 150,
+    "vsr": 90,
+    "vqav2": 120
+  },
+  "by_image_type": {
+    "page": 330,
+    "chart": 270,
+    "photo": 540,
+    "screenshot": 240,
+    "diagram": 120
+  },
+  "by_origin": {
+    "real": 1500
+  },
+  "synthetic_fraction": 0.0,
+  "rejections": {
+    "tat_qa:target_length": 1,
+    "ai2d:target_length": 111
+  },
+  "max_target_tokens": 64,
+  "sources": {
+    "docvqa": {
+      "name": "docvqa",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "docvqa",
+      "kind": "finevision",
+      "image_type": "page",
+      "task": "doc_qa",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    },
+    "infographic_vqa": {
+      "name": "infographic_vqa",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "infographic_vqa",
+      "kind": "finevision",
+      "image_type": "page",
+      "task": "doc_qa",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    },
+    "chartqa": {
+      "name": "chartqa",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "chartqa",
+      "kind": "finevision",
+      "image_type": "chart",
+      "task": "chart_qa",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    },
+    "tat_qa": {
+      "name": "tat_qa",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "tat_qa",
+      "kind": "finevision",
+      "image_type": "chart",
+      "task": "table_qa",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    },
+    "textvqa": {
+      "name": "textvqa",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "textvqa",
+      "kind": "finevision",
+      "image_type": "photo",
+      "task": "scene_text",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    },
+    "screenqa": {
+      "name": "screenqa",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "screenqa",
+      "kind": "finevision",
+      "image_type": "screenshot",
+      "task": "ui_qa",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    },
+    "ai2d": {
+      "name": "ai2d",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "ai2d_merged",
+      "kind": "finevision",
+      "image_type": "diagram",
+      "task": "diagram_qa",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    },
+    "tallyqa": {
+      "name": "tallyqa",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "tallyqa",
+      "kind": "finevision",
+      "image_type": "photo",
+      "task": "counting",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    },
+    "vsr": {
+      "name": "vsr",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "vsr",
+      "kind": "finevision",
+      "image_type": "photo",
+      "task": "spatial",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    },
+    "vqav2": {
+      "name": "vqav2",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "vqav2",
+      "kind": "finevision",
+      "image_type": "photo",
+      "task": "vqa",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    }
+  },
+  "manifest_hash": "bcfb3ee844eea3c3",
+  "contamination_checked": false
+}

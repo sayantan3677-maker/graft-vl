@@ -1,0 +1,43 @@
+{
+  "name": "s2/tat_qa",
+  "mixture_file": null,
+  "mixture": {
+    "tat_qa": 1.0
+  },
+  "seed": 3,
+  "requested": 3000,
+  "written": 665,
+  "counts": {
+    "tat_qa": 665
+  },
+  "quotas": {
+    "tat_qa": 3000
+  },
+  "by_image_type": {
+    "chart": 665
+  },
+  "by_origin": {
+    "real": 665
+  },
+  "synthetic_fraction": 0.0,
+  "rejections": {
+    "tat_qa:duplicate": 29
+  },
+  "max_target_tokens": 2048,
+  "sources": {
+    "tat_qa": {
+      "name": "tat_qa",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "tat_qa",
+      "kind": "finevision",
+      "image_type": "chart",
+      "task": "table_qa",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    }
+  },
+  "manifest_hash": "b738528d14bc69a6",
+  "contamination_checked": false
+}

@@ -1,0 +1,44 @@
+{
+  "name": "s3/cosyn_document",
+  "mixture_file": null,
+  "mixture": {
+    "cosyn_document": 1.0
+  },
+  "seed": 11,
+  "requested": 12000,
+  "written": 12000,
+  "counts": {
+    "cosyn_document": 12000
+  },
+  "quotas": {
+    "cosyn_document": 12000
+  },
+  "by_image_type": {
+    "page": 12000
+  },
+  "by_origin": {
+    "synthetic": 12000
+  },
+  "synthetic_fraction": 1.0,
+  "rejections": {
+    "cosyn_document:duplicate": 46
+  },
+  "all_turns": true,
+  "max_target_tokens": 2048,
+  "sources": {
+    "cosyn_document": {
+      "name": "cosyn_document",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "CoSyn_400k_document",
+      "kind": "finevision",
+      "image_type": "page",
+      "task": "doc_qa",
+      "origin": "synthetic",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    }
+  },
+  "manifest_hash": "a65ffef568ebc682",
+  "contamination_checked": false
+}

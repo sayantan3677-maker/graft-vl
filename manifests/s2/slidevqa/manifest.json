@@ -1,0 +1,41 @@
+{
+  "name": "s2/slidevqa",
+  "mixture_file": null,
+  "mixture": {
+    "slidevqa": 1.0
+  },
+  "seed": 3,
+  "requested": 3000,
+  "written": 94,
+  "counts": {
+    "slidevqa": 94
+  },
+  "quotas": {
+    "slidevqa": 3000
+  },
+  "by_image_type": {
+    "page": 94
+  },
+  "by_origin": {
+    "real": 94
+  },
+  "synthetic_fraction": 0.0,
+  "rejections": {},
+  "max_target_tokens": 2048,
+  "sources": {
+    "slidevqa": {
+      "name": "slidevqa",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "slidevqa",
+      "kind": "finevision",
+      "image_type": "page",
+      "task": "doc_qa",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    }
+  },
+  "manifest_hash": "df7d573cf7eab667",
+  "contamination_checked": false
+}

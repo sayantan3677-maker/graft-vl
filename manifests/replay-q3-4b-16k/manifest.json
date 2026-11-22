@@ -1,0 +1,18 @@
+{
+  "name": "replay-q3-4b-16k",
+  "teacher": "Qwen/Qwen3-4B",
+  "written": 16000,
+  "drops": {
+    "truncated": 1715
+  },
+  "by_task": {
+    "writing_chat": 3924,
+    "coding": 2837,
+    "instruction_following": 3236,
+    "safety": 1452,
+    "math": 2950,
+    "reasoning": 1601
+  },
+  "thinking_frac": 0.45975,
+  "mean_gen_tokens": 1211.3628125
+}

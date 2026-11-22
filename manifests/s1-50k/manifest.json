@@ -1,0 +1,150 @@
+{
+  "name": "s1-50k",
+  "mixture_file": "configs/data/s1.json",
+  "mixture": {
+    "pixmo_cap": 0.35,
+    "localized_narratives": 0.15,
+    "textcaps": 0.1,
+    "screen2words": 0.1,
+    "websight": 0.05,
+    "olmocr_docs": 0.15,
+    "ureader_cap": 0.1
+  },
+  "seed": 2,
+  "requested": 50000,
+  "written": 50000,
+  "counts": {
+    "pixmo_cap": 17500,
+    "localized_narratives": 7500,
+    "textcaps": 5000,
+    "screen2words": 5000,
+    "websight": 2500,
+    "olmocr_docs": 7500,
+    "ureader_cap": 5000
+  },
+  "quotas": {
+    "pixmo_cap": 17500,
+    "localized_narratives": 7500,
+    "textcaps": 5000,
+    "screen2words": 5000,
+    "websight": 2500,
+    "olmocr_docs": 7500,
+    "ureader_cap": 5000
+  },
+  "by_image_type": {
+    "photo": 30000,
+    "screenshot": 7500,
+    "page": 12500
+  },
+  "by_origin": {
+    "real": 47500,
+    "synthetic": 2500
+  },
+  "synthetic_fraction": 0.05,
+  "rejections": {
+    "pixmo_cap:too_large": 19,
+    "pixmo_cap:duplicate": 33,
+    "pixmo_cap:blank": 7,
+    "pixmo_cap:too_small": 2,
+    "pixmo_cap:target_length": 2,
+    "pixmo_cap:extreme_aspect": 1,
+    "localized_narratives:duplicate": 14,
+    "textcaps:duplicate": 32,
+    "screen2words:duplicate": 37,
+    "websight:duplicate": 13,
+    "websight:target_length": 9,
+    "olmocr_docs:target_length": 1676,
+    "olmocr_docs:duplicate": 33,
+    "olmocr_docs:blank": 1,
+    "ureader_cap:duplicate": 2636
+  },
+  "max_target_tokens": 1024,
+  "sources": {
+    "pixmo_cap": {
+      "name": "pixmo_cap",
+      "hf_id": "allenai/pixmo-cap",
+      "config": null,
+      "kind": "pixmo_url",
+      "image_type": "photo",
+      "task": "caption",
+      "origin": "real",
+      "license": "ODC-BY (captions); images: web",
+      "commercial_ok": null,
+      "min_ratings": 3
+    },
+    "localized_narratives": {
+      "name": "localized_narratives",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "localized_narratives",
+      "kind": "finevision",
+      "image_type": "photo",
+      "task": "caption",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    },
+    "textcaps": {
+      "name": "textcaps",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "textcaps",
+      "kind": "finevision",
+      "image_type": "photo",
+      "task": "caption",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    },
+    "screen2words": {
+      "name": "screen2words",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "screen2words",
+      "kind": "finevision",
+      "image_type": "screenshot",
+      "task": "caption",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    },
+    "websight": {
+      "name": "websight",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "websight",
+      "kind": "finevision",
+      "image_type": "screenshot",
+      "task": "caption",
+      "origin": "synthetic",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    },
+    "olmocr_docs": {
+      "name": "olmocr_docs",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "olmOCR-mix-0225-documents",
+      "kind": "finevision",
+      "image_type": "page",
+      "task": "ocr",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 1
+    },
+    "ureader_cap": {
+      "name": "ureader_cap",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "ureader_cap",
+      "kind": "finevision",
+      "image_type": "page",
+      "task": "caption",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    }
+  },
+  "manifest_hash": "c9e334af658d0f12",
+  "contamination_checked": false
+}

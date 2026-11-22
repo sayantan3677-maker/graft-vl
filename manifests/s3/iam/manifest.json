@@ -1,0 +1,44 @@
+{
+  "name": "s3/iam",
+  "mixture_file": null,
+  "mixture": {
+    "iam": 1.0
+  },
+  "seed": 11,
+  "requested": 5000,
+  "written": 2243,
+  "counts": {
+    "iam": 2243
+  },
+  "quotas": {
+    "iam": 5000
+  },
+  "by_image_type": {
+    "page": 2243
+  },
+  "by_origin": {
+    "real": 2243
+  },
+  "synthetic_fraction": 0.0,
+  "rejections": {
+    "iam:duplicate": 4,
+    "iam:extreme_aspect": 3
+  },
+  "max_target_tokens": 2048,
+  "sources": {
+    "iam": {
+      "name": "iam",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "iam",
+      "kind": "finevision",
+      "image_type": "page",
+      "task": "ocr",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    }
+  },
+  "manifest_hash": "24f62ae1f65e6f31",
+  "contamination_checked": false
+}

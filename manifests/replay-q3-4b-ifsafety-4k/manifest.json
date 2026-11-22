@@ -1,0 +1,14 @@
+{
+  "name": "replay-q3-4b-ifsafety-4k",
+  "teacher": "Qwen/Qwen3-4B",
+  "written": 4000,
+  "drops": {
+    "truncated": 21
+  },
+  "by_task": {
+    "instruction_following": 2762,
+    "safety": 1238
+  },
+  "thinking_frac": 0.5,
+  "mean_gen_tokens": 753.3715
+}

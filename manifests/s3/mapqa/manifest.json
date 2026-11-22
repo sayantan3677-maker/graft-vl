@@ -1,0 +1,44 @@
+{
+  "name": "s3/mapqa",
+  "mixture_file": null,
+  "mixture": {
+    "mapqa": 1.0
+  },
+  "seed": 11,
+  "requested": 8000,
+  "written": 8000,
+  "counts": {
+    "mapqa": 8000
+  },
+  "quotas": {
+    "mapqa": 8000
+  },
+  "by_image_type": {
+    "chart": 8000
+  },
+  "by_origin": {
+    "synthetic": 8000
+  },
+  "synthetic_fraction": 1.0,
+  "rejections": {
+    "mapqa:duplicate": 251
+  },
+  "all_turns": true,
+  "max_target_tokens": 2048,
+  "sources": {
+    "mapqa": {
+      "name": "mapqa",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "mapqa",
+      "kind": "finevision",
+      "image_type": "chart",
+      "task": "chart_qa",
+      "origin": "synthetic",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    }
+  },
+  "manifest_hash": "9bb22fcfcfdc0f80",
+  "contamination_checked": false
+}

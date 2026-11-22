@@ -1,0 +1,43 @@
+{
+  "name": "s2/localized_narratives",
+  "mixture_file": null,
+  "mixture": {
+    "localized_narratives": 1.0
+  },
+  "seed": 3,
+  "requested": 9000,
+  "written": 9000,
+  "counts": {
+    "localized_narratives": 9000
+  },
+  "quotas": {
+    "localized_narratives": 9000
+  },
+  "by_image_type": {
+    "photo": 9000
+  },
+  "by_origin": {
+    "real": 9000
+  },
+  "synthetic_fraction": 0.0,
+  "rejections": {
+    "localized_narratives:duplicate": 3
+  },
+  "max_target_tokens": 2048,
+  "sources": {
+    "localized_narratives": {
+      "name": "localized_narratives",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "localized_narratives",
+      "kind": "finevision",
+      "image_type": "photo",
+      "task": "caption",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    }
+  },
+  "manifest_hash": "b13687d956f2e624",
+  "contamination_checked": false
+}

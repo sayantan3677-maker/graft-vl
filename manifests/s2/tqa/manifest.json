@@ -1,0 +1,43 @@
+{
+  "name": "s2/tqa",
+  "mixture_file": null,
+  "mixture": {
+    "tqa": 1.0
+  },
+  "seed": 3,
+  "requested": 6000,
+  "written": 2320,
+  "counts": {
+    "tqa": 2320
+  },
+  "quotas": {
+    "tqa": 6000
+  },
+  "by_image_type": {
+    "diagram": 2320
+  },
+  "by_origin": {
+    "real": 2320
+  },
+  "synthetic_fraction": 0.0,
+  "rejections": {
+    "tqa:duplicate": 105
+  },
+  "max_target_tokens": 2048,
+  "sources": {
+    "tqa": {
+      "name": "tqa",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "tqa",
+      "kind": "finevision",
+      "image_type": "diagram",
+      "task": "science_qa",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    }
+  },
+  "manifest_hash": "969451e44b823427",
+  "contamination_checked": false
+}

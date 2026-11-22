@@ -1,0 +1,15 @@
+{
+  "name": "replay-q3-1b7-ifsafety-5k",
+  "teacher": "Qwen/Qwen3-1.7B",
+  "written": 5000,
+  "drops": {
+    "truncated": 26,
+    "no_reasoning": 1
+  },
+  "by_task": {
+    "instruction_following": 3462,
+    "safety": 1538
+  },
+  "thinking_frac": 0.5006,
+  "mean_gen_tokens": 760.2168
+}

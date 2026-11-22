@@ -1,0 +1,43 @@
+{
+  "name": "s3/invoices_receipts",
+  "mixture_file": null,
+  "mixture": {
+    "invoices_receipts": 1.0
+  },
+  "seed": 11,
+  "requested": 6000,
+  "written": 2530,
+  "counts": {
+    "invoices_receipts": 2530
+  },
+  "quotas": {
+    "invoices_receipts": 6000
+  },
+  "by_image_type": {
+    "page": 2530
+  },
+  "by_origin": {
+    "real": 2530
+  },
+  "synthetic_fraction": 0.0,
+  "rejections": {
+    "invoices_receipts:duplicate": 304
+  },
+  "max_target_tokens": 2048,
+  "sources": {
+    "invoices_receipts": {
+      "name": "invoices_receipts",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "invoices_receipts",
+      "kind": "finevision",
+      "image_type": "page",
+      "task": "doc_ie",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    }
+  },
+  "manifest_hash": "b5e3ea9425bdb0c3",
+  "contamination_checked": false
+}

@@ -1,0 +1,23 @@
+{
+  "name": "traces-q3-1b7-s2-v3",
+  "derived_from": "manifests/traces-q3-1b7-s2",
+  "written": 2565,
+  "kept": 2565,
+  "refilter_drops": {
+    "leak_phrase": 1820,
+    "empty_or_short_reasoning": 1247
+  },
+  "by_source": {
+    "scienceqa": 211,
+    "textvqa": 128,
+    "infographic_vqa": 358,
+    "iconqa": 155,
+    "ai2d": 525,
+    "chartqa": 475,
+    "docvqa": 278,
+    "tallyqa": 143,
+    "tat_qa": 115,
+    "screenqa": 120,
+    "vsr": 57
+  }
+}

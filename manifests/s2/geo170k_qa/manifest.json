@@ -1,0 +1,43 @@
+{
+  "name": "s2/geo170k_qa",
+  "mixture_file": null,
+  "mixture": {
+    "geo170k_qa": 1.0
+  },
+  "seed": 3,
+  "requested": 1500,
+  "written": 1077,
+  "counts": {
+    "geo170k_qa": 1077
+  },
+  "quotas": {
+    "geo170k_qa": 1500
+  },
+  "by_image_type": {
+    "diagram": 1077
+  },
+  "by_origin": {
+    "synthetic": 1077
+  },
+  "synthetic_fraction": 1.0,
+  "rejections": {
+    "geo170k_qa:duplicate": 1422
+  },
+  "max_target_tokens": 2048,
+  "sources": {
+    "geo170k_qa": {
+      "name": "geo170k_qa",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "geo170k(qa)",
+      "kind": "finevision",
+      "image_type": "diagram",
+      "task": "visual_math",
+      "origin": "synthetic",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    }
+  },
+  "manifest_hash": "cc3a8529c0ac617d",
+  "contamination_checked": false
+}

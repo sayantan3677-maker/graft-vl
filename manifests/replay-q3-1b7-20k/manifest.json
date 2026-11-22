@@ -1,0 +1,17 @@
+{
+  "name": "replay-q3-1b7-20k",
+  "teacher": "Qwen/Qwen3-1.7B",
+  "written": 16365,
+  "drops": {
+    "truncated": 2692,
+    "no_reasoning": 2
+  },
+  "by_task": {
+    "writing_chat": 6083,
+    "coding": 3986,
+    "math": 4372,
+    "reasoning": 1924
+  },
+  "thinking_frac": 0.4472960586617782,
+  "mean_gen_tokens": 1385.5396883593035
+}

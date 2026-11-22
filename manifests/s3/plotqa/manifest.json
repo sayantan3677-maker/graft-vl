@@ -1,0 +1,45 @@
+{
+  "name": "s3/plotqa",
+  "mixture_file": null,
+  "mixture": {
+    "plotqa": 1.0
+  },
+  "seed": 11,
+  "requested": 15000,
+  "written": 14999,
+  "counts": {
+    "plotqa": 14999
+  },
+  "quotas": {
+    "plotqa": 15000
+  },
+  "by_image_type": {
+    "chart": 15000
+  },
+  "by_origin": {
+    "synthetic": 15000
+  },
+  "synthetic_fraction": 1.0,
+  "rejections": {
+    "plotqa:duplicate": 629
+  },
+  "all_turns": true,
+  "max_target_tokens": 2048,
+  "sources": {
+    "plotqa": {
+      "name": "plotqa",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "plotqa",
+      "kind": "finevision",
+      "image_type": "chart",
+      "task": "chart_qa",
+      "origin": "synthetic",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    }
+  },
+  "manifest_hash": "1358e36207bb2f27",
+  "contamination_checked": false,
+  "dropped_eval_overlap": 1
+}

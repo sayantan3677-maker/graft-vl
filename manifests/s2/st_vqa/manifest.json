@@ -1,0 +1,43 @@
+{
+  "name": "s2/st_vqa",
+  "mixture_file": null,
+  "mixture": {
+    "st_vqa": 1.0
+  },
+  "seed": 3,
+  "requested": 6000,
+  "written": 6000,
+  "counts": {
+    "st_vqa": 6000
+  },
+  "quotas": {
+    "st_vqa": 6000
+  },
+  "by_image_type": {
+    "photo": 6000
+  },
+  "by_origin": {
+    "real": 6000
+  },
+  "synthetic_fraction": 0.0,
+  "rejections": {
+    "st_vqa:duplicate": 61
+  },
+  "max_target_tokens": 2048,
+  "sources": {
+    "st_vqa": {
+      "name": "st_vqa",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "st_vqa",
+      "kind": "finevision",
+      "image_type": "photo",
+      "task": "scene_text",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    }
+  },
+  "manifest_hash": "5e5591c35827a45f",
+  "contamination_checked": false
+}

@@ -1,0 +1,44 @@
+{
+  "name": "s2/visual7w",
+  "mixture_file": null,
+  "mixture": {
+    "visual7w": 1.0
+  },
+  "seed": 3,
+  "requested": 6000,
+  "written": 5999,
+  "counts": {
+    "visual7w": 5999
+  },
+  "quotas": {
+    "visual7w": 6000
+  },
+  "by_image_type": {
+    "photo": 6000
+  },
+  "by_origin": {
+    "real": 6000
+  },
+  "synthetic_fraction": 0.0,
+  "rejections": {
+    "visual7w:duplicate": 1
+  },
+  "max_target_tokens": 2048,
+  "sources": {
+    "visual7w": {
+      "name": "visual7w",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "visual7w",
+      "kind": "finevision",
+      "image_type": "photo",
+      "task": "vqa",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    }
+  },
+  "manifest_hash": "eb030818fb9f3272",
+  "contamination_checked": false,
+  "dropped_eval_overlap": 1
+}

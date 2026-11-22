@@ -1,0 +1,9 @@
+{
+  "name": "s2/pixmo_cap",
+  "written": 15999,
+  "counts": {
+    "pixmo_cap": 15999
+  },
+  "salvaged_from": "s2-mm-300k",
+  "dropped_eval_overlap": 1
+}

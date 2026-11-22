@@ -1,0 +1,43 @@
+{
+  "name": "s2/arxivqa",
+  "mixture_file": null,
+  "mixture": {
+    "arxivqa": 1.0
+  },
+  "seed": 3,
+  "requested": 1500,
+  "written": 1500,
+  "counts": {
+    "arxivqa": 1500
+  },
+  "quotas": {
+    "arxivqa": 1500
+  },
+  "by_image_type": {
+    "diagram": 1500
+  },
+  "by_origin": {
+    "real": 1500
+  },
+  "synthetic_fraction": 0.0,
+  "rejections": {
+    "arxivqa:duplicate": 16
+  },
+  "max_target_tokens": 2048,
+  "sources": {
+    "arxivqa": {
+      "name": "arxivqa",
+      "hf_id": "HuggingFaceM4/FineVision",
+      "config": "arxivqa",
+      "kind": "finevision",
+      "image_type": "diagram",
+      "task": "figure_qa",
+      "origin": "real",
+      "license": "per-subset (FineVision aggregates sources with their own licenses) - verify",
+      "commercial_ok": null,
+      "min_ratings": 3
+    }
+  },
+  "manifest_hash": "b7c3d440490bcf43",
+  "contamination_checked": false
+}
