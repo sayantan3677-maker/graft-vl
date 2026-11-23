@@ -3,6 +3,9 @@
 # + "Answer:" quirk count → text retention (both, in parallel) → lmms-eval quick + MMMU for l0.5 → serving latency.
 cd "$(dirname "$0")/../.."
 export CUDA_VISIBLE_DEVICES=1 VLLM_USE_FLASHINFER_SAMPLER=0 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+# GPU1 is shared with root-owned vLLM servers: start each vLLM job only when enough memory is free.
+free_gb() { nvidia-smi -i 1 --query-gpu=memory.free --format=csv,noheader,nounits | awk '{print int($1/1024)}'; }
+wait_free() { until [ "$(free_gb)" -ge "$1" ]; do sleep 60; done; }
 PY=~/.conda/envs/vlm-train/bin/python; EVAL_PY=~/.conda/envs/vlm-eval/bin/python
 R=experiments/HYB-S4F-Q3-4B-VIT8-HR-2000; D=experiments/s4f; T=reports/text/s4f; mkdir -p $D/vision $T
 until [ -f $D/train.done ]; do sleep 60; done
@@ -20,17 +23,18 @@ $PY scripts/score_clean.py s3-l05=experiments/s3-eval/vision/hyb-4b-s3-s4000-l05
   s4-l05=experiments/s4/vision/hyb-4b-s4-s2000-l05.qa.json \
   $(for f in $D/vision/hyb-4b-s4f-*.qa.json; do n=$(basename $f .qa.json); echo "${n#hyb-4b-}=$f"; done)
 for E in hyb-4b-s4f-s2000-l05 hyb-4b-s4f-s2000-l10; do
-  echo "=== text $E $(date +%T)"
+  wait_free 22; echo "=== text $E $(date +%T) (free $(free_gb) GB)"
   $EVAL_PY scripts/eval_text_batched.py --model exports/$E-llm --tasks mmlu_pro gsm8k ifeval math500 --modes think nothink --seeds 2 \
-    --limit mmlu_pro=500 gsm8k=500 math500=200 --gpu-mem 0.35 --out $T/$E.json --items-out $T/$E.items.json > $D/text-$E.log 2>&1 &
+    --limit mmlu_pro=500 gsm8k=500 math500=200 --gpu-mem 0.2 --out $T/$E.json --items-out $T/$E.items.json > $D/text-$E.log 2>&1 &
   sleep 240
 done
 wait
 echo "=== text done $(date +%T)"
 E=hyb-4b-s4f-s2000-l05
-echo "=== bench $E $(date +%T)"
+wait_free 31; echo "=== bench $E $(date +%T)"
+export GPU_MEM=0.3
 TASKS=docvqa_val,chartqa,textvqa_val,infovqa_val,ocrbench,ai2d,mmbench_en_dev,pope,realworldqa scripts/run_benchmarks.sh exports/$E quick || echo "!!! bench $E failed"
 TASKS=mmmu_val MM_LIMIT=5 OUT_TAG=mmmu scripts/run_benchmarks.sh exports/$E quick || echo "!!! mmmu $E failed"
-echo "=== latency $E $(date +%T)"
+wait_free 31; echo "=== latency $E $(date +%T)"
 SUFFIX=-s4f scripts/run_hybrid_serving_bench.sh exports/$E 8011 bf16 || echo "!!! latency $E failed"
 echo "=== eval done $(date +%T)"
