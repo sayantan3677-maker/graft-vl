@@ -82,7 +82,7 @@ def main():
     total, warm = cfg["max_steps"], max(1, int(cfg.get("warmup_ratio", 0.03) * cfg["max_steps"]))
     sched = torch.optim.lr_scheduler.LambdaLR(opt, lambda s: lr_lambda(s, total, warm))
     accum = cfg["grad_accum"]
-    mf = open(run_dir / "metrics.jsonl", "a")
+    metrics_path = run_dir / "metrics.jsonl"  # reopened per write: survives the file being replaced mid-run
     step, t0, acc = 0, time.time(), {"loss": 0.0, "tok": 0, "img_tok": 0, "n": 0, "think": 0, "text_only": 0}
     torch.cuda.reset_peak_memory_stats()
     model.train()
@@ -118,8 +118,8 @@ def main():
                    "step_time_s": dt / n, "tokens_per_s": acc["tok"] / dt, "samples_per_s": acc["n"] / dt,
                    "frac_thinking": acc["think"] / max(1, acc["n"]), "frac_text_only": acc["text_only"] / max(1, acc["n"]),
                    "peak_alloc_gb": torch.cuda.max_memory_allocated() / 2**30}
-            mf.write(json.dumps(rec) + "\n")
-            mf.flush()
+            with open(metrics_path, "a") as mf:
+                mf.write(json.dumps(rec) + "\n")
             print(json.dumps({k: (round(v, 4) if isinstance(v, float) else v) for k, v in rec.items() if k != "lr"}), flush=True)
             t0, acc = time.time(), {k: 0 for k in acc}
         if step % cfg["save_every"] == 0 or step == total:
@@ -127,7 +127,6 @@ def main():
             ck.mkdir(parents=True, exist_ok=True)
             torch.save({n: p.detach().cpu() for n, p in model.named_parameters() if p.requires_grad}, ck / "trainable.pt")
             (ck / "info.json").write_text(json.dumps({"step": step, "init": cfg["init"], "lora": cfg.get("lora")}))
-    mf.close()
 
 
 if __name__ == "__main__":
