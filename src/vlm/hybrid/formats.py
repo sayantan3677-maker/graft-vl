@@ -37,10 +37,31 @@ def _set_instruction(text: str, old: str, new: str) -> str:
     return head + new
 
 
-def normalize_sample(sample: dict, rng: random.Random, p_standard: float = 0.35, strip_unprompted: bool = False) -> dict:
+_RATIONALE_ANSWER = re.compile(r"^(?P<why>.*\S)\s*\n\s*(?:\*\*)?answer(?:\*\*)?\s*:\s*(?:\*\*)?\s*(?P<ans>[^\n]+?)\s*$", re.I | re.S)
+
+
+def _rationale_answer(ans: str, question: str, rng: random.Random, p_standard: float) -> tuple[str, str | None]:
+    """'<explanation>\nAnswer: X' (CoSyn, Geo170K) → a direct answer for unprompted questions: the explanation alone
+    when it already states X, else the explanation plus a closing sentence; with p_standard, the brevity instruction
+    is added and the target becomes X. Returns (new_answer, new_question or None)."""
+    m = _RATIONALE_ANSWER.match(ans.strip())
+    if not m:
+        return ans, None
+    why, short = m.group("why").strip(), _strip_period(m.group("ans").strip().strip("*").strip())
+    if rng.random() < p_standard and len(short.split()) <= 6:
+        return short, question.rstrip() + "\n" + STANDARD_BRIEF
+    flags = 0 if len(short) <= 2 else re.I  # option letters: "A" must not match the article "a"
+    if re.search(r"(?<!\w)" + re.escape(short) + r"(?!\w)", why, flags):
+        return why, None
+    return f"{why}\n\nSo the answer is {short}.", None
+
+
+def normalize_sample(sample: dict, rng: random.Random, p_standard: float = 0.35, strip_unprompted: bool = False,
+                     rationale: bool = False) -> dict:
     """Rewrite the final user/assistant pair of a single-turn short-answer or letter-MCQ sample in place.
     strip_unprompted: QA sources whose questions carry no format instruction (table/doc QA): also drop the trailing
-    '.' of short answers. Not for transcription sources, where the period is part of the text."""
+    '.' of short answers. Not for transcription sources, where the period is part of the text.
+    rationale: sources whose targets are '<explanation>\nAnswer: X' (see _rationale_answer)."""
     msgs = sample["messages"]
     if len(msgs) < 2 or msgs[-1]["role"] != "assistant" or msgs[-1].get("reasoning"):
         return sample
@@ -62,6 +83,9 @@ def normalize_sample(sample: dict, rng: random.Random, p_standard: float = 0.35,
         ans = _strip_period(ans)
         if rng.random() < p_standard:
             new_text = _set_instruction(text, last, STANDARD_BRIEF)
+    elif rationale:
+        ans, q = _rationale_answer(ans, text, rng, p_standard)
+        new_text = q if q is not None else text
     elif last == "Answer yes or no." or strip_unprompted:
         ans = _strip_period(ans)
     else:

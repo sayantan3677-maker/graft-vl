@@ -58,3 +58,21 @@ def test_yes_no_and_unprompted_qa():
     assert _qa(normalize_sample(_s("Is it red?\nAnswer yes or no.", "No."), random.Random(0), 0.0))[1] == "No"
     assert _qa(normalize_sample(_s("Who finished next?", "Charles Zwolsman."), random.Random(0), 0.0))[1] == "Charles Zwolsman."
     assert _qa(normalize_sample(_s("Who finished next?", "Charles Zwolsman."), random.Random(0), 0.0, strip_unprompted=True))[1] == "Charles Zwolsman"
+
+
+def test_rationale_answer_line_removed():
+    why = "The response time for the Basic tier is listed in the table; this value is 36 hours."
+    s = _s("What is the response time for the Basic tier?", why + "\nAnswer: 36 hours")
+    q, a = _qa(normalize_sample(s, random.Random(0), 0.0, rationale=True))
+    assert a == why and q == "What is the response time for the Basic tier?"
+
+
+def test_rationale_answer_not_stated_gets_closing_sentence():
+    s = _s("Which option is correct?", "Angle E = 22.5 degrees, so the first option holds.\nAnswer:A")
+    assert _qa(normalize_sample(s, random.Random(0), 0.0, rationale=True))[1].endswith("So the answer is A.")
+
+
+def test_rationale_answer_brief_instruction_variant():
+    s = _s("When did the first call occur?", "It is the first log entry.\nAnswer: May 15, 2023.")
+    q, a = _qa(normalize_sample(s, random.Random(0), 1.0, rationale=True))
+    assert a == "May 15, 2023" and q == "When did the first call occur?\n" + STANDARD_BRIEF

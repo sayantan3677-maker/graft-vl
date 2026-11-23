@@ -17,7 +17,6 @@ Usage: python scripts/prepare_hybrid_serving.py exports/<name> [--max-pixels 160
 
 import argparse
 import json
-import shutil
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -67,6 +66,28 @@ def merge_template(src: str) -> str:
     return HEADER + src
 
 
+def is_merged(template: str) -> bool:
+    """True for a template this script already wrote (exports initialised from a prepared export inherit it)."""
+    return template.startswith(HEADER) or "set image_count = namespace(value=0)" in template
+
+
+def original_template(d: Path, base: str) -> str:
+    """The text-only Qwen3 template to merge from: the saved original if it is genuine, else the base LM's own
+    template (re-merging an already merged template is impossible; see is_merged)."""
+    orig = d / "chat_template.qwen3_text_original.jinja"
+    for cand in (orig, d / "chat_template.jinja"):
+        if cand.exists() and not is_merged(cand.read_text()):
+            text = cand.read_text()
+            break
+    else:
+        from transformers import AutoTokenizer
+
+        text = AutoTokenizer.from_pretrained(base).chat_template
+        assert text and not is_merged(text), f"no usable text-only chat template for {d} (base {base})"
+    orig.write_text(text)
+    return text
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("export")
@@ -74,10 +95,10 @@ def main():
     ap.add_argument("--base-lm", default=None, help="HF id/dir of the text LM (default: export_info.json base_llm, else the 1.7B hybrid_info.json)")
     args = ap.parse_args()
     d = ROOT / args.export
-    orig = d / "chat_template.qwen3_text_original.jinja"
-    if not orig.exists():
-        shutil.copy(d / "chat_template.jinja", orig)
-    merged = merge_template(orig.read_text())
+    info = d / "export_info.json"  # written by export_hybrid.py (base_llm resolved from the init chain)
+    base = args.base_lm or (json.loads(info.read_text()).get("base_llm") if info.exists() else None) \
+        or json.loads((ROOT / "exports/hybrid-q3-1b7-vit2b/hybrid_info.json").read_text())["language_model_from"]
+    merged = merge_template(original_template(d, base))
     (d / "chat_template.jinja").write_text(merged)
     (d / "chat_template_nothink.jinja").write_text("{%- set enable_thinking = false %}\n" + merged)
 
@@ -87,9 +108,6 @@ def main():
 
     from transformers import GenerationConfig
 
-    info = d / "export_info.json"  # written by export_hybrid.py (base_llm resolved from the init chain)
-    base = args.base_lm or (json.loads(info.read_text()).get("base_llm") if info.exists() else None) \
-        or json.loads((ROOT / "exports/hybrid-q3-1b7-vit2b/hybrid_info.json").read_text())["language_model_from"]
     GenerationConfig.from_pretrained(base).save_pretrained(d)
     print(f"serving files written to {d} (max_pixels {args.max_pixels}, generation_config from {base})")
 

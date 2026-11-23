@@ -137,7 +137,7 @@ class HybridStream(IterableDataset):
                     (raw.get("meta") or {}).get("n_turns"):
                 raw = pick_turn(raw, rng)  # --all-turns QA manifests: one random question per draw
             if norm[k]:  # True: instruction-driven fixes; "qa": also strip '.' from unprompted short answers
-                raw = normalize_sample(raw, rng, strip_unprompted=norm[k] == "qa")
+                raw = normalize_sample(raw, rng, strip_unprompted=norm[k] == "qa", rationale=norm[k] == "rationale")
             try:
                 p = self.processor.prepare(raw)
             except ValueError:
