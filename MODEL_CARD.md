@@ -32,28 +32,28 @@ replaying text data to protect reasoning and instruction following.
 - **Thinking:** Qwen3's hybrid thinking is kept and toggled with `enable_thinking`. Use non-thinking mode for image
   questions; thinking gave no gain on vision in our tests.
 
-> Status: release candidate `S3` (`hyb-4b-s3-s4000-l05`). The numbers below are for that checkpoint.
+> Release checkpoint: `S4F` (`hyb-4b-s4f-s2000-l05`). All numbers below are for that checkpoint unless marked.
 
 ## Results
 
 ### Public benchmarks
 
-Measured with lmms-eval through vLLM on 500 samples per task and the same pipeline for every model. We did not
-measure Qwen3-VL-4B-Instruct; it is stronger again and is the natural upper bound, because it uses the same vision
-encoder with Qwen's full multimodal training.
+Measured with lmms-eval through vLLM on 500 samples per task (one standard error ≈ ±2 points), with the same
+pipeline for every model. Qwen3-VL-4B-Instruct uses the same vision encoder plus Qwen's full multimodal training, so
+it is the natural upper bound; Qwen3-VL-2B-Instruct is shown for scale.
 
-| Benchmark | Metric | **Graft-VL-4B** | Qwen3-VL-2B-Instruct |
-|---|---|---:|---:|
-| DocVQA (val) | ANLS | **79.9** | 93.3 |
-| InfographicVQA (val) | ANLS | **49.2** | 70.0 |
-| ChartQA | relaxed acc. | **57.0** | 68.2 |
-| TextVQA (val) | VQA acc. | **70.6** | 79.7 |
-| OCRBench | score | **77.4** | 90.0 |
-| AI2D | exact match | **72.0** | 76.2 |
-| MMBench-EN (dev) | rule-based match | **79.6** | 81.4 |
-| POPE | F1 | **84.6** | 88.0 |
-| RealWorldQA | exact match | **58.2** | 65.8 |
-| MMMU (val) | accuracy | **47.4** | 39.8 |
+| Benchmark | Metric | **Graft-VL-4B** | Qwen3-VL-2B-Instruct | Qwen3-VL-4B-Instruct |
+|---|---|---:|---:|---:|
+| DocVQA (val) | ANLS | **79.3** | 93.3 | 95.5 |
+| InfographicVQA (val) | ANLS | **53.0** | 70.0 | 79.1 |
+| ChartQA | relaxed acc. | **56.6** | 68.2 | 73.4 |
+| TextVQA (val) | VQA acc. | **72.9** | 79.7 | 82.1 |
+| OCRBench | score | **77.2** | 90.0 | 89.6 |
+| AI2D | exact match | **72.0** | 76.2 | 86.4 |
+| MMBench-EN (dev) | rule-based match | **79.0** | 81.4 | 88.8 |
+| POPE | F1 | **83.7** | 88.0 | 88.1 |
+| RealWorldQA | exact match | **56.8** | 65.8 | 70.8 |
+| MMMU (val) | accuracy | **47.0** | 39.8 | 48.0 |
 
 AI2D test images also appear in the public FineVision training subsets (`ai2d_merged`, `tqa`). We removed every
 eval image from our training data by exact hash and perceptual hash (dHash); see "Contamination control" below.
@@ -65,20 +65,22 @@ a 200-sample subset; each figure is the mean of 2 seeds.
 
 | Mode | MMLU-Pro | GSM8K | IFEval | MATH-500 |
 |---|---:|---:|---:|---:|
-| thinking | −0.8 | −0.4 | −1.8 | −0.5 |
-| non-thinking | −1.1 | +0.2 | −1.1 | −1.8 |
+| thinking | −0.7 | −1.4 | −2.5 | −1.5 |
+| non-thinking | −0.4 | −0.3 | +0.2 | −0.8 |
 
-The average change is **−0.9 points**. The text path is the original Qwen3-4B plus a merged LoRA at strength 0.5.
+The average change is **−0.9 points**. The text path is the original Qwen3-4B plus two merged LoRAs (stages S3
+and S4), each at strength 0.5.
 
 ### Latency
 
-vLLM 0.30, BF16, one data-centre GPU, images capped at 1.6 MP, 64 output tokens.
+vLLM 0.30, BF16, one data-centre GPU shared with other inference servers (so these are upper bounds), images capped
+at 2.56 MP, 64 output tokens.
 
 | Concurrency | TTFT p50 | Output tokens/s | Requests/s |
 |---:|---:|---:|---:|
-| 1 | 220 ms (photo ≈ 75 ms, full page ≈ 245 ms) | 102 | 1.6 |
-| 8 | 391 ms | 437 | 6.8 |
-| 32 | 930 ms | 808 | 12.6 |
+| 1 | 274 ms (photo ≈ 85 ms, full page ≈ 350 ms) | 93 | 1.5 |
+| 8 | 491 ms | 380 | 5.9 |
+| 32 | 1.13 s | 626 | 9.8 |
 
 ## Usage
 
@@ -118,8 +120,8 @@ out = model.generate(**inputs, max_new_tokens=512, do_sample=False)
 print(processor.decode(out[0, inputs["input_ids"].shape[1]:], skip_special_tokens=True))
 ```
 
-`processor_config.json` caps images at the training resolution, about 1.6 MP. Qwen3-VL's own default of 16.7 MP
-produces prompts over 16K tokens on long pages and was never seen in training.
+`processor_config.json` caps images at the training resolution, 2.56 MP (about 2,500 image tokens for a full page).
+Qwen3-VL's own default of 16.7 MP produces prompts over 16K tokens on long pages and was never seen in training.
 
 ## Training
 
@@ -128,7 +130,8 @@ produces prompts over 16K tokens on long pages and was never seen in training.
 | Graft | nothing: weights assembled, text logits verified identical | — | — |
 | Align | merger + DeepStack mergers (LM and ViT frozen) | captions, OCR and reading data | 1,500 |
 | S2 | LoRA r32 on the LM + merger | broad visual instruction mix + text replay | 2,000 |
-| S3 | LoRA r64 on the LM + merger | 62 sources, document-, chart- and OCR-heavy + 18% text replay | 4,000 × 32 samples |
+| S3 | LoRA r64 on the LM + merger (merged at 0.5) | 62 sources, document-, chart- and OCR-heavy + 18% text replay, 1.6 MP | 4,000 × 32 samples |
+| S4 | fresh LoRA r64 + merger + **top 8 ViT blocks** (merged at 0.5) | S3 mix re-weighted to docs ×1.5, charts ×1.25, OCR ×1.1; 2.56 MP | 2,000 × 32 samples |
 
 Engineering details:
 - **Answer-format normalization.** Short-answer and multiple-choice targets follow their own instruction. Several
@@ -137,8 +140,14 @@ Engineering details:
 - **All questions per image.** Multi-question rows contribute every question, one sampled per use. An earlier stage
   only ever used the first.
 - **Text replay.** Qwen3-4B's own responses to instruction and reasoning prompts.
-- **LoRA strength.** The LoRA is merged at strength 0.5, chosen on a vision vs. text-retention sweep: 1.0 gained
-  < 0.6 points on vision but lost 1.85 points of text ability on average.
+- **Rationale answers.** Some synthetic sources (CoSyn, Geo170K) end every target with "Answer: X" after an
+  explanation. Their targets are rewritten into a plain explanation that states the answer, or into a short answer
+  with a matching instruction.
+- **LoRA strength.** Each stage's LoRA is merged at strength 0.5, chosen on a vision vs. text-retention sweep: at S3,
+  1.0 gained < 0.6 points on vision but lost 1.85 points of text ability on average.
+- **What helped at S4.** Raising the resolution alone changed nothing (62.3 → 62.7 on our clean set). Training the
+  top ViT blocks on document-heavy data at 2.56 MP gave +1.5 points, mostly documents and infographics
+  (InfographicVQA +3.8 on the public benchmark), at a cost of up to 1.5 points on some photo benchmarks (POPE, RealWorldQA).
 
 ### Contamination control
 
@@ -148,14 +157,15 @@ of 1,214 of 1,400 items whose images never appeared in any training stage.
 
 ## Limitations
 
-- **Gap to Qwen's own VL models.** Dense documents and infographics remain the main gap (DocVQA −13, InfoVQA −21 vs.
-  Qwen3-VL-2B). Qwen3-VL was trained with far more multimodal data and compute.
+- **Gap to Qwen's own VL models.** Dense documents, infographics and charts remain the main gap (DocVQA −14,
+  InfoVQA −17, ChartQA −12 vs. Qwen3-VL-2B; larger vs. Qwen3-VL-4B). Qwen3-VL was trained with far more multimodal
+  data and compute. Graft-VL's point is keeping an existing text model intact, not beating Qwen3-VL.
 - **Single image per prompt.** Multi-image and video input were not trained.
 - **English only** for evaluation; multilingual OCR is untested.
 - **Prompt injection.** Text written inside an image is sometimes repeated in the answer: 13% of our injection tests,
-  37.5% on web screenshots. No embedded instruction was followed.
-- **Verbose open-ended answers.** Free-form questions can produce chatty preambles. Ask for a short answer when you
-  need one.
+  30% on web screenshots. No embedded instruction was followed.
+- **Short explanations.** Answers are concise by default; asked to "explain your reasoning", the model often gives a
+  one-sentence justification (≈ 30 tokens). Use thinking mode for step-by-step reasoning.
 - Not evaluated for safety-critical uses (medical, legal, financial decisions).
 
 ## License and data

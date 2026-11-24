@@ -64,13 +64,19 @@ $PY scripts/train_hybrid.py --config configs/train/hybrid_s2_lora.json          
 $PY scripts/eval_hybrid.py --run experiments/<run> --n-qa 60                     # reading probe + official-split QA
 $PY scripts/export_hybrid.py --run experiments/<run> --lora-scale 1.0 --out exports/<name>   # + <name>-llm for text evals
 ```
-**S3 (4B, doc/chart/OCR; current release `exports/hyb-4b-s3-s4000-l05`):**
+**S3 (4B, doc/chart/OCR; `exports/hyb-4b-s3-s4000-l05`):**
 ```bash
 experiments/s3/build_s3.sh                                                       # shards; FineVision multi-QA rows via build_shards.py --all-turns
 $PY experiments/s3/overlap_check.py && $PY experiments/s3/drop_overlap.py 'manifests/s3/*'   # drop eval-image overlap (hash + dHash)
 $PY scripts/train_hybrid.py --config configs/train/hybrid_s3_lora_4b.json        # per-source "normalize_format": true | "qa" (src/vlm/hybrid/formats.py)
 $PY scripts/export_hybrid.py --run experiments/HYB-S3-Q3-4B-LORA64-4000 --step 4000 --lora-scale 0.5 --out exports/hyb-4b-s3-s4000-l05
 $PY scripts/score_clean.py s3-l05=experiments/s3-eval/vision/hyb-4b-s3-s4000-l05.qa.json  # all vs contamination-clean subset + answer-format rates
+```
+**S4F (release `exports/hyb-4b-s4f-s2000-l05` = Graft-VL-4B): top-8 ViT blocks + 2.56 MP, from the S3 release:**
+```bash
+$PY scripts/train_hybrid.py --config configs/train/hybrid_s4f_release_4b.json    # "vit_top_blocks": 8, "lr_vit"; "normalize_format": "rationale" for CoSyn/Geo170K
+experiments/s4f/run_eval.sh                                                      # export l0.5/l1.0 → official QA → text retention → lmms-eval → latency
+$PY experiments/s4f/answer_style_probe.py experiments/s4f/answer_style.json exports/<name>   # open-ended answer-style check
 ```
 Multi-turn QA rows hold one image with several independent questions; the loader draws one turn per use (`pick_turn`).
 The exported hybrid is a stock Qwen3-VL checkpoint, so `vllm serve exports/<name>` works without the plugin.
@@ -79,7 +85,7 @@ Image preprocessing runs on the GPU in the trainer (`HybridProcessor.finalize`);
 ## Demo (Gradio)
 ```bash
 python -m venv ~/.venvs/vlm-demo && ~/.venvs/vlm-demo/bin/pip install "gradio>=5,<6" "openai>=1.40" pillow
-demo/launch.sh exports/hyb-4b-s3-s4000-l05            # vLLM on :8011 + Gradio on :7860
+demo/launch.sh exports/hyb-4b-s4f-s2000-l05           # vLLM on :8011 + Gradio on :7860
 ```
 The app is a thin OpenAI-API client of `vllm serve` (streaming, TTFT and tok/s per request, thinking toggle, task presets:
 QA, OCR, description, chart → table, key-field JSON). Example images are rendered by `demo/make_examples.py` (no third-party images).
