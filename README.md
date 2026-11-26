@@ -1,6 +1,21 @@
-# Qwen3 → VLM
+# Graft-VL
 
-Converting text-only Qwen3 into a vision-language model. Plan: [roadmap.md](roadmap.md). Data licenses: [LICENSES.md](LICENSES.md).
+Graft-VL adds vision to the **text-only Qwen3-4B** without changing what it says. Qwen3-VL's vision encoder is grafted
+onto the unmodified language model, then trained with LoRA plus replay of the model's own answers. The result reads
+documents, charts, screenshots and photos, stays within about 1 point of Qwen3-4B on text, keeps the thinking
+switch, and serves with stock vLLM.
+
+- **Model:** [sayantan1/Graft-VL-4B](https://huggingface.co/sayantan1/Graft-VL-4B) (CC BY-NC 4.0)
+- **Write-up:** [docs/WRITEUP.md](docs/WRITEUP.md): approach, results, what mattered
+- **Full experiment log:** [roadmap.md](roadmap.md) · **Data licenses:** [LICENSES.md](LICENSES.md), [audit](reports/licenses/dataset-audit.md)
+
+| | DocVQA | InfoVQA | ChartQA | TextVQA | OCRBench | MMMU | Text Δ vs Qwen3-4B |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| **Graft-VL-4B** | 79.3 | 53.0 | 56.6 | 72.9 | 77.2 | 47.0 | −0.3 non-thinking / −1.5 thinking |
+| Qwen3-VL-4B | 95.5 | 79.1 | 73.4 | 82.1 | 89.6 | 48.0 | +2.6 Instruct / −2.1 Thinking (separate models) |
+
+lmms-eval, 500 samples per task, same vLLM pipeline for every model. Qwen3-VL is far stronger on vision (much larger
+multimodal training); Graft-VL's point is keeping an existing text model's behaviour. Details in the write-up.
 
 ## Setup
 ```bash
