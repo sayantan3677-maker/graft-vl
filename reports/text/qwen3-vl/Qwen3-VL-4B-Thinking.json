@@ -1,0 +1,90 @@
+{
+  "model": "Qwen/Qwen3-VL-4B-Thinking",
+  "results": {
+    "mmlu_pro/think": {
+      "n_items": 500,
+      "seeds": 2,
+      "acc_mean": 70.9,
+      "acc_std": 0.7071067811865476,
+      "acc_per_seed": [
+        71.4,
+        70.4
+      ],
+      "mean_gen_tokens": 6415.462,
+      "truncated_frac": 0.023,
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "top_k": 20,
+        "min_p": 0.0
+      },
+      "max_tokens": 32768,
+      "minutes": 727.3450617551804,
+      "minutes_note": "whole combined call"
+    },
+    "gsm8k/think": {
+      "n_items": 500,
+      "seeds": 2,
+      "acc_mean": 94.5,
+      "acc_std": 0.7071067811865476,
+      "acc_per_seed": [
+        95.0,
+        94.0
+      ],
+      "mean_gen_tokens": 1698.094,
+      "truncated_frac": 0.0,
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "top_k": 20,
+        "min_p": 0.0
+      },
+      "max_tokens": 32768,
+      "minutes": 727.3450617551804,
+      "minutes_note": "whole combined call"
+    },
+    "ifeval/think": {
+      "n_items": 541,
+      "seeds": 2,
+      "acc_mean": 76.43253234750462,
+      "acc_std": 0.13070365641155998,
+      "acc_per_seed": [
+        76.52495378927911,
+        76.34011090573013
+      ],
+      "mean_gen_tokens": 5994.792975970425,
+      "truncated_frac": 0.1367837338262477,
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "top_k": 20,
+        "min_p": 0.0
+      },
+      "max_tokens": 32768,
+      "minutes": 727.3450617551804,
+      "minutes_note": "whole combined call"
+    },
+    "math500/think": {
+      "n_items": 200,
+      "seeds": 2,
+      "acc_mean": 93.5,
+      "acc_std": 0.0,
+      "acc_per_seed": [
+        93.5,
+        93.5
+      ],
+      "mean_gen_tokens": 8152.495,
+      "truncated_frac": 0.0525,
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "top_k": 20,
+        "min_p": 0.0
+      },
+      "max_tokens": 32768,
+      "minutes": 727.3450617551804,
+      "minutes_note": "whole combined call"
+    }
+  },
+  "runner": "eval_text_batched.py (all task x mode in one generate call)"
+}

@@ -71,6 +71,22 @@ a 200-sample subset; each figure is the mean of 2 seeds.
 The average change is **−0.9 points**. The text path is the original Qwen3-4B plus two merged LoRAs (stages S3
 and S4), each at strength 0.5.
 
+**Compared with Qwen3-VL-4B** (same tests and settings; Qwen ships separate Instruct and Thinking VL models):
+
+| Mode | Model | MMLU-Pro | GSM8K | IFEval | MATH-500 | Avg. vs Qwen3-4B | Mean output tokens (MMLU-Pro) |
+|---|---|---:|---:|---:|---:|---:|---:|
+| non-thinking | Qwen3-4B | 57.1 | 89.1 | 80.7 | 83.8 | — | 420 |
+| | **Graft-VL-4B** | 56.7 | 88.8 | 80.9 | 83.0 | −0.3 | 326 |
+| | Qwen3-VL-4B-Instruct | 61.0 | 93.6 | 81.5 | 84.8 | +2.6 | 1,071 |
+| thinking | Qwen3-4B | 70.1 | 95.5 | 84.1 | 94.0 | — | 3,333 |
+| | **Graft-VL-4B** | 69.4 | 94.1 | 81.6 | 92.5 | −1.5 | 3,354 |
+| | Qwen3-VL-4B-Thinking | 70.9 | 94.5 | 76.4 | 93.5 | −2.1 | 6,415 |
+
+Qwen3-VL-4B's language model is a newer, further-trained one, not Qwen3-4B: its Instruct model reasons at length
+even without thinking (≈ 2.5× longer answers) and scores higher; its Thinking model uses ≈ 2× the tokens and loses
+instruction following (IFEval −7.7). Graft-VL instead keeps Qwen3-4B's behaviour, answer length and hybrid
+thinking switch in one model.
+
 ### Latency
 
 vLLM 0.30, BF16, one data-centre GPU shared with other inference servers (so these are upper bounds), images capped
