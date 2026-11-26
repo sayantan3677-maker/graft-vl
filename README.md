@@ -7,6 +7,7 @@ switch, and serves with stock vLLM.
 
 - **Model:** [sayantan1/Graft-VL-4B](https://huggingface.co/sayantan1/Graft-VL-4B) (CC BY-NC 4.0)
 - **Write-up:** [docs/WRITEUP.md](docs/WRITEUP.md): approach, results, what mattered
+- **Project status and handover:** [docs/PROJECT_STATUS.md](docs/PROJECT_STATUS.md): full timeline, artifacts, pending work
 - **Full experiment log:** [roadmap.md](roadmap.md) · **Data licenses:** [LICENSES.md](LICENSES.md), [audit](reports/licenses/dataset-audit.md)
 
 | | DocVQA | InfoVQA | ChartQA | TextVQA | OCRBench | MMMU | Text Δ vs Qwen3-4B |
