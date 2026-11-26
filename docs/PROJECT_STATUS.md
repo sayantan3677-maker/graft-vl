@@ -162,8 +162,18 @@ Done before removing the server user account:
   account): Hugging Face cache (~123 GB), pip and vLLM caches, conda envs `vlm-train` / `vlm-eval`, venv
   `~/.venvs/vlm-demo`, the assistant's project memory under `~/.claude/projects/`.
 
-Account actions for the owner:
-- Revoke the fine-grained Hugging Face token used for the upload (if not already revoked).
-- Revoke or log out the GitHub CLI token and the Hugging Face token stored on the server, unless still used
-  elsewhere.
+Credentials on the server (state at handover):
+- **Hugging Face upload token** (fine-grained, personal account): its file was deleted right after the upload.
+- **Hugging Face token of the organisation account** (used for downloads): the server's copies
+  (`~/.cache/huggingface/token`, `stored_tokens`) were deleted.
+- **GitHub CLI token:** logged out on the server (`gh auth logout`); its stored copy is gone.
+- **SSH key** `~/.ssh/id_ed25519` (authenticates to GitHub as the repository owner): kept, so git over SSH keeps
+  working until the account is removed.
+
+Account actions for the owner (deleting a file from the server does not invalidate a token):
+- Revoke on huggingface.co (Settings → Access Tokens): the upload token and the organisation token, unless the
+  latter is still used elsewhere.
+- Revoke on github.com (Settings → Applications → GitHub CLI) the CLI's OAuth token, when GitHub access from this
+  server is no longer needed.
+- Remove this server's SSH key from github.com (Settings → SSH and GPG keys) when the account is deleted.
 - The released model and this repository do not depend on the server.
