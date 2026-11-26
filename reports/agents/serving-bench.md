@@ -168,7 +168,6 @@ The "Gap vs ceiling" column is relative to the default-pixel Qwen3-VL-2B run.
   - `scripts/run_hybrid_serving_bench.sh`
   - `scripts/prepare_hybrid_serving.py`
   - `scripts/summarize_benchmarks.py`
-  - `scripts/run_serving_bench_queue{,2,3,4}.sh`
   - `scripts/run_benchmarks.sh` (extended)
   - `tests/test_hybrid_chat_template.py`
 - **Exports:** `exports/serve-hyb-1b7-s2000` (+`-llm`) and `exports/serve-bench-qwen3vl2b-1p6mp` (symlinks to the HF weights plus a pixel-capped preprocessor config).
