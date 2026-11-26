@@ -7,9 +7,10 @@ Pass 2 (verify):   the teacher answers every question again, independently, with
 Keep a pair when:  both answers agree (normalized match or numeric equality), and, for extractive questions,
                    the answer occurs in the page's ground-truth PDF text (DocLayNet `pdf_cells`).
 
-Usage (pilot):
-  CUDA_VISIBLE_DEVICES=1 python experiments/v2/gen_doc_qa.py --parquet data/v2/raw/doclaynet/data/*.parquet \
-      --n-pages 300 --out data/v2/doclaynet-qa-pilot.jsonl
+Processes one parquet shard at a time and writes <out-dir>/<shard>.jsonl + .summary.json; finished shards are
+skipped, so an interrupted run resumes.
+  CUDA_VISIBLE_DEVICES=1 python experiments/v2/gen_doc_qa.py --parquet data/v2/raw/doclaynet/data/train-*.parquet \
+      --out-dir data/v2/doclaynet-qa
 """
 
 import argparse
@@ -79,41 +80,37 @@ def data_url(img_bytes: bytes) -> str:
     return "data:image/png;base64," + base64.b64encode(img_bytes).decode()
 
 
-def load_pages(paths, n, seed):
+def load_shard(path, n, seed):
+    """All pages of one parquet shard (or a random n of them), with their row index for building training shards later."""
     import pyarrow.parquet as pq
 
-    rows = []
-    for p in paths:
-        t = pq.read_table(p, columns=["image", "pdf_cells", "metadata"])
-        rows += t.to_pylist()
-    random.Random(seed).shuffle(rows)
-    by_cat = {}
-    for r in rows:  # stratify across document categories
-        by_cat.setdefault(r["metadata"]["doc_category"], []).append(r)
-    out, i = [], 0
-    while len(out) < n and any(by_cat.values()):
-        cat = sorted(by_cat)[i % len(by_cat)]
-        if by_cat[cat]:
-            out.append(by_cat[cat].pop())
-        i += 1
-    return out
+    rows = pq.read_table(path, columns=["image", "pdf_cells", "metadata"]).to_pylist()
+    for i, r in enumerate(rows):
+        r["_row"] = i
+    if n and n < len(rows):
+        rows = random.Random(seed).sample(rows, n)
+    return rows
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--parquet", nargs="+", required=True)
-    ap.add_argument("--n-pages", type=int, default=300)
+    ap.add_argument("--pages-per-shard", type=int, default=0, help="0 = every page")
     ap.add_argument("--qa-per-page", type=int, default=5)
     ap.add_argument("--teacher", default="Qwen/Qwen3-VL-8B-Instruct")
     ap.add_argument("--gpu-mem", type=float, default=0.35)
-    ap.add_argument("--out", required=True)
+    ap.add_argument("--out-dir", required=True, help="one <shard>.jsonl + <shard>.summary.json per shard; done shards are skipped")
     ap.add_argument("--seed", type=int, default=0)
     args = ap.parse_args()
 
     from vllm import LLM, SamplingParams
 
-    t0 = time.time()
-    pages = load_pages(args.parquet, args.n_pages, args.seed)
+    out_dir = Path(args.out_dir)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    todo = [p for p in args.parquet if not (out_dir / (Path(p).stem + ".summary.json")).exists()]
+    print(f"{len(args.parquet) - len(todo)} shards done, {len(todo)} to go", flush=True)
+    if not todo:
+        return
     llm = LLM(model=args.teacher, dtype="bfloat16", gpu_memory_utilization=args.gpu_mem, max_model_len=8192,
               limit_mm_per_prompt={"image": 1}, seed=args.seed)
     gen_sp = SamplingParams(temperature=0.7, top_p=0.8, top_k=20, max_tokens=1500, seed=args.seed)
@@ -123,39 +120,42 @@ def main():
         return [{"role": "user", "content": [{"type": "image_url", "image_url": {"url": data_url(img)}},
                                              {"type": "text", "text": text}]}]
 
-    outs = llm.chat([conv(p["image"]["bytes"], GEN_PROMPT.format(n=args.qa_per_page)) for p in pages], gen_sp)
-    cands = []
-    for pi, o in enumerate(outs):
-        for qa in parse_json_list(o.outputs[0].text):
-            cands.append((pi, qa))
-    vouts = llm.chat([conv(pages[pi]["image"]["bytes"], VERIFY_PROMPT.format(q=qa["question"])) for pi, qa in cands], ver_sp)
-
-    stats, kept = Counter(), []
-    with open(args.out, "w") as f:
-        for (pi, qa), vo in zip(cands, vouts):
-            p, v = pages[pi], vo.outputs[0].text.strip()
-            typ = qa["type"].lower()
-            stats[f"cand/{typ}"] += 1
-            if typ == "summary":
-                ok, why = True, "summary (not verified)"
-            elif not agree(qa["answer"], v):
-                ok, why = False, "disagree"
-            elif typ == "extractive" and norm(qa["answer"]) not in norm(page_text(p)):
-                ok, why = False, "not in page text"
-            else:
-                ok, why = True, "ok"
-            stats[f"{'keep' if ok else 'drop'}/{typ}/{why}"] += 1
-            rec = {"page_hash": p["metadata"]["page_hash"], "doc_category": p["metadata"]["doc_category"],
-                   "type": typ, "question": qa["question"], "answer": qa["answer"], "rationale": qa["rationale"],
-                   "verify_answer": v, "keep": ok, "reason": why}
-            if ok:
-                kept.append(rec)
-            f.write(json.dumps(rec) + "\n")
-    summary = {"pages": len(pages), "candidates": len(cands), "kept": len(kept),
-               "kept_per_page": round(len(kept) / max(1, len(pages)), 2), "stats": dict(sorted(stats.items())),
-               "minutes": round((time.time() - t0) / 60, 1)}
-    Path(args.out).with_suffix(".summary.json").write_text(json.dumps(summary, indent=1))
-    print(json.dumps(summary, indent=1))
+    for path in todo:
+        t0, shard = time.time(), Path(path).stem
+        pages = load_shard(path, args.pages_per_shard, args.seed)
+        outs = llm.chat([conv(p["image"]["bytes"], GEN_PROMPT.format(n=args.qa_per_page)) for p in pages], gen_sp,
+                        use_tqdm=False)
+        cands = [(pi, qa) for pi, o in enumerate(outs) for qa in parse_json_list(o.outputs[0].text)]
+        vouts = llm.chat([conv(pages[pi]["image"]["bytes"], VERIFY_PROMPT.format(q=qa["question"])) for pi, qa in cands],
+                         ver_sp, use_tqdm=False)
+        stats, n_kept = Counter(), 0
+        tmp = out_dir / (shard + ".jsonl.tmp")
+        with open(tmp, "w") as f:
+            for (pi, qa), vo in zip(cands, vouts):
+                p, v = pages[pi], vo.outputs[0].text.strip()
+                typ = qa["type"].lower()
+                stats[f"cand/{typ}"] += 1
+                if typ == "summary":
+                    ok, why = True, "summary (not verified)"
+                elif not agree(qa["answer"], v):
+                    ok, why = False, "disagree"
+                elif typ == "extractive" and norm(qa["answer"]) not in norm(page_text(p)):
+                    ok, why = False, "not in page text"
+                else:
+                    ok, why = True, "ok"
+                stats[f"{'keep' if ok else 'drop'}/{typ}/{why}"] += 1
+                n_kept += ok
+                f.write(json.dumps({"shard": shard, "row": p["_row"], "page_hash": p["metadata"]["page_hash"],
+                                    "doc_category": p["metadata"]["doc_category"], "type": typ,
+                                    "question": qa["question"], "answer": qa["answer"], "rationale": qa["rationale"],
+                                    "verify_answer": v, "keep": ok, "reason": why}) + "\n")
+        tmp.rename(out_dir / (shard + ".jsonl"))
+        summary = {"shard": shard, "pages": len(pages), "candidates": len(cands), "kept": n_kept,
+                   "kept_per_page": round(n_kept / max(1, len(pages)), 2),
+                   "categories": dict(Counter(p["metadata"]["doc_category"] for p in pages)),
+                   "stats": dict(sorted(stats.items())), "minutes": round((time.time() - t0) / 60, 1)}
+        (out_dir / (shard + ".summary.json")).write_text(json.dumps(summary, indent=1))
+        print(shard, summary["pages"], "pages", n_kept, "kept", summary["minutes"], "min", flush=True)
 
 
 if __name__ == "__main__":

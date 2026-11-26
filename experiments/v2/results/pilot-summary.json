@@ -1,0 +1,21 @@
+{
+ "pages": 300,
+ "candidates": 1402,
+ "kept": 1168,
+ "kept_per_page": 3.89,
+ "stats": {
+  "cand/extractive": 525,
+  "cand/layout": 272,
+  "cand/reasoning": 336,
+  "cand/summary": 269,
+  "drop/extractive/disagree": 29,
+  "drop/extractive/not in page text": 36,
+  "drop/layout/disagree": 66,
+  "drop/reasoning/disagree": 103,
+  "keep/extractive/ok": 460,
+  "keep/layout/ok": 206,
+  "keep/reasoning/ok": 233,
+  "keep/summary/summary (not verified)": 269
+ },
+ "minutes": 3.3
+}
